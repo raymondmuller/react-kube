@@ -19,3 +19,9 @@ const Block = require("./Lib/Block");
 
 const Grid = require("./Lib/Grid");
 const GridItem = require("./Lib/GridItem");
+
+const Form = require("./Lib/Form");
+const FormInput = require("./Lib/FormInput");
+const FormSection = require("./Lib/FormSection");
+
+const Search = require("./Lib/Search");

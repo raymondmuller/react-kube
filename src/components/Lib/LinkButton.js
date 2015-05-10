@@ -17,6 +17,9 @@ class LinkButton extends React.Component {
 		if(this.props.color) {
 			styles += " " + "btn-" + this.props.color
 		}
+		if(this.props.width) {
+			styles += " " + "width-" + this.props.width;
+		}
 	}
 	
 	render() {
