@@ -44,13 +44,13 @@ gulp.task("compile:production", function () {
 });
 
 gulp.task("sass", function () {
-    gulp.src("./src/styles/kube.scss")
+    gulp.src("./src/styles/react-kube.scss")
         .pipe(sass())
         .pipe(gulp.dest("./build/css"));
 });
 
 gulp.task("sass:dist", function () {
-    gulp.src("src/styles/kube.scss")
+    gulp.src("src/styles/react-kube.scss")
         .pipe(sass())
         .pipe(buffer())
         .pipe(minifyCss({compatibility: "ie8"}))

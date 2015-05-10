@@ -5,38 +5,30 @@ var styles;
 
 class NavigationBar extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.state = { active: 0}
-	}
-
 	componentWillMount() {
 		styles = classNames({
-			"nav": true,
-			"navbar-pills": this.props.pills,
-			"navigationBarCustom": true,
-			"fullwidth": this.props.fullwidth
+			"navbar": true,
+			"navbar-left": this.props.left,
+			"navbar-right": this.props.right,
+			"navigationBarCustom": true
 		})
 	}
 
-	handleItemClick(id) {
-		this.setState({
-			active: id
-		})
-	}
+	componentWillUpdate(nextProps) {
+		styles = classNames({
+			"navbar": true,
+			"navbar-left": this.props.left,
+			"navbar-right": this.props.right,
+			"navigationBarCustom": true
+		})}
+
 
 	render() {
 		var children = React.Children.map(this.props.children, function(child, i) {
-    return React.cloneElement(child, {active: i === this.state.active ,id: i, onItemClick: this.handleItemClick.bind(this)})
+    return React.cloneElement(child, {active: this.props.index + "" + i == this.props.active, index: i, onItemClick: this.props.onItemClick})
 		}, this)
 
-		return (
-			<nav className={styles}>
-				<ul>
-					{children}
-				</ul>
-			</nav>
-		)
+		return ( <ul className={styles}>{children}</ul> )
 	}
 
 }

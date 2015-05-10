@@ -2,6 +2,7 @@ const React = require("react");
 var classNames = require("classnames");
 var defaultStyle;
 var styles;
+var iconStyles;
 
 class NavigationItem extends React.Component {
 
@@ -10,7 +11,9 @@ class NavigationItem extends React.Component {
 	}
 
 	componentWillMount() {
-		console.log(this.props)
+
+		iconStyles = "fa " + "fa-" + this.props.icon
+
 		defaultStyle = classNames({
 			navigationItemCustom: true
 		})
@@ -19,16 +22,16 @@ class NavigationItem extends React.Component {
 
 	componentWillUpdate(nextProps, nextState) {
 		this.setActive(nextProps.active)
+		iconStyles = "fa " + "fa-" + this.props.icon
 	}
 
 	handleClick() {
-		this.props.onItemClick(this.props.id);
+		this.props.onItemClick(this.props.index);
 	}
 
 	render() {
-		return (<li className={styles} onClick={this.handleClick.bind(this)}><a href={this.props.url}>{this.props.children}</a></li>)
+		return (<li className={styles} index={this.props.index} onClick={this.handleClick.bind(this)}><a href={this.props.url} className={iconStyles}>{this.props.children}</a></li>)
 	}
-
 }
 
 module.exports = NavigationItem;
