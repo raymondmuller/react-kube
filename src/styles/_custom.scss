@@ -1,33 +1,11 @@
-$navbar-color: #B71C1C;
-$navbar-pills-color: #EF9A9A;
-$navbar-pills-hover-color: #D32F2F;
+/* =Custom Components Code */
 
-nav {
-	background: $navbar-color;
-	padding: 30px 50px 28px;
-	height: 90px;
-}
-
-.navigationBarCustom > li > a {
-	color: white;
-	font-size: large;
-	margin-top: 8px;
-	text-decoration: none;
-	display: block;
-}
-
-.navbar-pills > ul > li.active > a {
-	background: $navbar-pills-color;
-	color: white;
-	border-radius: 50px;
-}
-
-.navbar-pills > ul > li:hover > a {
-	background: $navbar-pills-hover-color;
-	color: white;
-}
-.navbar {
-	span {
-		color: white;
+.react-alert-wrapper {
+	position: relative;
+	.fa-times {
+	  position: absolute;
+	  top: 2px;
+	  right: 6px;
+	  cursor: pointer;
 	}
 }

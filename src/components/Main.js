@@ -25,7 +25,7 @@ class Main extends React.Component {
 				<Label color="red" outline>YEAH </Label><br/>
 				<Badge small> 1 </Badge><br/>
 				<Badge color="black"> 2</Badge><br/>
-				<Alert> Hello this is an alert </Alert>
+				<Alert remove> Hello this is an alert </Alert>
 				<Alert color="blue"> This is a blue alert </Alert> 
 				<Message color="red" position="relative"> ERROR! </Message>
 				<Message color="green" show={true} top="100px"> Show Message! </Message>
