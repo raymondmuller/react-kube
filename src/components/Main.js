@@ -1,5 +1,6 @@
 const React = require('react');
 const NavigationBox = require("./NavigationBox");
+const Button = require("./Lib/Button");
 
 
 class Main extends React.Component {
@@ -7,6 +8,7 @@ class Main extends React.Component {
 		return (
 			<div className="main">
 				<NavigationBox />
+				<Button>Hello</Button>
 			</div>
 		) 
 	}

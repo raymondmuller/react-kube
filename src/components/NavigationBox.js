@@ -13,8 +13,8 @@ class NavigationBox extends React.Component {
 					<NavigationItem url="#" icon="home"> Home </NavigationItem>
 					<NavigationItem url="#about" icon="file"> About </NavigationItem>
 					<NavigationItem url="#documentation" icon="code"> Documentation </NavigationItem>
-					<NavigationItem url="#contact" icon="envelope"> Contact </NavigationItem>
-					<NavigationItem url="#Github" icon="github"> Github</NavigationItem>
+					<NavigationItem url="http://www.raymondmuller.com" icon="envelope"> Contact </NavigationItem>
+					<NavigationItem url="http://www.github.com/raymondmuller" target="_new" icon="github"> Github</NavigationItem>
 				</NavigationBar>
 				<NavigationBar right>
 					<form action="" className="right width-70">

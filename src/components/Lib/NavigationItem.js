@@ -30,7 +30,11 @@ class NavigationItem extends React.Component {
 	}
 
 	render() {
-		return (<li className={styles} index={this.props.index} onClick={this.handleClick.bind(this)}><a href={this.props.url} className={iconStyles}>{this.props.children}</a></li>)
+		return (<li className={styles} index={this.props.index} onClick={this.handleClick.bind(this)}>
+			<a href={this.props.url} target={this.props.target ? this.props.target : "_self"} className={iconStyles}>
+				{this.props.children}
+			</a>
+		</li>)
 	}
 }
 
