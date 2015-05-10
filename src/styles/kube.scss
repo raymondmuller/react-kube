@@ -241,8 +241,6 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-@import "custom";
-
 /* =Typography
 -----------------------------------------------------------------------------*/
 body {
@@ -2540,7 +2538,6 @@ input[type="submit"].btn-white.btn-outline.btn-active {
   margin-bottom: 1.65em;
 }
 .tools-message {
-  display: none;
   position: fixed;
   z-index: 100;
   top: 10px;

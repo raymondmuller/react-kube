@@ -2,7 +2,7 @@ const React = require("react");
 var classNames = require("classnames");
 var styles;
 
-class Button extends React.Component {
+class LinkButton extends React.Component {
 
 	componentWillMount() {
 		styles = classNames({
@@ -19,10 +19,10 @@ class Button extends React.Component {
 	
 	render() {
 		return (
-			<button className={styles}>{this.props.children} </button>
+			<a href={this.props.url} target={this.props.target ? this.props.target : "_self"} className={styles}>{this.props.children} </a>
 		)
 	}
 
 }
 
-module.exports = Button;
+module.exports = LinkButton;

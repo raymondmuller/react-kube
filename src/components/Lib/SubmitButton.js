@@ -2,7 +2,7 @@ const React = require("react");
 var classNames = require("classnames");
 var styles;
 
-class Button extends React.Component {
+class SubmitButton extends React.Component {
 
 	componentWillMount() {
 		styles = classNames({
@@ -19,10 +19,10 @@ class Button extends React.Component {
 	
 	render() {
 		return (
-			<button className={styles}>{this.props.children} </button>
+			<input type="submit" value={this.props.children} className={styles} />
 		)
 	}
 
 }
 
-module.exports = Button;
+module.exports = SubmitButton;
