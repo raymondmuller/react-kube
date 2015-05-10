@@ -7,6 +7,8 @@ class LinkButton extends React.Component {
 	componentWillMount() {
 		styles = classNames({
 			"btn": true,
+			"left": this.props.left,
+			"right": this.props.right,
 			"btn-active": this.props.active,
 			"btn-outline": this.props.outline,
 			"btn-disabled": this.props.disabled

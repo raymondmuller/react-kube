@@ -11,6 +11,11 @@ const Message = require("./Lib/Message");
 const Blocks = require("./Lib/Blocks");
 const Block = require("./Lib/Block");
 
+const Grid = require("./Lib/Grid");
+const GridItem = require("./Lib/GridItem");
+
+const Search = require("./Lib/Search");
+
 
 class Main extends React.Component {
 	render() {
@@ -18,7 +23,7 @@ class Main extends React.Component {
 			<div className="main">
 				<NavigationBox />
 				<Button color="blue" disabled active>Hello</Button>
-				<LinkButton color="red" outline active>Hello</LinkButton>
+				<LinkButton right color="red" outline active>Hello</LinkButton>
 				<SubmitButton color="yellow">Hello</SubmitButton>
 				<Label color="yellow"> New </Label>
 				<br/>
@@ -29,14 +34,20 @@ class Main extends React.Component {
 				<Alert color="blue"> This is a blue alert </Alert> 
 				<Message color="red" position="relative"> ERROR! </Message>
 				<Message color="green" show={true} top="100px"> Show Message! </Message>
-
-
 				<br/>
 				<Blocks amount={3}>
 					<Block>Test</Block>
 					<Block>Test</Block>
 					<Block>Test</Block>
 				</Blocks>
+
+				<br/><br/><br/>
+				<Grid>
+					<GridItem size={60}> Hello</GridItem>
+					<GridItem size={20} rounded><Search /> </GridItem>
+					<GridItem size={20}><Search placeholder="search" button="go" /> </GridItem>
+
+				</Grid>
 			</div>
 		) 
 	}

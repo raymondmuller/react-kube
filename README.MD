@@ -1,6 +1,12 @@
-# React Components based on KUBE CSS
+# React Components based on KUBE CSS by IMPERAVI (http://imperavi.com/kube/css/)
 
-WORK IN PROGRESS
+! WORK IN PROGRESS !
+
+##TODO:
+- Improve current code / Clean up code / Formatting
+- JS Components
+- Tests 
+
 
 ###Contact
-If you have any questions or feel free to contact me: raymond.muller.1989@gmail.com
+If you have any questions: http://www.raymondmuller.com

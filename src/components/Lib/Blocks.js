@@ -1,5 +1,4 @@
 const React = require("react");
-var classNames = require("classnames");
 var styles;
 
 class Blocks extends React.Component {
@@ -10,7 +9,7 @@ class Blocks extends React.Component {
 			styles = "blocks-" + this.props.amount;
 		}
 		if(this.props.mobile) {
-			styles+= "blocks-mobile-" + this.props.mobile
+			styles+= " blocks-mobile-" + this.props.mobile
 		}
 	}
 	
