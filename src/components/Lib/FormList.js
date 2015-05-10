@@ -1,23 +1,24 @@
 const React = require("react");
 var classNames = require("classnames");
-var inputStyle;
+var styles;
 
 class FormList extends React.Component {
 
 	componentWillMount() {
-
 		if(this.props.inline) {
-			inputStyle = "forms-inline-list";
+			styles = "forms-inline-list";
 		} else {
-			inputStyle = "forms-list";
+			styles = "forms-list";
 		}
 	}
 
-    render() {
-        return (
-            <ul className={inputStyle}> {this.props.children} </ul>
-        )
-    }
+  render() {
+    return (
+      <ul className={classNames(this.props.className, styles)}>
+       {this.props.children}
+     	</ul>
+    )
+  }
 }
 
 module.exports = FormList;

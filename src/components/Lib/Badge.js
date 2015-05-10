@@ -17,7 +17,7 @@ class Badge extends React.Component {
 	
 	render() {
 		return (
-			<span className={styles}>{this.props.children}</span>
+			<span className={classNames(this.props.className, styles)}>{this.props.children}</span>
 		)
 	}
 

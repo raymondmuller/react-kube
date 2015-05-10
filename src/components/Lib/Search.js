@@ -18,7 +18,7 @@ class Search extends React.Component {
 	render() {
 			
 		return (
-			<form action={this.props.action} className="forms">
+			<form action={this.props.action} className={classNames(this.props.className, "forms")}>
 			{this.props.button ? 
 				<div className="input-groups">
 					<input type="text" className={styles} placeholder={this.props.placeholder}/>

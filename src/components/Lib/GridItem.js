@@ -22,7 +22,7 @@ class Blocks extends React.Component {
 	
 	render() {
 		return (
-			<ul className={styles}>{this.props.children}</ul>
+			<ul className={classNames(this.props.className, styles)}>{this.props.children}</ul>
 		)
 	}
 

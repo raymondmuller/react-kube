@@ -1,6 +1,7 @@
 const React = require("react");
 var classNames = require("classnames");
 var styles;
+var iconStyles;
 
 class Button extends React.Component {
 
@@ -23,8 +24,12 @@ class Button extends React.Component {
 	}
 	
 	render() {
+		this.props.icon ? iconStyles = "fa " + "fa-" + this.props.icon : null
 		return (
-			<button className={styles}>{this.props.children} </button>
+			<button className={classNames(this.props.className, styles)}>
+				{this.props.icon ? <li className={iconStyles}></li> : null }
+				{this.props.children}
+			</button>
 		)
 	}
 

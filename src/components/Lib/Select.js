@@ -12,7 +12,7 @@ class Select extends React.Component {
 
 	render() {
 		return (
-		 <select name={this.props.name} className={styles} multiple={this.props.multiple} size={this.props.size} disabled={this.props.disabled}>
+		 <select name={this.props.name} className={classNames(this.props.className, styles)} multiple={this.props.multiple} size={this.props.size} disabled={this.props.disabled}>
     		{this.props.children}
     		{this.props.description ? <div className="forms-desc">{this.props.description}</div> : null }
         </select>

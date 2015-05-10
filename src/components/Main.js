@@ -18,15 +18,17 @@ const Search = require("./Lib/Search");
 
 const Form = require("./Lib/Form");
 const FormList = require("./Lib/FormList");
-const FormInput = require("./Lib/FormInput");
+const Input = require("./Lib/Input");
 const FormSection = require("./Lib/FormSection");
+
+const Table = require("./Lib/Table");
 
 class Main extends React.Component {
 	render() {
 		return (
 			<div className="main">
 				<NavigationBox />
-				<Button color="blue" disabled active>Hello</Button>
+				<Button color="blue" icon="times" disabled active>Hello</Button>
 				<LinkButton right color="red" outline active>Hello</LinkButton>
 				<SubmitButton color="yellow">Hello</SubmitButton>
 				<Label color="yellow"> New </Label>
@@ -55,22 +57,25 @@ class Main extends React.Component {
 
 				<br/><br/><br/><br/>
 				<Form>
-					<FormInput placeholder="type your email" width="40"/>
+					<Input placeholder="type your email" width="40"/>
 					<Button color="blue" width="40">Log in</Button>
 					<FormSection name="test">
 						<FormList inline>
 						<ul>
 						<li>
-							<FormInput size={5} placeholder="type your email"/>
+							<Input size={5} placeholder="type your email"/>
 							</li>
 						<li>
-							<FormInput size={10} type="password" placeholder="type your password" width="100"/>
+							<Input size={10} type="password" placeholder="type your password" width="100"/>
 						</li>
 						</ul>
 						</FormList>
 
 					</FormSection>
 				</Form>
+				<br/><br/><br/><br/>
+				<Table>
+				</Table>
 			</div>
 		) 
 	}

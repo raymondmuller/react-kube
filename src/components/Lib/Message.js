@@ -36,7 +36,7 @@ class Message extends React.Component {
 	render() {
 			if(this.state.showMessage) {
 				return (
-					<div onClick={this.handleClick.bind(this)} className={styles} style={messageStyle}>{this.props.children}</div>
+					<div onClick={this.handleClick.bind(this)} className={classNames(this.props.className, styles)} style={messageStyle}>{this.props.children}</div>
 				)
 			} 
 			else {

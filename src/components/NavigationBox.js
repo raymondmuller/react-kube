@@ -9,7 +9,7 @@ class NavigationBox extends React.Component {
 
 		return(
 			<Navigation>
-				<NavigationBar left>
+				<NavigationBar className="navigationBarCustom" left>
 					<NavigationItem url="#" icon="home"> Home </NavigationItem>
 					<NavigationItem url="#about" icon="file"> About </NavigationItem>
 					<NavigationItem url="#documentation" icon="code"> Documentation </NavigationItem>

@@ -4,7 +4,7 @@ class SelectGroup extends React.Component {
 
 	render() {
 		return (
-		 <optgroup label={this.props.label}>
+		 <optgroup className={this.props.className} label={this.props.label}>
 		 	{this.props.children}
 	 	</optgroup>
 		)

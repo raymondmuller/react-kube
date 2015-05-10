@@ -35,7 +35,7 @@ class Alert extends React.Component {
 		return (
 			<div>{this.state.showAlert ? 
 			<div className="react-alert-wrapper">
-				<div className={styles}>{this.props.children}</div>
+				<div className={classNames(this.props.className, styles)}>{this.props.children}</div>
 				{this.props.remove ? 
 				<div className="fa fa-times" onClick={this.handleClick.bind(this)}></div>
 				: null }

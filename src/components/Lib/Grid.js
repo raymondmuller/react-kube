@@ -19,7 +19,7 @@ class Grid extends React.Component {
 	render() {
 		return (
 			<div className="units-container">
-				<div className={styles}>{this.props.children}</div>
+				<div className={classNames(this.props.className, styles)}>{this.props.children}</div>
 			</div>
 		)
 	}

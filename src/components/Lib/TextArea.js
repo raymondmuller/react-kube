@@ -14,7 +14,7 @@ class TextArea extends React.Component {
 		return (
 			<label>
 		        {this.props.label}
-		        <textarea rows={this.props.rows} className={styles} disabled={this.props.disabled}></textarea>
+		        <textarea rows={this.props.rows} className={classNames(this.props.className, styles)} disabled={this.props.disabled}></textarea>
 		    </label>
 		)
 	}

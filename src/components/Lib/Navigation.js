@@ -28,7 +28,7 @@ class Navigation extends React.Component {
 
 		return (
 			<header className="group">
-				<nav className={styles}>{children}</nav>
+				<nav className={classNames(this.props.className, styles)}>{children}</nav>
 			</header>
 		)
 	}

@@ -24,7 +24,7 @@ class SubmitButton extends React.Component {
 	
 	render() {
 		return (
-			<input type="submit" value={this.props.children} className={styles} />
+			<input type="submit" value={this.props.children} className={classNames(this.props.className, styles)} />
 		)
 	}
 

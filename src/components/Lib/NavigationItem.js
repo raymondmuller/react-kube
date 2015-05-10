@@ -12,17 +12,10 @@ class NavigationItem extends React.Component {
 
 	componentWillMount() {
 
-		iconStyles = "fa " + "fa-" + this.props.icon
-
 		defaultStyle = classNames({
 			navigationItemCustom: true
 		})
 		this.setActive(this.props.active);
-	}
-
-	componentWillUpdate(nextProps, nextState) {
-		this.setActive(nextProps.active)
-		iconStyles = "fa " + "fa-" + this.props.icon
 	}
 
 	handleClick() {
@@ -30,7 +23,10 @@ class NavigationItem extends React.Component {
 	}
 
 	render() {
-		return (<li className={styles} index={this.props.index} onClick={this.handleClick.bind(this)}>
+		
+		this.props.icon ? iconStyles = "fa " + "fa-" + this.props.icon : null
+
+		return (<li className={classNames(this.props.className, styles)} index={this.props.index} onClick={this.handleClick.bind(this)}>
 			<a href={this.props.url} target={this.props.target ? this.props.target : "_self"} className={iconStyles}>
 				{this.props.children}
 			</a>

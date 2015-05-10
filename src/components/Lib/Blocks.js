@@ -1,4 +1,5 @@
 const React = require("react");
+const classNames = require("classnames");
 var styles;
 
 class Blocks extends React.Component {
@@ -15,7 +16,9 @@ class Blocks extends React.Component {
 	
 	render() {
 		return (
-			<ul className={styles}>{this.props.children}</ul>
+			<ul className={classNames(this.props.className, styles)}>
+				{this.props.children}
+			</ul>
 		)
 	}
 

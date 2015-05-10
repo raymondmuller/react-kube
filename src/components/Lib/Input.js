@@ -1,12 +1,12 @@
 const React = require("react");
 var classNames = require("classnames");
-var inputStyle;
+var styles;
 
-class Form extends React.Component {
+class Input extends React.Component {
 
 	componentWillMount() {
 
-		inputStyle = classNames({
+		styles = classNames({
 			"input-error": this.props.error,
 			"input-success": this.props.success,
 			"input-gray": this.props.gray,
@@ -17,7 +17,7 @@ class Form extends React.Component {
 		});
 
 		if(this.props.width) {
-			inputStyle = " width-" + this.props.width
+			styles = " width-" + this.props.width
 		}
 	}
 
@@ -28,13 +28,12 @@ class Form extends React.Component {
             	{this.props.description ? <span className="forms-desc">{this.props.description}</span> : null }
             	{this.props.errorMsg && this.props.error ? <span className="error">{this.props.errorMsg}</span> : null}
             	{this.props.successMsg && this.props.success ? <span className="success">{this.props.successMsg}</span> : null}
-                <input type={this.props.type} name={this.props.name} placeholder={this.props.placeholder} size={this.props.size} disabled={this.props.disabled} className={inputStyle} />
-
+                <input type={this.props.type} name={this.props.name} placeholder={this.props.placeholder} size={this.props.size} disabled={this.props.disabled} className={classNames(this.props.className, styles)} />
             </label>
         )
     }
 }
 
-Form.defaultProps = {type: "text", width:"50"};
+Input.defaultProps = {type: "text", width:"50"};
 
-module.exports = Form;
+module.exports = Input;

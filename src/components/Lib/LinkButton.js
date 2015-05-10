@@ -24,7 +24,9 @@ class LinkButton extends React.Component {
 	
 	render() {
 		return (
-			<a href={this.props.url} target={this.props.target ? this.props.target : "_self"} className={styles}>{this.props.children} </a>
+			<a href={this.props.url} target={this.props.target ? this.props.target : "_self"} className={classNames(this.props.className, styles)}>
+				{this.props.children}
+			</a>
 		)
 	}
 
