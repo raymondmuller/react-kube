@@ -2,7 +2,7 @@ const React = require("react");
 var classNames = require("classnames");
 var styles;
 
-class Navigation extends React.Component {
+class Pagination extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -10,8 +10,7 @@ class Navigation extends React.Component {
 	}
 	componentWillMount() {
 		styles = classNames({
-			"navbar-pills": this.props.pills,
-			"fullwidth": this.props.fullwidth
+			"pagination": true
 		})
 	}
 
@@ -27,12 +26,16 @@ class Navigation extends React.Component {
 		}, this)
 
 		return (
-			<header className="group">
-				<nav className={classNames(this.props.className, styles)} data-equals={this.props["data-equals"]} data-tools={this.props["data-tools"]}>{children}</nav>
-			</header>
+			<ul className={classNames(this.props.className, styles)}>
+			    <li><a href={this.props.left}>&larr;</a></li>
+						{children}
+			    <li><a href={this.props.right}>&rarr;</a></li>
+			</ul>
 		)
 	}
 
 }
 
-module.exports = Navigation;
+Pagination.defaultProps = {left: "#", right: "#"};
+
+module.exports = Pagination;

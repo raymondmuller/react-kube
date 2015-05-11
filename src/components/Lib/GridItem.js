@@ -12,10 +12,10 @@ class GridItem extends React.Component {
 			"units-split": this.props.disabled
 		})
 		if(this.props.size) {
-			styles += "unit-" + this.props.size;
+			styles += " unit-" + this.props.size;
 		}
 		if(this.props.push) {
-			styles += "unit-push-" + this.props.push;
+			styles += " unit-push-" + this.props.push;
 		}
 		
 	}

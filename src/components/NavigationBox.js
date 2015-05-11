@@ -8,9 +8,9 @@ class NavigationBox extends React.Component {
 	render() {
 
 		return(
-			<Navigation>
+			<Navigation className="navCustom">
 				<NavigationBar className="navigationBarCustom" left>
-					<NavigationItem url="#" icon="home"> Home </NavigationItem>
+					<NavigationItem url="#" icon="home"> React-Kube (WIP) </NavigationItem>
 					<NavigationItem url="#about" icon="file"> About </NavigationItem>
 					<NavigationItem url="#documentation" icon="code"> Documentation </NavigationItem>
 					<NavigationItem url="http://www.raymondmuller.com" icon="envelope"> Contact </NavigationItem>

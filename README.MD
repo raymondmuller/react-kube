@@ -4,6 +4,7 @@
 
 ##TODO:
 - Improve current code / Clean up code / Formatting
+- Documentation
 - JS Components
 - Tests 
 

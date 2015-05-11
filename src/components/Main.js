@@ -1,12 +1,13 @@
 const React = require('react');
 const NavigationBox = require("./NavigationBox");
-const Button = require("./Lib/Button");
-const LinkButton = require("./Lib/LinkButton");
-const SubmitButton = require("./Lib/SubmitButton");
+const Navigation = require("./Lib/Navigation");
+
+const NavigationBar = require("./Lib/NavigationBar");
+const NavigationItem = require("./Lib/NavigationItem");
+
 const Label = require("./Lib/Label");
 const Badge = require("./Lib/Badge");
 const Alert = require("./Lib/Alert");
-const Message = require("./Lib/Message");
 
 const Blocks = require("./Lib/Blocks");
 const Block = require("./Lib/Block");
@@ -23,106 +24,41 @@ const FormSection = require("./Lib/FormSection");
 
 const Table = require("./Lib/Table");
 
+const Tabs = require("./Lib/Tabs");
+
+const GetStarted = require("./GetStarted");
+const CSSComponents = require("./CSSComponents");
+const JSTools = require("./JSTools");
+
+
+
+
 class Main extends React.Component {
+
 	render() {
 		return (
 			<div className="main">
 				<NavigationBox />
+
 				<Grid>
 					<GridItem size={10}><br/></GridItem>
 					<GridItem size={80}>
 
-						<FormSection name="Get Started">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection> 
+    		<Tabs equals>
+	        <NavigationItem url="#tab1">Get Started</NavigationItem>
+					<NavigationItem url="#tab2">CSS Components</NavigationItem>
+					<NavigationItem url="#tab3">JS Components</NavigationItem>
+  			</Tabs>
 
-						<FormSection name="Typography">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection> 
+ 
+  				<GetStarted />
 
-						<FormSection name="Grid">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection> 
+					<CSSComponents />
 
-						<FormSection name="Blocks">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection> 
+					<JSTools />
 
-						<FormSection name="Tables">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection>
-
-						<FormSection name="Forms">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection>
-
-						<FormSection name="Navigation">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection>
-
-						<FormSection name="Buttons">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection>
-
-						<FormSection name="Labels">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection>
-
-						<FormSection name="Search">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection>
-
-						<FormSection name="Notifications">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection>
-
-						<FormSection name="Helpers">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection>
-
-						<FormSection name="Icons">
-							<Grid>
-								<GridItem size={50}>Preview here</GridItem>
-								<GridItem size={50}>Code Here</GridItem>
-							</Grid>
-						</FormSection>
-				
+						
+					
 					</GridItem>
 					<GridItem size={10}><br/></GridItem>
 				</Grid>

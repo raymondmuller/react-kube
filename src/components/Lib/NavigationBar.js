@@ -6,9 +6,12 @@ class NavigationBar extends React.Component {
 	render() {
 
 		let styles = classNames({
-			"navbar": true,
-			"navbar-left": this.props.left,
-			"navbar-right": this.props.right
+			"navbar": !this.props.vertical && !this.props.sub,
+			"nav": this.props.vertical || this.props.stacked || this.props.stats && !this.props.sub,
+			"nav-stacked": this.props.stacked,
+			"nav-stats": this.props.stats,
+			"navbar-left": this.props.left && !this.props.sub,
+			"navbar-right": this.props.right && !this.props.sub
 		})
 
 		let children = React.Children.map(this.props.children, function(child, i) {

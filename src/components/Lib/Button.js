@@ -24,10 +24,11 @@ class Button extends React.Component {
 	}
 	
 	render() {
+		let SPACE = " "
 		this.props.icon ? iconStyles = "fa " + "fa-" + this.props.icon : null
 		return (
-			<button className={classNames(this.props.className, styles)}>
-				{this.props.icon ? <li className={iconStyles}></li> : null }
+			<button onClick={this.props.onClick} className={classNames(this.props.className, styles)}>
+				{this.props.icon ? <li className={iconStyles}></li>: null }
 				{this.props.children}
 			</button>
 		)

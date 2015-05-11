@@ -14,6 +14,8 @@ class CheckBox extends React.Component {
 	}
 
 }
+Checkbox.propTypes = {disabled: React.PropTypes.bool };
+Checkbox.defaultProps = {disabled: false}
 
 module.exports = CheckBox;
 

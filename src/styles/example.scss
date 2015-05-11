@@ -2,11 +2,12 @@ $navbar-color: #B71C1C;
 $navbar-pills-color: #EF9A9A;
 $navbar-pills-hover-color: #D32F2F;
 
-nav {
+.navCustom {
 	background: $navbar-color;
 	padding: 30px 50px 28px;
 	height: 90px;
 }
+
 
 .navigationBarCustom > li > a {
 	color: white;
@@ -25,9 +26,4 @@ nav {
 .navbar-pills > ul > li:hover > a {
 	background: $navbar-pills-hover-color;
 	color: white;
-}
-.navbar {
-	span {
-		color: white;
-	}
 }

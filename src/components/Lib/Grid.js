@@ -8,8 +8,8 @@ class Grid extends React.Component {
 		styles = classNames({
 			"units-row": true,
 			"units-padding": this.props.padding,
-			"end": this.props.margin,
-			"units-split": this.props.disabled
+			"units-split": this.props.disabled,
+			"end": this.props.end
 		})
 		if(this.props.mobile) {
 			styles+= " units-mobile-" + this.props.mobile
@@ -18,12 +18,8 @@ class Grid extends React.Component {
 	
 	render() {
 		return (
-			<div className="units-container">
 				<div className={classNames(this.props.className, styles)}>{this.props.children}</div>
-			</div>
-		)
-	}
-
+		)}
 }
 
 module.exports = Grid;

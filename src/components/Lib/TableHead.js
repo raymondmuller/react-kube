@@ -4,11 +4,7 @@ class TableHead extends React.Component {
 
   render() {
     return (
-    	<thead className={this.props.className}>
-  			<tr>
-  				<th>{this.props.children}
-				</tr>
-  		</thead>
+  				<th className={this.props.className}>{this.props.children}</th>
     )
   }
 }
