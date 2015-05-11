@@ -6,7 +6,7 @@ class Pagination extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { active: "0-0" }
+		this.state = { active: "0" }
 	}
 	componentWillMount() {
 		styles = classNames({
@@ -14,9 +14,10 @@ class Pagination extends React.Component {
 		})
 	}
 
-	handleItemClick(index, nav) {
+	handleItemClick(index) {
+		console.log("should set active")
 		this.setState({
-			active: index + "" + nav
+			active: index
 		})	
 	}
 
