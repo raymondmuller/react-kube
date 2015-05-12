@@ -14,7 +14,7 @@ class LinkButton extends React.Component {
 
 		styles += this.props.color ? " btn-" + this.props.color : "";
 		styles += this.props.width ? " width-" + this.props.width : "";
-		
+
 		return (
 			<a className={classNames(this.props.className, styles)} href={this.props.url} target={this.props.target ? this.props.target : "_self"} >
 				{this.props.children}
