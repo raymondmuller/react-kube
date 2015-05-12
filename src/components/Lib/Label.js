@@ -8,15 +8,22 @@ class Label extends React.Component {
 			"label-outline": this.props.outline
 		});
 
-		if(this.props.color) {
-			styles += " " + "label-" + this.props.color;
-		}
+		styles += this.props.color ? " label-" + this.props.color : "";
+
 		return (
-			<span className={classNames(this.props.className, styles)}>
+			<span className={classNames(this.props.className, styles)} style={this.props.style}>
 				{this.props.children}
 			</span>
 		);
 	}
 }
+
+Label.propTypes = {
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	color: React.PropTypes.string,
+	outline: React.PropTypes.bool,
+	style: React.PropTypes.object
+};
 
 module.exports = Label;

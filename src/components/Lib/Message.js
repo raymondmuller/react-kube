@@ -31,7 +31,9 @@ class Message extends React.Component {
 
 		if(this.state.showMessage) {
 			return (
-				<div onClick={this.handleClick.bind(this)} className={classNames(this.props.className, styles)} style={messageStyle}>{this.props.children}</div>
+				<div className={classNames(this.props.className, styles)} onClick={this.handleClick.bind(this)} style={messageStyle, this.props.style}>
+					{this.props.children}
+				</div>
 			);
 		} else {
 			return ( null );
@@ -39,7 +41,13 @@ class Message extends React.Component {
 	}
 }
 
-Message.propTypes = { show: React.PropTypes.bool };
+Message.propTypes = {
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	show: React.PropTypes.bool,
+	style: React.PropTypes.object
+};
+
 Message.defaultProps = {show: false};
 
 module.exports = Message;

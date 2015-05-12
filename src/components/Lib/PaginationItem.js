@@ -20,4 +20,15 @@ class PaginationItem extends React.Component {
 	}
 }
 
+PaginationItem.propTypes = {
+	active: React.PropTypes.bool,
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	index: React.PropTypes.number,
+	onItemClick: React.PropTypes.func,
+	style: React.PropTypes.object,
+	target: React.PropTypes.string,
+	url: React.PropTypes.string
+};
+
 module.exports = PaginationItem;

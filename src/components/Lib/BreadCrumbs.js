@@ -3,28 +3,17 @@ const classNames = require("classnames");
 
 class BreadCrumbs extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.state = { active: "0-0" };
-	}
-
-	handleItemClick(index, nav) {
-		this.setState({
-			active: index + "" + nav
-		});
-	}
-
 	render() {
 		let styles = classNames({
 			"breadcrumbs": true,
 			"breadcrumbs-path": this.props.path
 		});
 		let children = React.Children.map(this.props.children, function(child, i) {
-			return React.cloneElement(child, {active: this.state.active, onItemClick: this.handleItemClick.bind(this, i), index: i});
+			return React.cloneElement(child, {active: this.props.active, index: i});
 		}, this);
 
 		return (
-			<nav className={classNames(this.props.className, styles)}>
+			<nav className={classNames(this.props.className, styles)} style={this.props.style}>
 				<ul>
 				{children}
 				</ul>
@@ -32,5 +21,13 @@ class BreadCrumbs extends React.Component {
 		);
 	}
 }
+
+BreadCrumbs.propTypes = {
+	active: React.PropTypes.bool,
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	path: React.PropTypes.bool,
+	style: React.PropTypes.object
+};
 
 module.exports = BreadCrumbs;

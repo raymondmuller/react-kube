@@ -12,16 +12,27 @@ class SubmitButton extends React.Component {
 			"btn-disabled": this.props.disabled
 		});
 
-		if(this.props.color) {
-			styles += " " + "btn-" + this.props.color;
-		}
-		if(this.props.width) {
-			styles += " " + "width-" + this.props.width;
-		}
+		styles += this.props.color ? " btn-" + this.props.color : "";
+		styles += this.props.width ? " width-" + this.props.width : "";
+
 		return (
-			<input type="submit" value={this.props.children} className={classNames(this.props.className, styles)} />
+			<input className={classNames(this.props.className, styles)} type="submit" value={this.props.children}/>
 		);
 	}
 }
+
+SubmitButton.propTypes = {
+	active: React.PropTypes.bool,
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	color: React.PropTypes.string,
+	disabled: React.PropTypes.bool,
+	icon: React.PropTypes.string,
+	left: React.PropTypes.bool,
+	onClick: React.PropTypes.func,
+	outline: React.PropTypes.bool,
+	right: React.PropTypes.bool,
+	width: React.PropTypes.bool
+};
 
 module.exports = SubmitButton;

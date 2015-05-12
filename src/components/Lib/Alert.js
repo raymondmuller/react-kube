@@ -30,13 +30,15 @@ class Alert extends React.Component {
 			"tools-alert": true
 		});
 
-		styles += this.props.color ? " tools-alert-" + this.props.color : null;
+		styles += this.props.color ? " tools-alert-" + this.props.color : "";
 
 		return (
 			<div>
 				{this.state.showAlert ?
 					<div style={wrapperStyle}>
-						<div className={classNames(this.props.className, styles)}>{this.props.children}</div>
+						<div className={classNames(this.props.className, styles)} style={this.props.style}>
+							{this.props.children}
+						</div>
 						{this.props.remove ?
 						<div onClick={this.handleClick.bind(this)} style={iconStyle}>x</div>
 						: null }
@@ -46,5 +48,14 @@ class Alert extends React.Component {
 		);
 	}
 }
+
+Alert.propTypes = {
+	children: React.PropTypes.node.isRequired,
+	className: React.PropTypes.string,
+	color: React.PropTypes.string,
+	outline: React.PropTypes.bool,
+	remove: React.PropTypes.bool,
+	style: React.PropTypes.object
+};
 
 module.exports = Alert;

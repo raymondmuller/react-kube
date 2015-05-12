@@ -1,22 +1,30 @@
 const React = require("react");
-var classNames = require("classnames");
-var styles;
+const classNames = require("classnames");
 
 class TextArea extends React.Component {
 
-	componentWillMount() {
-		if(this.props.width) {
-			styles = "width-" + this.props.width;
-		}
-	}
 	render() {
+		let styles = this.props.width ? "width-" + this.props.width : "";
+
 		return (
 			<label>
-						{this.props.label}
-						<textarea rows={this.props.rows} className={classNames(this.props.className, styles)} disabled={this.props.disabled}></textarea>
-				</label>
+				{this.props.label}
+				<textarea
+					className={classNames(this.props.className, styles)}
+					disabled={this.props.disabled}
+					rows={this.props.rows}>
+				</textarea>
+			</label>
 		);
 	}
 }
+
+TextArea.propTypes = {
+	className: React.PropTypes.string,
+	disabled: React.PropTypes.bool,
+	label: React.PropTypes.string,
+	rows: React.PropTypes.number,
+	width: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ])
+};
 
 module.exports = TextArea;

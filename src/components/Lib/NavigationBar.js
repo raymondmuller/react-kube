@@ -18,8 +18,26 @@ class NavigationBar extends React.Component {
 			return React.cloneElement(child, {active: this.props.index + "" + i === this.props.active, index: i, onItemClick: this.props.onItemClick});
 		}, this);
 
-		return ( <ul className={classNames(this.props.className, styles)}>{children}</ul> );
+		return (
+			<ul className={classNames(this.props.className, styles)} style={this.props.style}>
+				{children}
+			</ul> );
 	}
 }
+
+NavigationBar.propTypes = {
+	active: React.PropTypes.bool,
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	index: React.PropTypes.number,
+	left: React.PropTypes.bool,
+	onItemClick: React.PropTypes.func,
+	right: React.PropTypes.bool,
+	stacked: React.PropTypes.bool,
+	stats: React.PropTypes.bool,
+	style: React.PropTypes.object,
+	sub: React.PropTypes.bool,
+	vertical: React.PropTypes.bool
+};
 
 module.exports = NavigationBar;

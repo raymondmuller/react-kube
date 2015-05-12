@@ -4,7 +4,7 @@ class TableRow extends React.Component {
 
 	render() {
 		return (
-			<tbody className={this.props.className}>
+			<tbody className={this.props.className} style={this.props.style}>
 				<tr>
 					{this.props.children}
 			</tr>
@@ -12,5 +12,11 @@ class TableRow extends React.Component {
 		);
 	}
 }
+
+TableRow.propTypes = {
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	style: React.PropTypes.object
+};
 
 module.exports = TableRow;

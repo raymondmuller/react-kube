@@ -27,11 +27,11 @@ class NotificationBox extends React.Component {
 				<FormSection name="Messages">
 					<Blocks amount={2}>
 						<Block>
-							<Message id="message-1" show={true} position="relative" color="blue">This is a message </Message>
+							<Message color="blue" id="message-1" position="relative" show={true} >This is a message </Message>
 							<br/>
 							<hr/>
-							<Message id="message-2" show={this.state.showMessage} color="yellow">Click </Message>
-							<Button onClick={this.handleShowMessage.bind(this)} color="green">Show Message</Button>
+							<Message color="yellow" id="message-2" show={this.state.showMessage} >Click </Message>
+							<Button color="green" onClick={this.handleShowMessage.bind(this)} >Show Message</Button>
 						</Block>
 						<Block>
 							//TODO - Code sample and fix independent states

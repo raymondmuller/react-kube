@@ -9,12 +9,25 @@ class Grid extends React.Component {
 			"units-split": this.props.disabled,
 			"end": this.props.end
 		});
-		if(this.props.mobile) {
-			styles += " units-mobile-" + this.props.mobile;
-		}
+
+		styles += this.props.mobile ? " units-mobile-" + this.props.mobile : "";
+
 		return (
-				<div className={classNames(this.props.className, styles)}>{this.props.children}</div>
+				<div className={classNames(this.props.className, styles)} style={this.props.style}>
+					{this.props.children}
+				</div>
 		);
 	}
 }
+
+Grid.propTypes = {
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	disabled: React.PropTypes.bool,
+	end: React.PropTypes.bool,
+	mobile: React.PropTypes.number,
+	padding: React.PropTypes.bool,
+	style: React.PropTypes.object
+};
+
 module.exports = Grid;

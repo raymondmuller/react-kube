@@ -7,19 +7,30 @@ class GridItem extends React.Component {
 		let styles = classNames({
 			"unit-centered": this.props.centered,
 			"unit-push-right": this.props.right,
-			"end": this.props.margin,
-			"units-split": this.props.disabled
+			"end": this.props.end,
+			"units-split": this.props.split
 		});
-		if(this.props.size) {
-			styles += " unit-" + this.props.size;
-		}
-		if(this.props.push) {
-			styles += " unit-push-" + this.props.push;
-		}
+
+		styles += this.props.size ? " unit-" + this.props.size : "";
+		styles += this.props.push ? " unit-push-" + this.props.push : "";
+
 		return (
 			<div className={classNames(this.props.className, styles)}>{this.props.children}</div>
 		);
 	}
 }
+
+GridItem.propTypes = {
+	centered: React.PropTypes.bool,
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	end: React.PropTypes.bool,
+	outline: React.PropTypes.bool,
+	push: React.PropTypes.number,
+	right: React.PropTypes.bool,
+	size: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ]),
+	split: React.PropTypes.bool,
+	style: React.PropTypes.object
+};
 
 module.exports = GridItem;

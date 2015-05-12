@@ -23,7 +23,7 @@ class Pagination extends React.Component {
 		}, this);
 
 		return (
-			<ul className={classNames(this.props.className, styles)}>
+			<ul className={classNames(this.props.className, styles)} style={this.props.style}>
 					<li><a href={this.props.left}>&larr;</a></li>
 						{children}
 					<li><a href={this.props.right}>&rarr;</a></li>
@@ -31,6 +31,14 @@ class Pagination extends React.Component {
 		);
 	}
 }
+
+Pagination.propTypes = {
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	left: React.PropTypes.string,
+	right: React.PropTypes.string,
+	style: React.PropTypes.object
+};
 
 Pagination.defaultProps = {left: "#", right: "#"};
 

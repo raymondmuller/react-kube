@@ -5,7 +5,7 @@ class Navigation extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { active: props.active };
+		this.state = { active: false };
 	}
 
 	handleItemClick(index, nav) {
@@ -26,12 +26,22 @@ class Navigation extends React.Component {
 
 		return (
 			<header className="group">
-				<nav id={this.props.id} className={classNames(this.props.className, styles)} data-equals={this.props["data-equals"]} data-tools={this.props["data-tools"]}>{children}</nav>
+				<nav className={classNames(this.props.className, styles)} data-equals={this.props["data-equals"]} data-tools={this.props["data-tools"]} id={this.props.id} style={this.props.style}>
+					{children}
+				</nav>
 			</header>
 		);
 	}
 }
 
-Navigation.defaultProps = { active: "0-0"};
+Navigation.propTypes = {
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	fullwidth: React.PropTypes.bool,
+	id: React.PropTypes.string,
+	pills: React.PropTypes.bool,
+	style: React.PropTypes.object,
+	toggle: React.PropTypes.bool
+};
 
 module.exports = Navigation;

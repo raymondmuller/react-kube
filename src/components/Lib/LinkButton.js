@@ -12,18 +12,31 @@ class LinkButton extends React.Component {
 			"btn-disabled": this.props.disabled
 		});
 
-		if(this.props.color) {
-			styles += " " + "btn-" + this.props.color;
-		}
-		if(this.props.width) {
-			styles += " " + "width-" + this.props.width;
-		}
+		styles += this.props.color ? " btn-" + this.props.color : "";
+		styles += this.props.width ? " width-" + this.props.width : "";
+		
 		return (
-			<a href={this.props.url} target={this.props.target ? this.props.target : "_self"} className={classNames(this.props.className, styles)}>
+			<a className={classNames(this.props.className, styles)} href={this.props.url} target={this.props.target ? this.props.target : "_self"} >
 				{this.props.children}
 			</a>
 		);
 	}
 }
+
+LinkButton.propTypes = {
+	active: React.PropTypes.bool,
+	children: React.PropTypes.node,
+	className: React.PropTypes.string,
+	color: React.PropTypes.string,
+	disabled: React.PropTypes.bool,
+	icon: React.PropTypes.string,
+	left: React.PropTypes.bool,
+	onClick: React.PropTypes.func,
+	outline: React.PropTypes.bool,
+	right: React.PropTypes.bool,
+	target: React.PropTypes.string,
+	url: React.PropTypes.string,
+	width: React.PropTypes.bool
+};
 
 module.exports = LinkButton;
