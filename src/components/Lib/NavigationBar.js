@@ -12,15 +12,14 @@ class NavigationBar extends React.Component {
 			"nav-stats": this.props.stats,
 			"navbar-left": this.props.left && !this.props.sub,
 			"navbar-right": this.props.right && !this.props.sub
-		})
+		});
 
 		let children = React.Children.map(this.props.children, function(child, i) {
-    	return React.cloneElement(child, {active: this.props.index + "" + i == this.props.active, index: i, onItemClick: this.props.onItemClick})
-		}, this)
+			return React.cloneElement(child, {active: this.props.index + "" + i === this.props.active, index: i, onItemClick: this.props.onItemClick});
+		}, this);
 
-		return ( <ul className={classNames(this.props.className, styles)}>{children}</ul> )
+		return ( <ul className={classNames(this.props.className, styles)}>{children}</ul> );
 	}
-
 }
 
 module.exports = NavigationBar;

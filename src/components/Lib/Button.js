@@ -4,7 +4,6 @@ var classNames = require("classnames");
 class Button extends React.Component {
 
 	render() {
-		let iconStyles;
 		let styles = classNames({
 			"btn": true,
 			"left": this.props.left,
@@ -14,20 +13,16 @@ class Button extends React.Component {
 			"btn-disabled": this.props.disabled
 		});
 
-		if(this.props.color) {
-			styles += " btn-" + this.props.color;
-		}
-		if(this.props.width) {
-			styles += " width-" + this.props.width;
-		}
+		styles += this.props.color ? " btn-" + this.props.color : null;
+		styles += this.props.width ? " width-" + this.props.width : null;
 
-		this.props.icon ? iconStyles = "fa " + "fa-" + this.props.icon : null
+		let iconStyles = this.props.icon ? "fa fa-" + this.props.icon : null;
 		return (
 			<button onClick={this.props.onClick} className={classNames(this.props.className, styles)}>
-				{this.props.icon ? <li className={iconStyles}></li>: null }
+				{this.props.icon ? <li className={iconStyles}></li> : null }
 				{this.props.children}
 			</button>
-		)
+		);
 	}
 }
 

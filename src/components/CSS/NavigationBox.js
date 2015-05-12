@@ -13,7 +13,6 @@ const PaginationItem = require("../Lib/PaginationItem");
 class NavigationBox extends React.Component {
 
 	render() {
-
 		return (
 			<FormSection name="Navigation">
 					<Grid>
@@ -27,8 +26,7 @@ class NavigationBox extends React.Component {
 						<GridItem size={50}>//TODO - Code sample and fix active state</GridItem>
 					</Grid>
 				</FormSection>
-		
-		)
+		);
 	}
 
 }

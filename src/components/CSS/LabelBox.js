@@ -7,7 +7,7 @@ const Badge = require("../Lib/Badge");
 class LabelBox extends React.Component {
 
 	render() {
-		return(
+		return (
 			<FormSection name="Labels & Badges">
 				<Grid>
 					<GridItem size={50}>
@@ -20,9 +20,9 @@ class LabelBox extends React.Component {
 					</GridItem>
 					<GridItem size={50}>//TODO - Code sample</GridItem>
 				</Grid>
-			</FormSection> 
-		)
+			</FormSection>
+		);
 	}
 }
 
-module.exports = LabelBox;
+export default LabelBox;

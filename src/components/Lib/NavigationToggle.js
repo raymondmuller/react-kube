@@ -12,12 +12,10 @@ class NavigationToggle extends React.Component {
 		<div className={classNames(this.props.className, styles)} data-tools="navigation-toggle" data-target={this.props.target}>
 			<span>{this.props.children}</span>
 		</div>
-		)
+		);
 	}
-
 }
 
 NavigationToggle.defaultProps = { target: "#nav"};
 
 module.exports = NavigationToggle;
-

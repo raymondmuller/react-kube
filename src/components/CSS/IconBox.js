@@ -1,13 +1,13 @@
-const React = require("react");
-const FormSection = require("../Lib/FormSection");
-const Grid = require("../Lib/Grid");
-const GridItem = require("../Lib/GridItem");
-const Button = require("../Lib/Button");
+import React from "react";
+import FormSection from "../Lib/FormSection";
+import Grid from "../Lib/Grid";
+import GridItem from "../Lib/GridItem";
+import Button from "../Lib/Button";
 
 class IconBox extends React.Component {
 
 	render() {
-		return(
+		return (
 			<FormSection name="Icons">
 				<Grid>
 					<GridItem size={50}>
@@ -19,7 +19,7 @@ class IconBox extends React.Component {
 					<GridItem size={50}>//TODO - Code sample</GridItem>
 				</Grid>
 			</FormSection>
-		)
+		);
 	}
 }
 

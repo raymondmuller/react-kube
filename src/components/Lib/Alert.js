@@ -1,5 +1,5 @@
 const React = require("react");
-var classNames = require("classnames");
+const classNames = require("classnames");
 
 class Alert extends React.Component {
 
@@ -20,30 +20,30 @@ class Alert extends React.Component {
 		};
 
 		let iconStyle = {
-		  position: "absolute",
-		  top: "-2px",
-		  right: "6px",
-		  cursor: "pointer"
+			position: "absolute",
+			top: "-2px",
+			right: "6px",
+			cursor: "pointer"
 		};
 
 		let styles = classNames({
-			"tools-alert": true,
-		})
+			"tools-alert": true
+		});
 
-		if(this.props.color) {
-			styles += " " + "tools-alert-" + this.props.color
-		}
+		styles += this.props.color ? " tools-alert-" + this.props.color : null;
 
 		return (
-			<div>{this.state.showAlert ? 
-			<div style={wrapperStyle}>
-				<div className={classNames(this.props.className, styles)}>{this.props.children}</div>
-				{this.props.remove ? 
-				<div onClick={this.handleClick.bind(this)} style={iconStyle}>x</div>
+			<div>
+				{this.state.showAlert ?
+					<div style={wrapperStyle}>
+						<div className={classNames(this.props.className, styles)}>{this.props.children}</div>
+						{this.props.remove ?
+						<div onClick={this.handleClick.bind(this)} style={iconStyle}>x</div>
+						: null }
+					</div>
 				: null }
 			</div>
-				: null } </div>
-		)
+		);
 	}
 }
 

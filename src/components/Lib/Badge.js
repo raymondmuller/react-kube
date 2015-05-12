@@ -1,26 +1,19 @@
 const React = require("react");
-var classNames = require("classnames");
-var styles;
+const classNames = require("classnames");
 
 class Badge extends React.Component {
 
-	componentWillMount() {
-		styles = classNames({
+	render() {
+		let styles = classNames({
 			"badge": true,
 			"badge-small": this.props.small
-		})
+		});
 
-		if(this.props.color) {
-			styles += " " + "badge-" + this.props.color
-		}
-	}
-	
-	render() {
+		styles += this.props.color ? " badge-" + this.props.color : null;
 		return (
 			<span className={classNames(this.props.className, styles)}>{this.props.children}</span>
-		)
+		);
 	}
-
 }
 
 module.exports = Badge;

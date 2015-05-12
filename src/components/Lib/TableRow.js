@@ -2,15 +2,15 @@ const React = require("react");
 
 class TableRow extends React.Component {
 
-  render() {
-    return (
-    	<tbody className={this.props.className}>
-  			<tr>
-  				{this.props.children}
+	render() {
+		return (
+			<tbody className={this.props.className}>
+				<tr>
+					{this.props.children}
 			</tr>
-  		</tbody>
-    )
-  }
+			</tbody>
+		);
+	}
 }
 
 module.exports = TableRow;
