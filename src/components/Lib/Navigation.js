@@ -6,11 +6,12 @@ class Navigation extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { active: "0-0" }
+		this.state = { active: props.active }
 	}
 	componentWillMount() {
 		styles = classNames({
 			"navbar-pills": this.props.pills,
+			"nav-toggle": this.props.toggle,
 			"fullwidth": this.props.fullwidth
 		})
 	}
@@ -28,11 +29,13 @@ class Navigation extends React.Component {
 
 		return (
 			<header className="group">
-				<nav className={classNames(this.props.className, styles)} data-equals={this.props["data-equals"]} data-tools={this.props["data-tools"]}>{children}</nav>
+				<nav id={this.props.id} className={classNames(this.props.className, styles)} data-equals={this.props["data-equals"]} data-tools={this.props["data-tools"]}>{children}</nav>
 			</header>
 		)
 	}
 
 }
+
+Navigation.defaultProps = { active: "0-0"}
 
 module.exports = Navigation;

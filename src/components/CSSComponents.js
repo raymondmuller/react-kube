@@ -33,7 +33,6 @@ class CSSComponents extends React.Component {
 
 		return(
 			<div id="tab2">
-
 				<TypographyBox />
 				<GridBox />
 				<BlockBox />
@@ -44,16 +43,8 @@ class CSSComponents extends React.Component {
 				<ButtonBox />
 				<SearchBox />
 				<NotificationBox />
-
-				<FormSection name="Helpers">
-					<Grid>
-						<p>No React stuff going on here (yet), please refer to the</p>
-						<LinkButton color="blue" url="http://imperavi.com/kube/css/helpers/" target="new">Official Kube Documentation</LinkButton>
-					</Grid>
-				</FormSection> 
-
 				<IconBox />
-		</div>
+			</div>
 		)
 	}
 

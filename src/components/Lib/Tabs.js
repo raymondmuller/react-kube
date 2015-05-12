@@ -21,7 +21,7 @@ class Tabs extends React.Component {
 		this.setState({
 			active: index + "" + nav
 		})	
-	}
+	}	
 
 	render() {
 			var children = React.Children.map(this.props.children, function(child, i) {
@@ -29,7 +29,7 @@ class Tabs extends React.Component {
 		}, this)
 
 		return (
-			<nav className={classNames(this.props.className, styles)} data-tools="tabs" data-equals="true">
+			<nav className={classNames(this.props.className, styles)} data-tools="tabs" data-equals={this.props.equals}>
 				<ul>{children}</ul>
 			</nav>
 		)

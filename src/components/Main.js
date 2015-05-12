@@ -44,7 +44,7 @@ class Main extends React.Component {
 					<GridItem size={10}><br/></GridItem>
 					<GridItem size={80}>
 
-    		<Tabs equals>
+    		<Tabs equals={false}>
 	        <NavigationItem url="#tab1">Get Started</NavigationItem>
 					<NavigationItem url="#tab2">CSS Components</NavigationItem>
 					<NavigationItem url="#tab3">JS Components</NavigationItem>
