@@ -17,7 +17,7 @@ class NavigationBox extends React.Component {
 				</NavigationBar>
 				<NavigationBar right>
 					<form action="" className="right width-70">
-				        <input type="text" className="input-search input-search-icon width-100" placeholder="Search" />
+				        <input type="text" className="input-search input-search-icon width-100" placeholder="not working yet" />
 				    </form>
 				</NavigationBar>
 			</Navigation>

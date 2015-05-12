@@ -100,13 +100,16 @@ gulp.task("reload", function () {
 });
 
 gulp.task("opn", function () {
-    opn("http://localhost:8080");
+    opn("http://localhost:3000");
 });
 
 gulp.task("server", function () {
     connect.server({
         root: "./build",
-        livereload: true
+        livereload:{
+            port: 35730
+        },
+        port: 3000
     });
 });
 

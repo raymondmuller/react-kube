@@ -16,7 +16,7 @@ class ButtonBox extends React.Component {
 						<Button color="red">Normal</Button> <span> </span>
 						<Button outline color="yellow">Outline</Button><span> </span>
 						<hr/>
-							<SubmitButton color="blue">Submit</SubmitButton> <br/>
+							<SubmitButton color="blue">Submit</SubmitButton> <br/><br/>
 							<LinkButton color="green">LinkButton</LinkButton>
 					</GridItem>
 					<GridItem size={50}>//TODO - Code sample</GridItem>

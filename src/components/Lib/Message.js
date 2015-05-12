@@ -11,6 +11,7 @@ class Message extends React.Component {
 	handleClick() {
 		this.state.showMessage ? this.setState({showMessage: false}) : null
 	}
+
 	
 	componentWillReceiveProps(nextProps) {
 		this.setState({
@@ -20,6 +21,11 @@ class Message extends React.Component {
 
 	render() {
 			let styles;
+
+			this.props.color ?
+			styles = "tools-message tools-message-" + this.props.color
+		 : styles="tools-message";
+		 
 			let messageStyle = {
 				top: this.props.top,
 				right: this.props.right,
@@ -28,10 +34,6 @@ class Message extends React.Component {
 				position: this.props.position,
 				display: "block !important"
 			}
-
-			this.props.color ?
-			styles = "tools-message tools-message-" + this.props.color
-		 : styles="tools-message";
 
 			if(this.state.showMessage) {
 				return (

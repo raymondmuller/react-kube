@@ -28,7 +28,7 @@ class NavigationItem extends React.Component {
 
 		return (
 			<li className={classNames(this.props.className, styles)} index={this.props.index} onClick={this.handleClick.bind(this)}>
-			<a href={this.props.url} target={this.props.target ? this.props.target : "_self"} className={iconStyles}>
+				<a href={this.props.url} target={this.props.target ? this.props.target : "_self"} className={iconStyles}>
 				{this.props.children}
 			</a>
 		</li>)

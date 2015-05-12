@@ -5,13 +5,14 @@ const GridItem = require("./Lib/GridItem");
 const Blocks = require("./Lib/Blocks");
 const Block = require("./Lib/Block");
 
+const TypographyBox = require("./lib/TypographyBox");
 const GridBox = require("./CSS/GridBox");
 const BlockBox = require("./CSS/BlockBox");
 const TableBox = require("./CSS/TableBox");
 const LabelBox = require("./CSS/LabelBox");
-
+const SearchBox = require("./CSS/SearchBox");
 const ButtonBox = require("./CSS/ButtonBox");
-
+const FormBox = require("./CSS/FormBox");
 const NavigationBox = require("./CSS/NavigationBox");
 
 const NotificationBox = require("./CSS/NotificationBox");
@@ -32,44 +33,24 @@ class CSSComponents extends React.Component {
 
 		return(
 			<div id="tab2">
-				<FormSection name="Typography">
-							<Grid>
-								<p>No React stuff going on here, please refer to the</p>
-								<LinkButton color="blue" url="http://imperavi.com/kube/css/typography/" target="new">Official Kube Documentation</LinkButton>
-							</Grid>
-						</FormSection> 
 
+				<TypographyBox />
 				<GridBox />
 				<BlockBox />
 				<TableBox />
 				<LabelBox />
-
-				<FormSection name="Forms">
-					<Grid>
-						<GridItem size={50}>Preview here</GridItem>
-						<GridItem size={50}>//TODO - Code sample</GridItem>
-					</Grid>
-				</FormSection>
-
+				<FormBox />
 				<NavigationBox />
-
 				<ButtonBox />
-
-				<FormSection name="Search">
-					<Grid>
-						<GridItem size={50}>Preview here</GridItem>
-						<GridItem size={50}>//TODO - Code sample</GridItem>
-					</Grid>
-				</FormSection>
-
+				<SearchBox />
 				<NotificationBox />
 
 				<FormSection name="Helpers">
 					<Grid>
-						<GridItem size={50}>Preview here</GridItem>
-						<GridItem size={50}>//TODO - Code sample</GridItem>
+						<p>No React stuff going on here (yet), please refer to the</p>
+						<LinkButton color="blue" url="http://imperavi.com/kube/css/helpers/" target="new">Official Kube Documentation</LinkButton>
 					</Grid>
-				</FormSection>
+				</FormSection> 
 
 				<IconBox />
 		</div>

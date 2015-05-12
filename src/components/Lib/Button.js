@@ -1,12 +1,11 @@
 const React = require("react");
 var classNames = require("classnames");
-var styles;
-var iconStyles;
 
 class Button extends React.Component {
 
-	componentWillMount() {
-		styles = classNames({
+	render() {
+		let iconStyles;
+		let styles = classNames({
 			"btn": true,
 			"left": this.props.left,
 			"right": this.props.right,
@@ -16,15 +15,12 @@ class Button extends React.Component {
 		});
 
 		if(this.props.color) {
-			styles += " " + "btn-" + this.props.color;
+			styles += " btn-" + this.props.color;
 		}
 		if(this.props.width) {
-			styles += " " + "width-" + this.props.width;
+			styles += " width-" + this.props.width;
 		}
-	}
-	
-	render() {
-		let SPACE = " "
+
 		this.props.icon ? iconStyles = "fa " + "fa-" + this.props.icon : null
 		return (
 			<button onClick={this.props.onClick} className={classNames(this.props.className, styles)}>
@@ -33,7 +29,6 @@ class Button extends React.Component {
 			</button>
 		)
 	}
-
 }
 
 module.exports = Button;

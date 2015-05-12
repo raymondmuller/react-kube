@@ -1,7 +1,5 @@
 const React = require("react");
 var classNames = require("classnames");
-var styles;
-var wrapperStyle;
 
 class Alert extends React.Component {
 
@@ -10,21 +8,6 @@ class Alert extends React.Component {
 		this.state = { showAlert: true };
 	}
 
-	componentWillMount() {
-
-		wrapperStyle = {
-			position: 'relative'
-		};
-
-		styles = classNames({
-			"tools-alert": true
-		})
-
-		if(this.props.color) {
-			styles += " " + "tools-alert-" + this.props.color
-		}
-	}
-	
 	handleClick() {
 		if(this.props.remove) {
 			this.setState({ showAlert: false });
@@ -32,12 +15,32 @@ class Alert extends React.Component {
 	}
 
 	render() {
+
+		let wrapperStyle = {
+			position: "relative"
+		};
+
+		let iconStyle = {
+		  position: "absolute",
+		  top: "0",
+		  right: "6px",
+		  cursor: "pointer"
+		};
+
+		let styles = classNames({
+			"tools-alert": true
+		})
+
+		if(this.props.color) {
+			styles += " " + "tools-alert-" + this.props.color
+		}
+
 		return (
 			<div>{this.state.showAlert ? 
-			<div className="react-alert-wrapper">
+			<div style={wrapperStyle}>
 				<div className={classNames(this.props.className, styles)}>{this.props.children}</div>
 				{this.props.remove ? 
-				<div className="fa fa-times" onClick={this.handleClick.bind(this)}></div>
+				<div onClick={this.handleClick.bind(this)} style={iconStyle}>x</div>
 				: null }
 			</div>
 				: null } </div>

@@ -23,10 +23,16 @@ class TableBox extends React.Component {
 							<TableHead>header 4</TableHead>
 							</TableHeader>
 							<TableRow>
-								<TableItem>Item 1 </TableItem>
-								<TableItem>Item 2 </TableItem>
-								<TableItem>Item 3 </TableItem>
-								<TableItem>Item 4 </TableItem>
+								<TableItem>Item 1-1 </TableItem>
+								<TableItem>Item 1-2 </TableItem>
+								<TableItem>Item 1-3 </TableItem>
+								<TableItem>Item 1-4 </TableItem>
+							</TableRow>
+							<TableRow>
+								<TableItem>Item 2-1 </TableItem>
+								<TableItem>Item 2-2 </TableItem>
+								<TableItem>Item 2-3 </TableItem>
+								<TableItem>Item 2-4 </TableItem>
 							</TableRow>
 						</Table>
 						

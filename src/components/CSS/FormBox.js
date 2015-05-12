@@ -3,6 +3,11 @@ const FormSection = require("../Lib/FormSection");
 const Grid = require("../Lib/Grid");
 const GridItem = require("../Lib/GridItem");
 
+const Form = require("../Lib/Form");
+const Input = require("../lib/Input");
+const FormList = require("../lib/FormList");
+const Button = require("../lib/Button");
+
 class FormBox extends React.Component {
 
 	render() {
@@ -10,14 +15,45 @@ class FormBox extends React.Component {
 			<FormSection name="Forms">
 				<Grid>
 					<GridItem size={50}>
-						<Label color="red">Normal</Label> <span> </span>
-						<Label outline color="yellow">Outline</Label><span> </span>
-						<Label outline color="black">Black</Label> <br/>
-						<hr/>
-						<Badge>1</Badge><span> </span>
-						<Badge outline color="green">s</Badge>
+					<Form>
+						<FormSection name="Form Section">
+							<FormList>
+								<Input width={100} placeholder="normal input (width=100)"/>
+							</FormList>
+							<FormList>
+								<Input width={100} required label="With a label"/><br/>
+							</FormList>
+							<FormList>
+								<Input width={100} label="With a label" description="and a description" /><br/>
+							</FormList>
+							<FormList>
+								<Input width={100} success successMessage="Good job!" label="Success!"  /><br/>
+							</FormList>
+							<FormList>
+								<Input width={50} error errorMessage="Oh no!" label="Error!"  /><br/>
+							</FormList>
+							<FormList className="btn-black">
+								<Input width={100} black placeholder="on black"  /><br/>
+							</FormList>
+							<FormList>
+								<Button color="green">Buttons</Button><span> </span>
+							</FormList>
+						</FormSection>
+						<FormSection name="Example">
+							<FormList>
+								<Input width={100} required label="E-mail"/>
+							</FormList>
+							<FormList>
+								<Input width={100} required type="password" label="Password"/>
+							</FormList>
+							<FormList>
+								<Button color="green">Login</Button><span> </span>
+								<Button color="blue">Sign Up</Button>
+							</FormList>
+						</FormSection>
+					</Form>
 					</GridItem>
-					<GridItem size={50}>//TODO - Code sample</GridItem>
+					<GridItem size={50}>//TODO - Code sample - Validations - </GridItem>
 				</Grid>
 			</FormSection> 
 		)

@@ -6,7 +6,7 @@ class Pagination extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { active: "0" }
+		this.state = { active: "1" }
 	}
 	componentWillMount() {
 		styles = classNames({
@@ -23,7 +23,7 @@ class Pagination extends React.Component {
 
 	render() {
 			var children = React.Children.map(this.props.children, function(child, i) {
-    return React.cloneElement(child, {active: this.state.active, onItemClick: this.handleItemClick.bind(this, i), index: i})
+    return React.cloneElement(child, {active: i === this.state.active, onItemClick: this.handleItemClick.bind(this, i), index: i})
 		}, this)
 
 		return (

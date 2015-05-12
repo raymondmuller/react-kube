@@ -5,6 +5,7 @@
 ##TODO:
 - Improve current code / Clean up code / Formatting
 - Documentation
+- Use React Mixins to reuse common code (ES6)
 - JS Components
 - Tests 
 
