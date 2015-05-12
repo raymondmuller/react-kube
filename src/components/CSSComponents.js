@@ -8,6 +8,14 @@ const Block = require("./Lib/Block");
 const GridBox = require("./CSS/GridBox");
 const BlockBox = require("./CSS/BlockBox");
 const TableBox = require("./CSS/TableBox");
+const LabelBox = require("./CSS/LabelBox");
+
+const ButtonBox = require("./CSS/ButtonBox");
+
+const NavigationBox = require("./CSS/NavigationBox");
+
+const NotificationBox = require("./CSS/NotificationBox");
+const IconBox = require("./CSS/IconBox");
 
 const Message = require("./Lib/Message");
 const Button = require("./Lib/Button");
@@ -19,20 +27,6 @@ const PaginationItem = require("./Lib/PaginationItem");
 
 
 class CSSComponents extends React.Component {
-
-	constructor(props) {
-		super(props);
-		this.state = {
-			showMessage: false
-		}
-	}
-
-	handleShowMessage() {
-		console.log("show message")
-		this.setState({
-			showMessage: true
-		});
-	}
 
 	render() {
 
@@ -48,6 +42,7 @@ class CSSComponents extends React.Component {
 				<GridBox />
 				<BlockBox />
 				<TableBox />
+				<LabelBox />
 
 				<FormSection name="Forms">
 					<Grid>
@@ -56,31 +51,9 @@ class CSSComponents extends React.Component {
 					</Grid>
 				</FormSection>
 
-				<FormSection name="Navigation">
-					<Grid>
-						<GridItem size={50}>
-							<Pagination>
-								<PaginationItem> hi </PaginationItem>
-								<PaginationItem> yo </PaginationItem>
-							</Pagination>
-						</GridItem>
-						<GridItem size={50}>//TODO - Code sample</GridItem>
-					</Grid>
-				</FormSection>
+				<NavigationBox />
 
-				<FormSection name="Buttons">
-					<Grid>
-						<GridItem size={50}>Preview here</GridItem>
-						<GridItem size={50}>//TODO - Code sample</GridItem>
-					</Grid>
-				</FormSection>
-
-				<FormSection name="Labels">
-					<Grid>
-						<GridItem size={50}>Preview here</GridItem>
-						<GridItem size={50}>//TODO - Code sample</GridItem>
-					</Grid>
-				</FormSection>
+				<ButtonBox />
 
 				<FormSection name="Search">
 					<Grid>
@@ -89,28 +62,7 @@ class CSSComponents extends React.Component {
 					</Grid>
 				</FormSection>
 
-				<FormSection name="Notifications">
-					<FormSection name="Messages">
-						<Blocks amount={2}>
-							<Block>
-								<Message id="message-1" show={true} position="relative" color="blue">This is a message </Message>
-								<br/>
-								<hr/>
-								<Message id="message-2" show={this.state.showMessage} color="yellow">Click </Message>
-								<Button onClick={this.handleShowMessage.bind(this)} color="green">Show Message</Button>
-							</Block>
-							<Block>
-								//TODO - Code sample
-							</Block>
-						</Blocks>
-					</FormSection>
-					<FormSection name="Alerts">
-						<Grid>
-							<GridItem size={50}>Preview here</GridItem>
-							<GridItem size={50}>//TODO - Code sample</GridItem>
-						</Grid>
-					</FormSection>
-				</FormSection>
+				<NotificationBox />
 
 				<FormSection name="Helpers">
 					<Grid>
@@ -119,17 +71,7 @@ class CSSComponents extends React.Component {
 					</Grid>
 				</FormSection>
 
-				<FormSection name="Icons">
-					<Grid>
-						<GridItem size={50}>
-							For now you can (only) add items to buttons. I will extend this functionality to more components later:
-							<br/>
-							<Button icon="github"> Github</Button>
-							<Button color="blue" icon="facebook"> Facebook</Button>
-						</GridItem>
-						<GridItem size={50}>//TODO - Code sample</GridItem>
-					</Grid>
-				</FormSection>
+				<IconBox />
 		</div>
 		)
 	}

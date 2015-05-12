@@ -18,18 +18,17 @@ class Search extends React.Component {
 	render() {
 			
 		return (
-			<form action={this.props.action} className={classNames(this.props.className, "forms")}>
+			<div>
 			{this.props.button ? 
 				<div className="input-groups">
 					<input type="text" className={styles} placeholder={this.props.placeholder}/>
 					<span className="btn-append">
 			            <button className="btn">{this.props.button}</button>
 			        </span>
-				</div> : <input type="text" className={styles} placeholder={this.props.placeholder}/> }
-
-			</form>
+					</div> : <input type="text" className={styles} placeholder={this.props.placeholder}/> }
+			</div>
 		)
-}
+	}
 }
 
 Search.defaultProps = {rounded: false};

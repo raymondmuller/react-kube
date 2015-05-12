@@ -11,6 +11,7 @@ class Grid extends React.Component {
 			"units-split": this.props.disabled,
 			"end": this.props.end
 		})
+		
 		if(this.props.mobile) {
 			styles+= " units-mobile-" + this.props.mobile
 		}
