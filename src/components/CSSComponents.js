@@ -5,7 +5,7 @@ const GridItem = require("./Lib/GridItem");
 const Blocks = require("./Lib/Blocks");
 const Block = require("./Lib/Block");
 
-const TypographyBox = require("./lib/TypographyBox");
+const TypographyBox = require("./CSS/TypographyBox");
 const GridBox = require("./CSS/GridBox");
 const BlockBox = require("./CSS/BlockBox");
 const TableBox = require("./CSS/TableBox");

@@ -15,20 +15,19 @@ class Alert extends React.Component {
 	}
 
 	render() {
-
 		let wrapperStyle = {
 			position: "relative"
 		};
 
 		let iconStyle = {
 		  position: "absolute",
-		  top: "0",
+		  top: "-2px",
 		  right: "6px",
 		  cursor: "pointer"
 		};
 
 		let styles = classNames({
-			"tools-alert": true
+			"tools-alert": true,
 		})
 
 		if(this.props.color) {
