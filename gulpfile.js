@@ -106,10 +106,10 @@ gulp.task("opn", function () {
 gulp.task("server", function () {
     connect.server({
         root: "./build",
-        livereload:{
+        port: 3000,
+        livereload: {
             port: 35730
-        },
-        port: 3000
+        }
     });
 });
 

@@ -11,7 +11,7 @@ const TableItem = require("../Lib/TableItem");
 class TableBox extends React.Component {
 
 	render() {
-		return(
+		return (
 			<FormSection name="Table">
 				<Grid>
 					<GridItem size={50}>
@@ -35,12 +35,11 @@ class TableBox extends React.Component {
 								<TableItem>Item 2-4 </TableItem>
 							</TableRow>
 						</Table>
-						
 					</GridItem>
 					<GridItem size={50}>//TODO - Code sample and improve demo</GridItem>
 				</Grid>
-			</FormSection> 
-		)
+			</FormSection>
+		);
 	}
 }
 

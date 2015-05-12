@@ -12,18 +12,17 @@ class NotificationBox extends React.Component {
 		super(props);
 		this.state = {
 			showMessage: false
-		}
+		};
 	}
 
 	handleShowMessage() {
-		console.log("show message")
 		this.setState({
 			showMessage: true
 		});
 	}
 
 	render() {
-		return(
+		return (
 			<FormSection name="Notifications">
 				<FormSection name="Messages">
 					<Blocks amount={2}>
@@ -42,18 +41,16 @@ class NotificationBox extends React.Component {
 				<FormSection name="Alerts">
 					<Blocks amount={2}>
 						<Block>
-
-						<Alert>I am a simple alert</Alert><br/>
-						<Alert color="yellow">Warning!</Alert><br/>
-						<Alert color="red" remove>Error! (I can be removed, since I have the "remove" attribute)</Alert>
-						<Alert color="green">Success</Alert>
-
+							<Alert>I am a simple alert</Alert><br/>
+							<Alert color="yellow">Warning!</Alert><br/>
+							<Alert color="red" remove>Error! (I can be removed, since I have the "remove" attribute)</Alert>
+							<Alert color="green">Success</Alert>
 						</Block>
 						<Block size={50}>//TODO - Code sample</Block>
 					</Blocks>
 				</FormSection>
-			</FormSection> 
-		)
+			</FormSection>
+		);
 	}
 }
 

@@ -11,7 +11,7 @@ const Button = require("../lib/Button");
 class FormBox extends React.Component {
 
 	render() {
-		return(
+		return (
 			<FormSection name="Forms">
 				<Grid>
 					<GridItem size={50}>
@@ -27,13 +27,13 @@ class FormBox extends React.Component {
 								<Input width={100} label="With a label" description="and a description" /><br/>
 							</FormList>
 							<FormList>
-								<Input width={100} success successMessage="Good job!" label="Success!"  /><br/>
+								<Input width={100} success successMessage="Good job!" label="Success!" /><br/>
 							</FormList>
 							<FormList>
-								<Input width={50} error errorMessage="Oh no!" label="Error!"  /><br/>
+								<Input width={50} error errorMessage="Oh no!" label="Error!" /><br/>
 							</FormList>
 							<FormList className="btn-black">
-								<Input width={100} black placeholder="on black"  /><br/>
+								<Input width={100} black placeholder="on black" /><br/>
 							</FormList>
 							<FormList>
 								<Button color="green">Buttons</Button><span> </span>
@@ -55,8 +55,8 @@ class FormBox extends React.Component {
 					</GridItem>
 					<GridItem size={50}>//TODO - Code sample - Validations - </GridItem>
 				</Grid>
-			</FormSection> 
-		)
+			</FormSection>
+		);
 	}
 }
 

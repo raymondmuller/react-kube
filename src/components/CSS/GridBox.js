@@ -6,15 +6,13 @@ const GridItem = require("../Lib/GridItem");
 class GridBox extends React.Component {
 
 	render() {
-		return(
+		return (
 			<FormSection name="Grid">
 				<Grid>
 					<GridItem size={50}>
-
 						<Grid>
 							<GridItem className="btn-yellow text-centered" size={100}>100%</GridItem>
 						</Grid>
-
 						<Grid>
 							<GridItem className="btn-red text-centered" size={50}>
 								50%
@@ -89,13 +87,11 @@ class GridBox extends React.Component {
 								20%
 							</GridItem>
 						</Grid>
-
-
 					</GridItem>
 					<GridItem size={50}>//TODO - Code sample</GridItem>
 				</Grid>
-			</FormSection> 
-		)
+			</FormSection>
+		);
 	}
 }
 

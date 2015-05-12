@@ -30,6 +30,7 @@
         "react/wrap-multilines": 1
     },
      "globals": {
+        "document": true,
         "chai": true,
         "console": false,
         "React":true,

@@ -5,7 +5,7 @@ const Grid = require("./Lib/Grid");
 class GetStarted extends React.Component {
 
 	render() {
-		return(
+		return (
 			<div id="tab1">
 				<FormSection name="Get Started">
 					<Grid>
@@ -17,9 +17,9 @@ class GetStarted extends React.Component {
 						- Add Tests <br/>
 						- Add More Docs and Demos <br/>
 					</Grid>
-				</FormSection> 
+				</FormSection>
 			</div>
-		)
+		);
 	}
 }
 

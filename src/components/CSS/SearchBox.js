@@ -7,7 +7,7 @@ const Search = require("../Lib/Search");
 class SearchBox extends React.Component {
 
 	render() {
-		return(
+		return (
 			<FormSection name="Search">
 					<Grid>
 						<GridItem size={50}>
@@ -16,8 +16,8 @@ class SearchBox extends React.Component {
 						</GridItem>
 						<GridItem size={50}>//TODO - Code sample</GridItem>
 					</Grid>
-			</FormSection> 
-		)
+			</FormSection>
+		);
 	}
 }
 

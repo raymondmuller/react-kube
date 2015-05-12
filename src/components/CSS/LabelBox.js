@@ -25,4 +25,4 @@ class LabelBox extends React.Component {
 	}
 }
 
-export default LabelBox;
+module.exports = LabelBox;

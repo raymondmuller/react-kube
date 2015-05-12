@@ -9,7 +9,7 @@ const LinkButton = require("../Lib/LinkButton");
 class ButtonBox extends React.Component {
 
 	render() {
-		return(
+		return (
 			<FormSection name="Buttons">
 				<Grid>
 					<GridItem size={50}>
@@ -21,8 +21,8 @@ class ButtonBox extends React.Component {
 					</GridItem>
 					<GridItem size={50}>//TODO - Code sample</GridItem>
 				</Grid>
-			</FormSection> 
-		)
+			</FormSection>
+		);
 	}
 }
 

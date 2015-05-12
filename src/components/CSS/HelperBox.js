@@ -6,7 +6,7 @@ const GridItem = require("../Lib/GridItem");
 class HelperBox extends React.Component {
 
 	render() {
-		return(
+		return (
 			<FormSection name="Helpers">
 				<Grid>
 					<GridItem size={50}>
@@ -19,8 +19,8 @@ class HelperBox extends React.Component {
 					</GridItem>
 					<GridItem size={50}>//TODO - Code sample</GridItem>
 				</Grid>
-			</FormSection> 
-		)
+			</FormSection>
+		);
 	}
 }
 

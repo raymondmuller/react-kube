@@ -8,7 +8,7 @@ const Block = require("../Lib/Block");
 class BlockBox extends React.Component {
 
 	render() {
-		return(
+		return (
 			<FormSection name="Block">
 				<Grid>
 					<GridItem size={50}>
@@ -31,8 +31,8 @@ class BlockBox extends React.Component {
 					</GridItem>
 					<GridItem size={50}>//TODO - Code sample</GridItem>
 				</Grid>
-			</FormSection> 
-		)
+			</FormSection>
+		);
 	}
 }
 

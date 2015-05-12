@@ -5,15 +5,15 @@ const Grid = require("./Lib/Grid");
 class JSTools extends React.Component {
 
 	render() {
-		return(
+		return (
 			<div id="tab3">
 				<FormSection name="JS Tools	">
 					<Grid>
 						Working on it!
 					</Grid>
-				</FormSection> 
+				</FormSection>
 			</div>
-		)
+		);
 	}
 }
 

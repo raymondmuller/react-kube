@@ -6,10 +6,10 @@ const NavigationToggle = require("./lib/NavigationToggle");
 
 class NavigationBox extends React.Component {
 
-	render() {
+render() {
 
-		return (
-			<span>
+	return (
+		<span>
 			<NavigationToggle target="#navbar-1"> Menu </NavigationToggle>
 			<Navigation id="#navbar-1" toggle className="navCustom">
 				<NavigationBar className="navigationBarCustom" left>
@@ -20,14 +20,13 @@ class NavigationBox extends React.Component {
 				</NavigationBar>
 				<NavigationBar className="hide-on-mobile" right>
 					<form action="" className="right width-70">
-				        <input type="text" className="input-search input-search-icon width-100" placeholder="not working yet" />
-				    </form>
+							<input type="text" className="input-search input-search-icon width-100" placeholder="not working yet" />
+						</form>
 				</NavigationBar>
 			</Navigation>
-			</span>
-		)
+		</span>
+		);
 	}
-
 }
 
 module.exports = NavigationBox;
