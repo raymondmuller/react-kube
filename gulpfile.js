@@ -42,7 +42,7 @@ gulp.task("compile:production", function () {
         .pipe(source("bundle.js"))
         .pipe(buffer())
         .pipe(uglify())
-        .pipe(gulp.dest("./dist/js"));
+        .pipe(gulp.dest("./production/js"));
 });
 
 gulp.task("compile:lib", function () {
@@ -56,16 +56,18 @@ gulp.task("compile:lib", function () {
         .bundle()
         .pipe(source("react-kube.js"))
         .pipe(buffer())
-        .pipe(gulp.dest("./lib/dist"))
+        .pipe(gulp.dest("./dist/dist"))
         .pipe(buffer())
         .pipe(uglify())
         .pipe(rename("react-kube.min.js"))
-        .pipe(gulp.dest("./lib/dist"));
+        .pipe(gulp.dest("./dist/dist"));
 });
 
 gulp.task("sass", function () {
     gulp.src("./src/styles/react-kube.scss")
         .pipe(sass())
+        .pipe(buffer())
+        .pipe(rename("kube.css"))
         .pipe(gulp.dest("./build/css"));
 });
 
@@ -73,8 +75,9 @@ gulp.task("sass:dist", function () {
     gulp.src("src/styles/react-kube.scss")
         .pipe(sass())
         .pipe(buffer())
+        .pipe(rename("kube.css"))
         .pipe(minifyCss({compatibility: "ie8"}))
-        .pipe(gulp.dest("dist/css"));
+        .pipe(gulp.dest("production/css"));
 });
 
 gulp.task("sass:lib", function () {
@@ -82,11 +85,11 @@ gulp.task("sass:lib", function () {
         .pipe(sass())
         .pipe(buffer())
         .pipe(rename("kube.css"))
-        .pipe(gulp.dest("lib/dist/"))
+        .pipe(gulp.dest("dist/dist/"))
         .pipe(buffer())
         .pipe(minifyCss({compatibility: "ie8"}))
         .pipe(rename("kube.min.css"))
-        .pipe(gulp.dest("lib/dist/"));
+        .pipe(gulp.dest("dist/dist"));
 });
 
 gulp.task("copy", function () {
@@ -104,21 +107,27 @@ gulp.task("copy", function () {
 
 gulp.task("copy:production", function () {
     gulp.src("src/index.html")
-        .pipe(gulp.dest("./dist"));
+        .pipe(gulp.dest("./production"));
 
     gulp.src("src/styles/*.css")
-        .pipe(gulp.dest("./dist/css"));
+        .pipe(gulp.dest("./production/css"));
 
     gulp.src("src/assets/**/*")
-        .pipe(gulp.dest("./dist/assets"));
+        .pipe(gulp.dest("./production/assets"));
 });
 
 gulp.task("copy:lib", function () {
-    gulp.src("src/components/lib/*.js")
-        .pipe(gulp.dest("./lib/src/js"));
+    gulp.src("package.json")
+        .pipe(gulp.dest("./dist"));
 
-    gulp.src("src/styles/*.scss")
-        .pipe(gulp.dest("./dist/scss"));
+    gulp.src("README.MD")
+        .pipe(gulp.dest("./dist"));
+
+    gulp.src("src/components/lib/**/*.js")
+        .pipe(gulp.dest("./dist/src/js"));
+
+    gulp.src("src/styles/**/*.scss")
+        .pipe(gulp.dest("./dist/src/scss"));
 });
 
 gulp.task("clean", function (cb) {
@@ -126,7 +135,7 @@ gulp.task("clean", function (cb) {
 });
 
 gulp.task("clean:production", function (cb) {
-    return del(["./dist"], cb);
+    return del(["./production/assets", "./production/css", "./production/js", "./production/index.html"], cb);
 });
 
 gulp.task("watch", function () {
@@ -162,16 +171,16 @@ gulp.task("test", function(cb) {
 });
 
 gulp.task("default", function () {
-    runSequence(["compile:lib"], "sass:lib", "copy:lib");
+    runSequence(["test"], ["compile:lib"], "sass:lib", "copy:lib");
 });
 
 gulp.task("demo", function () {
-    runSequence(["clean"], ["test"], ["compile", "sass", "copy"], "server", "opn", "watch");
+    runSequence(["clean"], ["compile", "sass", "copy"], "server", "opn", "watch");
 });
 
 gulp.task("build", ["default"]);
 
 gulp.task("production", function () {
-    runSequence(["clean:production"], ["compile:production"], "sass:dist", "copy:production");
+    runSequence(["clean:production"], ["test"], ["compile:production"], "sass:dist", "copy:production");
 });
 

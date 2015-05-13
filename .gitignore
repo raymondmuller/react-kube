@@ -1,5 +1,6 @@
 *.DS_Store
 dist
 build
+production
 node_modules
 .idea
