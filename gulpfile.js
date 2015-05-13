@@ -12,6 +12,7 @@ var sass = require("gulp-sass");
 var connect = require("gulp-connect");
 var del = require("del");
 var minifyCss = require("gulp-minify-css");
+var exec = require("child_process").exec;
 
 gulp.task("compile", function (cb) {
     browserify({
@@ -111,6 +112,14 @@ gulp.task("server", function () {
             port: 35730
         }
     });
+});
+
+gulp.task("test", function(cb) {
+    exec("karma start --single-run", function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+});
 });
 
 gulp.task("default", function () {
