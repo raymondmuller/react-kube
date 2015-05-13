@@ -123,7 +123,7 @@ gulp.task("test", function(cb) {
 });
 
 gulp.task("default", function () {
-    runSequence(["clean"], ["compile", "sass", "copy"], "server", "opn", "watch");
+    runSequence(["clean"], ["test"], ["compile", "sass", "copy"], "server", "opn", "watch");
 });
 
 gulp.task("build", ["default"]);

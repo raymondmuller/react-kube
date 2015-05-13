@@ -5,12 +5,12 @@ class Tabs extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { active: "0-0" };
+		this.state = { active: 0 };
 	}
 
-	handleItemClick(index, nav) {
+	handleItemClick(index) {
 		this.setState({
-			active: index + "" + nav
+			active: index
 		});
 	}
 

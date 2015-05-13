@@ -8,7 +8,7 @@ module.exports = function(karma) {
     frameworks: [ 'browserify', 'mocha' ],
 
     files: [
-      'test/**/*Spec.js'
+      'test/**/AlertSpec.js'
     ],
 
     reporters: [ 'spec' ],
