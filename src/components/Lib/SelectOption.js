@@ -4,7 +4,7 @@ class SelectOption extends React.Component {
 
 	render() {
 		return (
-			<option className={this.props.className} value={this.value}>
+			<option className={this.props.className} style={this.props.style} value={this.value}>
 				{this.props.children}
 			</option>
 		);
@@ -13,7 +13,8 @@ class SelectOption extends React.Component {
 
 SelectOption.propTypes = {
 	children: React.PropTypes.node,
-	className: React.PropTypes.string
+	className: React.PropTypes.string,
+	style: React.PropTypes.object
 };
 
 module.exports = SelectOption;

@@ -29,7 +29,14 @@ class BlockBox extends React.Component {
 							<Block className="btn-blue text-centered"> amount=5 </Block>
 						</Blocks>
 					</GridItem>
-					<GridItem size={50}>//TODO - Code sample</GridItem>
+					<GridItem size={50}>
+						<pre><code data-language="javascript">
+							<Blocks amount={2}><br/>
+							<Block className="btn-yellow text-centered"> amount=2 </Block><br/>
+							<Block className="btn-yellow text-centered"> amount=2 </Block>
+						</Blocks>
+		 				</code></pre>
+					//TODO - Code sample</GridItem>
 				</Grid>
 			</FormSection>
 		);

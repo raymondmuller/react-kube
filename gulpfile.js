@@ -44,6 +44,20 @@ gulp.task("compile:production", function () {
         .pipe(gulp.dest("./dist/js"));
 });
 
+gulp.task("compile:lib", function () {
+    browserify({
+        entries: "./src/components/lib/react-kube.js",
+        extensions: [".js"],
+        debug: true,
+        })
+        .transform(babelify)
+        .bundle()
+        .pipe(source("react-kube.js"))
+        .pipe(buffer())
+        .pipe(uglify())
+        .pipe(gulp.dest("./dist/js"));
+});
+
 gulp.task("sass", function () {
     gulp.src("./src/styles/react-kube.scss")
         .pipe(sass())

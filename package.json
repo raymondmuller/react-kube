@@ -27,6 +27,7 @@
     "karma-spec-reporter": "0.0.19",
     "mocha": "^2.2.4",
     "opn": "^1.0.2",
+    "phantom": "^0.7.2",
     "run-sequence": "^1.1.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
