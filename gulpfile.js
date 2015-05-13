@@ -12,6 +12,7 @@ var sass = require("gulp-sass");
 var connect = require("gulp-connect");
 var del = require("del");
 var minifyCss = require("gulp-minify-css");
+var rename = require("gulp-rename");
 var exec = require("child_process").exec;
 
 gulp.task("compile", function (cb) {
@@ -46,16 +47,20 @@ gulp.task("compile:production", function () {
 
 gulp.task("compile:lib", function () {
     browserify({
-        entries: "./src/components/lib/react-kube.js",
+        entries: "./src/components/lib/index.js",
         extensions: [".js"],
-        debug: true,
+        debug: true
         })
+        .exclude("react")
         .transform(babelify)
         .bundle()
         .pipe(source("react-kube.js"))
         .pipe(buffer())
+        .pipe(gulp.dest("./lib/dist"))
+        .pipe(buffer())
         .pipe(uglify())
-        .pipe(gulp.dest("./dist/js"));
+        .pipe(rename("react-kube.min.js"))
+        .pipe(gulp.dest("./lib/dist"));
 });
 
 gulp.task("sass", function () {
@@ -70,6 +75,18 @@ gulp.task("sass:dist", function () {
         .pipe(buffer())
         .pipe(minifyCss({compatibility: "ie8"}))
         .pipe(gulp.dest("dist/css"));
+});
+
+gulp.task("sass:lib", function () {
+    gulp.src("src/styles/react-kube.scss")
+        .pipe(sass())
+        .pipe(buffer())
+        .pipe(rename("kube.css"))
+        .pipe(gulp.dest("lib/dist/"))
+        .pipe(buffer())
+        .pipe(minifyCss({compatibility: "ie8"}))
+        .pipe(rename("kube.min.css"))
+        .pipe(gulp.dest("lib/dist/"));
 });
 
 gulp.task("copy", function () {
@@ -94,6 +111,14 @@ gulp.task("copy:production", function () {
 
     gulp.src("src/assets/**/*")
         .pipe(gulp.dest("./dist/assets"));
+});
+
+gulp.task("copy:lib", function () {
+    gulp.src("src/components/lib/*.js")
+        .pipe(gulp.dest("./lib/src/js"));
+
+    gulp.src("src/styles/*.scss")
+        .pipe(gulp.dest("./dist/scss"));
 });
 
 gulp.task("clean", function (cb) {
@@ -137,6 +162,10 @@ gulp.task("test", function(cb) {
 });
 
 gulp.task("default", function () {
+    runSequence(["compile:lib"], "sass:lib", "copy:lib");
+});
+
+gulp.task("demo", function () {
     runSequence(["clean"], ["test"], ["compile", "sass", "copy"], "server", "opn", "watch");
 });
 
@@ -145,3 +174,4 @@ gulp.task("build", ["default"]);
 gulp.task("production", function () {
     runSequence(["clean:production"], ["compile:production"], "sass:dist", "copy:production");
 });
+

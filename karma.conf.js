@@ -18,7 +18,7 @@ module.exports = function(karma) {
       'src/**/*.js': [ 'browserify' ]
     },
 
-    browsers: [ 'Firefox' ],
+    browsers: [ 'Firefox' ], // Change to PhantomJS when karma supports PhantomJS 2.0
 
     // browserify configuration
     browserify: {
