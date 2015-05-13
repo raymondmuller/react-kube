@@ -1,9 +1,9 @@
 const React = require("react");
-const FormSection = require("../Lib/FormSection");
-const Grid = require("../Lib/Grid");
-const GridItem = require("../Lib/GridItem");
+const FormSection = require("../lib/FormSection");
+const Grid = require("../lib/Grid");
+const GridItem = require("../lib/GridItem");
 
-const Form = require("../Lib/Form");
+const Form = require("../lib/Form");
 const Input = require("../lib/Input");
 const FormList = require("../lib/FormList");
 const Button = require("../lib/Button");

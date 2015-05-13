@@ -1,9 +1,9 @@
 const React = require("react");
-const FormSection = require("../Lib/FormSection");
-const Grid = require("../Lib/Grid");
-const GridItem = require("../Lib/GridItem");
-const Blocks = require("../Lib/Blocks");
-const Block = require("../Lib/Block");
+const FormSection = require("../lib/FormSection");
+const Grid = require("../lib/Grid");
+const GridItem = require("../lib/GridItem");
+const Blocks = require("../lib/Blocks");
+const Block = require("../lib/Block");
 
 class BlockBox extends React.Component {
 

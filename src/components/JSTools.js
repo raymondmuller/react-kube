@@ -1,6 +1,6 @@
 const React = require("react");
-const FormSection = require("./Lib/FormSection");
-const Grid = require("./Lib/Grid");
+const FormSection = require("./lib/FormSection");
+const Grid = require("./lib/Grid");
 
 class JSTools extends React.Component {
 

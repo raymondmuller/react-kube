@@ -1,11 +1,11 @@
 const React = require("react");
 
-const FormSection = require("../Lib/FormSection");
-const Grid = require("../Lib/Grid");
-const GridItem = require("../Lib/GridItem");
+const FormSection = require("../lib/FormSection");
+const Grid = require("../lib/Grid");
+const GridItem = require("../lib/GridItem");
 
-const Pagination = require("../Lib/Pagination");
-const PaginationItem = require("../Lib/PaginationItem");
+const Pagination = require("../lib/Pagination");
+const PaginationItem = require("../lib/PaginationItem");
 
 class NavigationBox extends React.Component {
 

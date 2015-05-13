@@ -1,8 +1,8 @@
 const React = require("react");
-const FormSection = require("../Lib/FormSection");
-const Grid = require("../Lib/Grid");
-const GridItem = require("../Lib/GridItem");
-const Search = require("../Lib/Search");
+const FormSection = require("../lib/FormSection");
+const Grid = require("../lib/Grid");
+const GridItem = require("../lib/GridItem");
+const Search = require("../lib/Search");
 
 class SearchBox extends React.Component {
 

@@ -1,7 +1,7 @@
 const React = require("react");
-const Navigation = require("./Lib/Navigation");
-const NavigationBar = require("./Lib/NavigationBar");
-const NavigationItem = require("./Lib/NavigationItem");
+const Navigation = require("./lib/Navigation");
+const NavigationBar = require("./lib/NavigationBar");
+const NavigationItem = require("./lib/NavigationItem");
 const NavigationToggle = require("./lib/NavigationToggle");
 
 class NavigationBox extends React.Component {

@@ -1,17 +1,17 @@
 const React = require("react");
 
-const TypographyBox = require("./CSS/TypographyBox");
-const GridBox = require("./CSS/GridBox");
-const BlockBox = require("./CSS/BlockBox");
-const TableBox = require("./CSS/TableBox");
-const LabelBox = require("./CSS/LabelBox");
-const SearchBox = require("./CSS/SearchBox");
-const ButtonBox = require("./CSS/ButtonBox");
-const FormBox = require("./CSS/FormBox");
-const NavigationBox = require("./CSS/NavigationBox");
+const TypographyBox = require("./css/TypographyBox");
+const GridBox = require("./css/GridBox");
+const BlockBox = require("./css/BlockBox");
+const TableBox = require("./css/TableBox");
+const LabelBox = require("./css/LabelBox");
+const SearchBox = require("./css/SearchBox");
+const ButtonBox = require("./css/ButtonBox");
+const FormBox = require("./css/FormBox");
+const NavigationBox = require("./css/NavigationBox");
 
-const NotificationBox = require("./CSS/NotificationBox");
-const IconBox = require("./CSS/IconBox");
+const NotificationBox = require("./css/NotificationBox");
+const IconBox = require("./css/IconBox");
 
 class CSSComponents extends React.Component {
 

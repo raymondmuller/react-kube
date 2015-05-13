@@ -1,9 +1,9 @@
 const React = require("react");
-const FormSection = require("../Lib/FormSection");
-const Grid = require("../Lib/Grid");
-const GridItem = require("../Lib/GridItem");
-const Label = require("../Lib/Label");
-const Badge = require("../Lib/Badge");
+const FormSection = require("../lib/FormSection");
+const Grid = require("../lib/Grid");
+const GridItem = require("../lib/GridItem");
+const Label = require("../lib/Label");
+const Badge = require("../lib/Badge");
 class LabelBox extends React.Component {
 
 	render() {

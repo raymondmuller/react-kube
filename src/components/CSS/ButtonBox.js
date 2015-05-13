@@ -1,10 +1,10 @@
 const React = require("react");
-const FormSection = require("../Lib/FormSection");
-const Grid = require("../Lib/Grid");
-const GridItem = require("../Lib/GridItem");
-const Button = require("../Lib/Button");
-const SubmitButton = require("../Lib/SubmitButton");
-const LinkButton = require("../Lib/LinkButton");
+const FormSection = require("../lib/FormSection");
+const Grid = require("../lib/Grid");
+const GridItem = require("../lib/GridItem");
+const Button = require("../lib/Button");
+const SubmitButton = require("../lib/SubmitButton");
+const LinkButton = require("../lib/LinkButton");
 
 class ButtonBox extends React.Component {
 

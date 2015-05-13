@@ -1,8 +1,8 @@
 import React from "react";
-import FormSection from "../Lib/FormSection";
-import Grid from "../Lib/Grid";
-import GridItem from "../Lib/GridItem";
-import Button from "../Lib/Button";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Button from "../lib/Button";
 
 class IconBox extends React.Component {
 
