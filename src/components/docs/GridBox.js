@@ -2,10 +2,12 @@ const React = require("react");
 const FormSection = require("../lib/FormSection");
 const Grid = require("../lib/Grid");
 const GridItem = require("../lib/GridItem");
+var Highlight = require('react-highlight');
 
 class GridBox extends React.Component {
 
 	render() {
+
 		return (
 			<FormSection name="Grid">
 				<Grid>
@@ -88,7 +90,27 @@ class GridBox extends React.Component {
 							</GridItem>
 						</Grid>
 					</GridItem>
-					<GridItem size={50}>//TODO - Code sample</GridItem>
+					<GridItem className="demo" size={50}>
+						<Highlight className="javascript">
+							{"<Grid>"}<br/>
+							&emsp;&emsp;{"<GridItem size={50}> 50% </GridItem>"}<br/>
+							&emsp;&emsp;{"<GridItem size={50}> 50% </GridItem>"}<br/>
+							{"</Grid>"}
+						</Highlight>
+						<Highlight className="javascript">
+							{"<Grid>"}<br/>
+							&emsp;&emsp;{"<GridItem size={10}> 10% </GridItem>"}<br/>
+							&emsp;&emsp;{"<GridItem size={90}> 90% </GridItem>"}<br/>
+							{"</Grid>"}
+						</Highlight>
+						<Highlight className="javascript">
+							{"<Grid>"}<br/>
+							&emsp;&emsp;{"<GridItem size={33}> 33% </GridItem>"}<br/>
+							&emsp;&emsp;{"<GridItem size={33}> 33% </GridItem>"}<br/>
+							&emsp;&emsp;{"<GridItem size={33}> 33% </GridItem>"}<br/>
+							{"</Grid>"}
+						</Highlight>
+					</GridItem>
 				</Grid>
 			</FormSection>
 		);

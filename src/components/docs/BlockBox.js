@@ -4,6 +4,7 @@ const Grid = require("../lib/Grid");
 const GridItem = require("../lib/GridItem");
 const Blocks = require("../lib/Blocks");
 const Block = require("../lib/Block");
+const Highlight = require("react-highlight");
 
 class BlockBox extends React.Component {
 
@@ -29,14 +30,23 @@ class BlockBox extends React.Component {
 							<Block className="btn-blue text-centered"> amount=5 </Block>
 						</Blocks>
 					</GridItem>
-					<GridItem size={50}>
-						<pre><code data-language="javascript">
-							<Blocks amount={2}><br/>
-							<Block className="btn-yellow text-centered"> amount=2 </Block><br/>
-							<Block className="btn-yellow text-centered"> amount=2 </Block>
-						</Blocks>
-		 				</code></pre>
-					//TODO - Code sample</GridItem>
+					<GridItem className="demo" size={50}>
+						<Highlight className="javascript">
+							{"<Blocks amount={2}>"}<br/>
+							&emsp;&emsp;{"<Block> amount=2 </Block>"}<br/>
+							&emsp;&emsp;{"<Block> amount=2 </Block>"}<br/>
+							{"</Blocks>"}
+						</Highlight>
+						<Highlight className="javascript">
+							{"<Blocks amount={5}>"}<br/>
+							&emsp;&emsp;{"<Block> amount=5 </Block>"}<br/>
+							&emsp;&emsp;{"<Block> amount=5 </Block>"}<br/>
+							&emsp;&emsp;{"<Block> amount=5 </Block>"}<br/>
+							&emsp;&emsp;{"<Block> amount=5 </Block>"}<br/>
+							&emsp;&emsp;{"<Block> amount=5 </Block>"}<br/>
+							{"</Blocks>"}
+						</Highlight>
+						</GridItem>
 				</Grid>
 			</FormSection>
 		);

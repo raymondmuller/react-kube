@@ -1,12 +1,13 @@
 # React Components based on KUBE CSS by IMPERAVI (http://imperavi.com/kube/css/)
 
-! WORK IN PROGRESS ! Not ready for production use.
+! WORK IN PROGRESS ! Not ready for production use yet!.
 
 ### TODO:
-- Improve current code / Clean up code / Formatting
-- Improve demo and documentation page (add code samples and such)
-- Use React Mixins to reuse common code (ES6) ?
-- JS Components
+- Improve current code / clean up and formatting
+- Improve demo and documentation page
+- Remove jQuery and Kube.js dependencies.
+- Use React Mixins to reuse common code (ES6) ? Can I?
+- JS Tools Components ()
 - Tests 
 
 ### Demo and Documentation

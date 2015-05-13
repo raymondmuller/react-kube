@@ -13,7 +13,7 @@ class GetStarted extends React.Component {
 							<br/> <br/>
 						TODO: <br/>
 						- Add JS Tools <br/>
-						- Remove Jquery and Kube.js dependencies <br/>
+						- Remove jQuery and Kube.js dependencies <br/>
 						- Add Tests <br/>
 						- Add More Docs and Demos <br/>
 					</Grid>

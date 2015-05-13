@@ -29,12 +29,12 @@ class Input extends React.Component {
 				<label>
 					{this.props.label}
 					{validation}
-					<input className={classNames(this.props.className, styles)} disabled={this.props.disabled} name={this.props.name} placeholder={this.props.placeholder} size={this.props.size} style={this.props.style} type={this.props.type} />
+					<input className={classNames(this.props.className, styles)} disabled={this.props.disabled} name={this.props.name} placeholder={this.props.placeholder} size={this.props.size} style={this.props.style} type={this.props.type} value={this.props.value} />
 				</label> );
 		} else { return (
 						<span>
 						{validation}
-						<input className={classNames(this.props.className, styles)} disabled={this.props.disabled} name={this.props.name} placeholder={this.props.placeholder} size={this.props.size} style={this.props.style} type={this.props.type} />
+						<input className={classNames(this.props.className, styles)} disabled={this.props.disabled} name={this.props.name} placeholder={this.props.placeholder} size={this.props.size} style={this.props.style} type={this.props.type} value={this.props.value}/>
 					</span>
 				);
 			}
@@ -51,7 +51,8 @@ Input.propTypes = {
 	small: React.PropTypes.bool,
 	smaller: React.PropTypes.bool,
 	style: React.PropTypes.object,
-	successMessage: React.PropTypes.string
+	successMessage: React.PropTypes.string,
+	value: React.PropTypes.string
 };
 
 Input.defaultProps = {type: "text", width: "50"};

@@ -68,7 +68,7 @@ gulp.task("sass", function () {
         .pipe(sass())
         .pipe(buffer())
         .pipe(rename("kube.css"))
-        .pipe(gulp.dest("./build/css"));
+        .pipe(gulp.dest("./build/css"))
 });
 
 gulp.task("sass:dist", function () {
@@ -81,7 +81,7 @@ gulp.task("sass:dist", function () {
 });
 
 gulp.task("sass:lib", function () {
-    gulp.src("src/styles/react-kube.scss")
+    gulp.src("src/styles/kube.scss")
         .pipe(sass())
         .pipe(buffer())
         .pipe(rename("kube.css"))
@@ -102,7 +102,9 @@ gulp.task("copy", function () {
         .pipe(connect.reload());
 
     gulp.src("./src/assets/**/*")
-        .pipe(gulp.dest("./build/assets"));
+        .pipe(gulp.dest("./build/assets"))
+        .pipe(connect.reload());
+
 });
 
 gulp.task("copy:production", function () {
@@ -140,7 +142,7 @@ gulp.task("clean:production", function (cb) {
 
 gulp.task("watch", function () {
     gulp.watch(["src/components/**/*.js", "src/*.html", "src/styles/*.scss"], function () {
-        runSequence(["compile", "copy", "sass"]);
+        runSequence(["compile", "copy", "sass"], ["reload"]);
     });
 });
 

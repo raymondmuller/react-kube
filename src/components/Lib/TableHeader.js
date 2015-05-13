@@ -4,7 +4,7 @@ class TableHeader extends React.Component {
 
 	render() {
 		return (
-			<thead className={this.props.className}>
+			<thead className={this.props.className} style={this.props.style}>
 				<tr>
 					{this.props.children}
 				</tr>
@@ -15,7 +15,8 @@ class TableHeader extends React.Component {
 
 TableHeader.propTypes = {
 	children: React.PropTypes.node,
-	className: React.PropTypes.string
+	className: React.PropTypes.string,
+	style: React.PropTypes.object
 };
 
 module.exports = TableHeader;

@@ -7,7 +7,6 @@ const NavigationToggle = require("./lib/NavigationToggle");
 class NavigationBox extends React.Component {
 
 render() {
-
 	return (
 		<span>
 			<NavigationToggle target="#navbar-1"> Menu </NavigationToggle>

@@ -4,7 +4,7 @@ class BreadCrumb extends React.Component {
 
 	render() {
 		return (
-				<li active={this.props.active} className={this.props.className}>{this.props.children} style={this.props.style}</li>
+				<li active={this.props.active} className={this.props.className} style={this.props.style}>{this.props.children}</li>
 		);
 	}
 }

@@ -4,7 +4,7 @@ class TableHead extends React.Component {
 
 	render() {
 		return (
-			<th className={this.props.className}>
+			<th className={this.props.className} style={this.props.style}>
 				{this.props.children}
 			</th>
 		);
@@ -13,7 +13,8 @@ class TableHead extends React.Component {
 
 TableHead.propTypes = {
 	children: React.PropTypes.node,
-	className: React.PropTypes.string
+	className: React.PropTypes.string,
+	style: React.PropTypes.object
 };
 
 module.exports = TableHead;
