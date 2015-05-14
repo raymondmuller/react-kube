@@ -1,6 +1,9 @@
 const React = require("react");
+
 const FormSection = require("./lib/FormSection");
 const Grid = require("./lib/Grid");
+const AccordionBox = require("./docs/AccordionBox");
+const AutocompleteBox = require("./docs/AutocompleteBox");
 
 class JSTools extends React.Component {
 
@@ -11,6 +14,8 @@ class JSTools extends React.Component {
 					<Grid>
 						Working on it!
 					</Grid>
+					<AccordionBox />
+					<AutocompleteBox />
 				</FormSection>
 			</div>
 		);
