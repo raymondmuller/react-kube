@@ -5,7 +5,8 @@ const Grid = require("./lib/Grid");
 const AccordionBox = require("./docs/AccordionBox");
 const AutocompleteBox = require("./docs/AutocompleteBox");
 const ModalBox = require("./docs/ModalBox");
-const ProgressBar = require("./docs/ProgressBarBox");
+const ProgressBarBox = require("./docs/ProgressBarBox");
+const TooltipBox = require("./docs/TooltipBox");
 
 class JSTools extends React.Component {
 
@@ -20,7 +21,8 @@ class JSTools extends React.Component {
 					<AutocompleteBox />
 
 					<ModalBox />
-					<ProgressBar />
+					<ProgressBarBox />
+					<TooltipBox />
 
 				</FormSection>
 			</div>

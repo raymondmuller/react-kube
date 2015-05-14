@@ -25,12 +25,11 @@ class ProgressBarBox extends React.Component {
 		this.setState({
 			progress: this.state.progress -= 10
 		});
-		console.log(this.state.progress)
 	}
 
 	render() {
 		return (
-			<FormSection name="Modal">
+			<FormSection name="ProgressBar">
 				<Grid>
 					<GridItem size={50}>
 						<Button color="green" onClick={this.handleIncreaseProgress.bind(this)}>Increase Progress +10</Button><br/><br/>
