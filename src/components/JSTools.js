@@ -4,6 +4,7 @@ const FormSection = require("./lib/FormSection");
 const Grid = require("./lib/Grid");
 const AccordionBox = require("./docs/AccordionBox");
 const AutocompleteBox = require("./docs/AutocompleteBox");
+const ModalBox = require("./docs/ModalBox");
 
 class JSTools extends React.Component {
 
@@ -16,6 +17,8 @@ class JSTools extends React.Component {
 					</Grid>
 					<AccordionBox />
 					<AutocompleteBox />
+
+					<ModalBox />
 				</FormSection>
 			</div>
 		);

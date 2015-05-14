@@ -102,13 +102,13 @@ class Autocomplete extends React.Component {
 		if(this.props.data[0].label) {
 			suggestions = this.state.data.map((suggestion, i) => {
 				return (
-					<li><a onMouseDown={this.handleSelect.bind(this, suggestion)} key={i} ref={i}>{suggestion.label}</a></li>
+					<li><a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>{suggestion.label}</a></li>
 				);
 			});
 		} else {
 			suggestions = this.state.data.map((suggestion, i) => {
 					return (
-						<li><a onMouseDown={this.handleSelect.bind(this, suggestion)} key={i} ref={i}>{suggestion}</a></li>
+						<li><a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>{suggestion}</a></li>
 					);
 			});
 		}
@@ -116,7 +116,7 @@ class Autocomplete extends React.Component {
 		return (
 			<span>
 				<div style={wrapperStyle}>
-					<input autoComplete="false" type="text" ref="autocompleteInput" name="q" onBlur={this.handleBlur.bind(this)} onChange={this.handleChange.bind(this)} value={this.state.value}/>
+					<input autoComplete="false" name="q" onBlur={this.handleBlur.bind(this)} onChange={this.handleChange.bind(this)} ref="autocompleteInput" type="text" value={this.state.value}/>
 						{this.state.show ?
 					<ul className={classNames(this.props.listClassName, listClasses)} style={listStyle}>
 						{suggestions}
@@ -137,14 +137,12 @@ Autocomplete.propTypes = {
 			}))
 		]),
 	limit: React.PropTypes.number,
+	listClassName: React.PropTypes.string,
 	onBlur: React.PropTypes.func,
 	onChange: React.PropTypes.func,
-	onClose: React.PropTypes.func,
 	onSelect: React.PropTypes.func,
-	onShow: React.PropTypes.func,
-	panelClassName: React.PropTypes.string,
-	panelStyle: React.PropTypes.object,
-	style: React.PropTypes.object
+	style: React.PropTypes.object,
+	value: React.PropTypes.string
 };
 
 module.exports = Autocomplete;
