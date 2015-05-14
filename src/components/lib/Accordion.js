@@ -13,7 +13,7 @@ class Accordion extends React.Component {
 		this.setState({
 			show: shown
 		});
-		
+
 		//callbacks
 		shown ? this.props.onShow : this.props.onClose;
 	}
@@ -57,7 +57,6 @@ Accordion.propTypes = {
 	onShow: React.PropTypes.func,
 	panelClassName: React.PropTypes.string,
 	panelStyle: React.PropTypes.object,
-	remove: React.PropTypes.bool,
 	style: React.PropTypes.object,
 	title: React.PropTypes.string,
 	toggleClassName: React.PropTypes.string,

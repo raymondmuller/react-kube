@@ -38,9 +38,7 @@ class Autocomplete extends React.Component {
 			if(this.props.data[0].label) {
 				suggestionList = [];
 				for(let item of this.props.data) {
-					if(
-						item.label[0].toLowerCase().search(e.target.value[0].toLowerCase()) !== -1 && e.target.value.length <= item.label.length
-					){
+					if(item.label[0].toLowerCase().search(e.target.value[0].toLowerCase()) !== -1 && e.target.value.length <= item.label.length){
 						suggestionList.push(item);
 					}
 				}
@@ -103,10 +101,10 @@ class Autocomplete extends React.Component {
 		let suggestions;
 		if(this.props.data[0].label) {
 			suggestions = this.state.data.map((suggestion, i) => {
-								return (
-									<li><a onMouseDown={this.handleSelect.bind(this, suggestion)} key={i} ref={i}>{suggestion.label}</a></li>
-								);
-						});
+				return (
+					<li><a onMouseDown={this.handleSelect.bind(this, suggestion)} key={i} ref={i}>{suggestion.label}</a></li>
+				);
+			});
 		} else {
 			suggestions = this.state.data.map((suggestion, i) => {
 					return (
@@ -123,7 +121,7 @@ class Autocomplete extends React.Component {
 					<ul className={classNames(this.props.listClassName, listClasses)} style={listStyle}>
 						{suggestions}
 					</ul>			: null }
-					</div>
+				</div>
 			</span>
 		);
 	}
@@ -131,7 +129,6 @@ class Autocomplete extends React.Component {
 
 Autocomplete.propTypes = {
 	className: React.PropTypes.string,
-	collapse: React.PropTypes.bool,
 	data: React.PropTypes.oneOfType([
 		React.PropTypes.arrayOf(React.PropTypes.string),
 		React.PropTypes.arrayOf(React.PropTypes.shape({
@@ -139,19 +136,15 @@ Autocomplete.propTypes = {
 			value: React.PropTypes.any
 			}))
 		]),
+	limit: React.PropTypes.number,
 	onBlur: React.PropTypes.func,
 	onChange: React.PropTypes.func,
 	onClose: React.PropTypes.func,
-	onShow: React.PropTypes.func,
-	limit: React.PropTypes.number,
 	onSelect: React.PropTypes.func,
+	onShow: React.PropTypes.func,
 	panelClassName: React.PropTypes.string,
 	panelStyle: React.PropTypes.object,
-	remove: React.PropTypes.bool,
-	style: React.PropTypes.object,
-	title: React.PropTypes.string,
-	toggleClassName: React.PropTypes.string,
-	toggleStyle: React.PropTypes.object
+	style: React.PropTypes.object
 };
 
 module.exports = Autocomplete;
