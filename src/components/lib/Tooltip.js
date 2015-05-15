@@ -2,6 +2,7 @@ const React = require("react");
 const classNames = require("classnames");
 
 class Tooltip extends React.Component {
+	
 	constructor(props) {
 		super(props);
 		this.state = {show: false};
