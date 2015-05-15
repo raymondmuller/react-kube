@@ -7,6 +7,7 @@ const AutocompleteBox = require("./docs/AutocompleteBox");
 const ModalBox = require("./docs/ModalBox");
 const ProgressBarBox = require("./docs/ProgressBarBox");
 const TooltipBox = require("./docs/TooltipBox");
+const TextFitBox = require("./docs/TextFitBox");
 
 class JSTools extends React.Component {
 
@@ -23,7 +24,8 @@ class JSTools extends React.Component {
 					<ModalBox />
 					<ProgressBarBox />
 					<TooltipBox />
-
+					<TextFitBox />
+					
 				</FormSection>
 			</div>
 		);

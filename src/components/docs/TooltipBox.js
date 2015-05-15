@@ -52,8 +52,8 @@ class TooltipBox extends React.Component {
 					</GridItem>
 					<GridItem className="demo" size={50}>
 						<Highlight className="javascript">
-						{"Tooltip color={this.state.color} placement={this.state.tooltipPlacement} text=\"I am a tooltip\">"}
-						&emsp;&emsp;{"<Button color=\"blue\">Button</Button>"}
+						{"Tooltip color={this.state.color} placement={this.state.tooltipPlacement} text=\"I am a tooltip\">"}<br/>
+						&emsp;&emsp;{"<Button color=\"blue\">Button</Button>"}<br/>
 						{"</Tooltip>"}
 						</Highlight>
 					</GridItem>
