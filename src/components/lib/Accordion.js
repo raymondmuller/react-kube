@@ -9,15 +9,32 @@ class Accordion extends React.Component {
 	}
 
 	handleClick() {
-		let shown = !this.state.show;
-		this.setState({
-			show: shown
-		});
+		if(this.props.onAccordionClick) {
+			let shown = this.state.show;
+			this.props.onAccordionClick(shown);
+			this.setState({
+				show: shown && this.props.active
+			});
+		}
+		else{
+			let shown = this.state.show;
+			this.setState({
+				show: !shown
+			});
 
-		//callbacks
-		shown ? this.props.onShow : this.props.onClose;
+			//callbacks
+			shown ? this.props.onShow : this.props.onClose;
+		}
 	}
 
+	componentWillReceiveProps(nextProps) {
+		if(this.props.onAccordionClick){
+			this.setState({
+				show: nextProps.active
+			});
+		}
+	}
+	
 	render() {
 		let titleStyles = classNames({
 			"accordion-title": true,
@@ -37,7 +54,7 @@ class Accordion extends React.Component {
 
 		return (
 			<span>
-					<a className={classNames(this.props.className, titleStyles)} href="#" onClick={this.handleClick.bind(this)} style={this.props.style}>
+					<a className={classNames(this.props.className, titleStyles)} onClick={this.handleClick.bind(this)} style={this.props.style}>
 						{this.props.title}
 						<span className={classNames(this.props.toggleClassName, toggleStyles)} style={this.props.toggleStyle}></span>
 					</a>
@@ -53,6 +70,7 @@ Accordion.propTypes = {
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	collapse: React.PropTypes.bool,
+	onAccordionClick: React.PropTypes.func,
 	onClose: React.PropTypes.func,
 	onShow: React.PropTypes.func,
 	panelClassName: React.PropTypes.string,

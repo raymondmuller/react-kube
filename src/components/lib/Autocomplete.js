@@ -1,5 +1,6 @@
 const React = require("react");
 const classNames = require("classnames");
+const Input = require("./Input");
 
 class Autocomplete extends React.Component {
 
@@ -102,13 +103,13 @@ class Autocomplete extends React.Component {
 		if(this.props.data[0].label) {
 			suggestions = this.state.data.map((suggestion, i) => {
 				return (
-					<li><a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>{suggestion.label}</a></li>
+					<li key={i}><a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>{suggestion.label}</a></li>
 				);
 			});
 		} else {
 			suggestions = this.state.data.map((suggestion, i) => {
 					return (
-						<li><a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>{suggestion}</a></li>
+						<li key={i}><a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>{suggestion}</a></li>
 					);
 			});
 		}
@@ -116,11 +117,11 @@ class Autocomplete extends React.Component {
 		return (
 			<span>
 				<div style={wrapperStyle}>
-					<input autoComplete="false" name="q" onBlur={this.handleBlur.bind(this)} onChange={this.handleChange.bind(this)} ref="autocompleteInput" type="text" value={this.state.value}/>
+					<Input autoComplete="false" description={this.props.description} label={this.props.label} name="q" onBlur={this.handleBlur.bind(this)} onChange={this.handleChange.bind(this)} ref="autocompleteInput" type="text" value={this.state.value} width={this.props.width}/>
 						{this.state.show ?
 					<ul className={classNames(this.props.listClassName, listClasses)} style={listStyle}>
 						{suggestions}
-					</ul>			: null }
+					</ul>	: null }
 				</div>
 			</span>
 		);
@@ -136,13 +137,16 @@ Autocomplete.propTypes = {
 			value: React.PropTypes.any
 			}))
 		]),
+	description: React.PropTypes.string,
+	label: React.PropTypes.string,
 	limit: React.PropTypes.number,
 	listClassName: React.PropTypes.string,
 	onBlur: React.PropTypes.func,
 	onChange: React.PropTypes.func,
 	onSelect: React.PropTypes.func,
 	style: React.PropTypes.object,
-	value: React.PropTypes.string
+	value: React.PropTypes.string,
+	width: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ])
 };
 
 module.exports = Autocomplete;

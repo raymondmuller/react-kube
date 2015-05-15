@@ -12,18 +12,21 @@ class Search extends React.Component {
 
 		let searchStyle = this.props.rounded ? {} : { borderRadius: "0 !important"};
 
+		let inputField =
+			<Input className={classNames(this.props.className, styles)} description={this.props.description} label={this.props.label} onBlur={this.props.onBlur} onChange={this.props.onChange} placeholder={this.props.placeholder} style={searchStyle} type="text" value={this.props.value} />;
+
 		return (
 			<div>
 			{this.props.button ?
 				<div className="input-groups">
-					<Input className={styles} placeholder={this.props.placeholder} style={searchStyle} type="text"/>
+					{inputField}
 					<span className="btn-append">
 						<button className="btn">
 							{this.props.button}
 						</button>
 					</span>
 					</div>
-					: <Input className={styles} placeholder={this.props.placeholder} style={searchStyle} type="text" /> }
+					: {inputField} }
 			</div>
 		);
 	}
@@ -36,10 +39,15 @@ Search.propTypes = {
 	color: React.PropTypes.string,
 	description: React.PropTypes.string,
 	disabled: React.PropTypes.bool,
+	label: React.PropTypes.string,
 	name: React.PropTypes.string,
+	onBlur: React.PropTypes.func,
+	onChange: React.PropTypes.func,
 	placeholder: React.PropTypes.string,
 	rounded: React.PropTypes.bool,
-	size: React.PropTypes.number
+	size: React.PropTypes.number,
+	value: React.PropTypes.string,
+	width: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ])
 };
 
 Search.defaultProps = {rounded: false};
