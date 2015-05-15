@@ -39,17 +39,33 @@ class Autocomplete extends React.Component {
 			if(this.props.data[0].label) {
 				suggestionList = [];
 				for(let item of this.props.data) {
-					if(item.label[0].toLowerCase().search(e.target.value[0].toLowerCase()) !== -1 && e.target.value.length <= item.label.length){
-						suggestionList.push(item);
+					switch(this.props.rule) {
+						case "contains":
+							if(item.label.toLowerCase().search(e.target.value.toLowerCase()) !== -1 && e.target.value.length <= item.label.length){
+								suggestionList.push(item);
+							}
+							break;
+						case "exact":
+							if(item.label.toLowerCase().substring(0, e.target.value.length) === e.target.value.toLowerCase()){
+								suggestionList.push(item);
+							}
+							break;
+						}
 					}
-				}
 			} else {
-			suggestionList = this.props.data.filter(function(item) {
-				return (
-					item[0].toLowerCase().search(e.target.value[0].toLowerCase()) !== -1 && e.target.value.length <= item.length
-				);
-			});
-		}
+			suggestionList = this.props.data.filter((item) => {
+					switch(this.props.rule) {
+						case "contains":
+							return (
+								item.toLowerCase().search(e.target.value.toLowerCase()) !== -1 && e.target.value.length <= item.length
+								);
+						case "exact":
+							return (
+							item.toLowerCase().substring(0, e.target.value.length) === e.target.value.toLowerCase()
+							);
+					}
+				});
+			}
 		}
 		else {
 			suggestionList = [];
@@ -144,9 +160,12 @@ Autocomplete.propTypes = {
 	onBlur: React.PropTypes.func,
 	onChange: React.PropTypes.func,
 	onSelect: React.PropTypes.func,
+	rule: React.PropTypes.oneOf(["contains", "exact"]),
 	style: React.PropTypes.object,
 	value: React.PropTypes.string,
 	width: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ])
 };
+
+Autocomplete.defaultProps = { rule: "contains"};
 
 module.exports = Autocomplete;
