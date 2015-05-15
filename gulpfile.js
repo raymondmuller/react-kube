@@ -2,6 +2,7 @@
 
 var gulp = require("gulp");
 var browserify = require("browserify");
+var babel = require("gulp-babel");
 var babelify = require("babelify");
 var source = require("vinyl-source-stream");
 var runSequence = require("run-sequence");
@@ -46,21 +47,9 @@ gulp.task("compile:production", function () {
 });
 
 gulp.task("compile:lib", function () {
-    browserify({
-        entries: "./src/components/lib/index.js",
-        extensions: [".js"],
-        debug: true
-        })
-        .exclude("react")
-        .transform(babelify)
-        .bundle()
-        .pipe(source("react-kube.js"))
-        .pipe(buffer())
-        .pipe(gulp.dest("./dist/dist"))
-        .pipe(buffer())
-        .pipe(uglify())
-        .pipe(rename("react-kube.min.js"))
-        .pipe(gulp.dest("./dist/dist"));
+    return gulp.src("./src/components/lib/**/*.js")
+        .pipe(babel())
+        .pipe(gulp.dest("./dist"));
 });
 
 gulp.task("sass", function () {
@@ -68,7 +57,7 @@ gulp.task("sass", function () {
         .pipe(sass())
         .pipe(buffer())
         .pipe(rename("kube.css"))
-        .pipe(gulp.dest("./build/css"))
+        .pipe(gulp.dest("./build/css"));
 });
 
 gulp.task("sass:dist", function () {
@@ -81,16 +70,15 @@ gulp.task("sass:dist", function () {
 });
 
 gulp.task("sass:lib", function () {
-    console.log("sass libbing")
     gulp.src("src/styles/kube.scss")
         .pipe(sass())
         .pipe(buffer())
         .pipe(rename("kube.css"))
-        .pipe(gulp.dest("dist/dist"))
+        .pipe(gulp.dest("dist/css"))
         .pipe(buffer())
         .pipe(minifyCss({compatibility: "ie8"}))
         .pipe(rename("kube.min.css"))
-        .pipe(gulp.dest("dist/dist"));
+        .pipe(gulp.dest("dist/css"));
 });
 
 gulp.task("copy", function () {

@@ -2,7 +2,7 @@
   "name": "react-kube",
   "description": "Kube CSS in React Components",
   "author": "Raymond Muller <raymond.muller.1989@gmail.com>",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "devDependencies": {
     "babel": "^5.2.17",
     "babelify": "^6.0.2",
@@ -11,6 +11,7 @@
     "eslint": "^0.21.0",
     "eslint-plugin-react": "^2.2.0",
     "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0",
     "gulp-connect": "^2.2.0",
     "gulp-minify-css": "^1.1.0",
     "gulp-notify": "^2.2.0",

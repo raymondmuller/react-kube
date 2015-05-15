@@ -1,4 +1,5 @@
 const React = require("react");
+
 const NavigationBox = require("./NavigationBox");
 const Grid = require("./lib/Grid");
 const GridItem = require("./lib/GridItem");
