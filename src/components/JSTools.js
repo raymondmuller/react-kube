@@ -6,6 +6,7 @@ const AccordionBox = require("./docs/AccordionBox");
 const AutocompleteBox = require("./docs/AutocompleteBox");
 const DropdownBox = require("./docs/DropdownBox");
 const FilterBox = require("./docs/FilterBox");
+const InfiniteScroll = require("./lib/InfiniteScroll");
 const ModalBox = require("./docs/ModalBox");
 const ProgressBarBox = require("./docs/ProgressBarBox");
 const TooltipBox = require("./docs/TooltipBox");
@@ -28,7 +29,7 @@ class JSTools extends React.Component {
 					<ProgressBarBox />
 					<TooltipBox />
 					<TextFitBox />
-					
+					<InfiniteScroll>YO</InfiniteScroll>
 				</FormSection>
 			</div>
 		);
