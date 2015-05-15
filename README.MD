@@ -1,6 +1,6 @@
-# React Components based on KUBE CSS by IMPERAVI (http://imperavi.com/kube/css/)
+# React Components based on KUBE CSS
 
-! WORK IN PROGRESS ! Not ready for production use yet!.
+! Under active development ! - Stay tuned.
 
 ### TODO:
 - Improve current code / clean up and formatting
@@ -8,6 +8,14 @@
 - Use React Mixins to reuse common code (ES6) ? 
 - Some JS Tools Components ()
 - Tests 
+
+### Get Started
+- npm install react-kube
+- require the desired component to use it:
+
+for example:
+
+        const Alert = require("react-kube/Alert")
 
 ### Demo and Documentation
 [Demo and Documentation](http://raymondmuller.github.io/react-kube/ "React Kube Documentation") 
