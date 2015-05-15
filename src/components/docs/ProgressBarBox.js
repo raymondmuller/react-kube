@@ -40,7 +40,7 @@ class ProgressBarBox extends React.Component {
 						<Highlight className="javascript">
 							{"<Button color=\"green\" onClick={this.handleIncreaseProgress.bind(this)}>Increase Progress +10</Button>"}<br/>
 							{"<Button color=\"red\" onClick={this.handleDecreaseProgress.bind(this)}>Decrease Progress -10</Button>"}<br/><br/>
-							{"<ProgressBar progress={this.state.progress} />"}
+							{"<ProgressBar progress=\""}{this.state.progress}{"\" />"}
 						</Highlight>
 					</GridItem>
 				</Grid>

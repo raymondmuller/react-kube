@@ -34,8 +34,8 @@ class ModalBox extends React.Component {
 					</GridItem>
 					<GridItem className="demo" size={50}>
 						<Highlight className="javascript">
-							{"<Modal padding=\"30px\" show={this.state.showModal} title=\"Modal Title\">"}<br/>
-							&emsp;&emsp;{"<p>check it out now</p>"}<br/>
+							{"<Modal padding=\"30px\" show=\"{this.state.showModal}\" title=\"Modal Title\">"}<br/>
+							&emsp;&emsp;{"<p>Lorem ipsum....</p>"}<br/>
 							{"</Modal>"}<br/>
 						</Highlight>
 						</GridItem>

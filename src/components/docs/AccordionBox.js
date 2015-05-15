@@ -40,6 +40,17 @@ class AccordionBox extends React.Component {
 							&emsp;&emsp;{"<p>Content in the second panel</p>"}<br/>
 							{"</Accordion>"}
 						</Highlight>
+						<hr/>
+						<Highlight className="javascript">
+							{"<AccordionGroup>"}<br/>
+							&emsp;&emsp;{"<Accordion title=\"first title\">"}<br/>
+							&emsp;&emsp;&emsp;&emsp;{"<p>Content in the first panel</p>"}<br/>
+							&emsp;&emsp;{"</Accordion>"}<br/>
+							&emsp;&emsp;{"<Accordion title=\"second title\">"}<br/>
+							&emsp;&emsp;&emsp;&emsp;{"<p>Content in the second panel</p>"}<br/>
+							&emsp;&emsp;{"</Accordion>"}<br/>
+							{"</AccordionGroup"}
+						</Highlight>
 						</GridItem>
 				</Grid>
 			</FormSection>

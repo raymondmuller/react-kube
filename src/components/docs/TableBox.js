@@ -59,7 +59,7 @@ class TableBox extends React.Component {
 					</GridItem>
 					<GridItem size={50}>
 						<Highlight>
-							{"<Table type=\"flat\">"}<br/>
+							{"<Table type=\""}{this.state.tableStyle}{"\">"}<br/>
 							&emsp;&emsp;{"<TableHeader>"}<br/>
 							&emsp;&emsp;&emsp;&emsp;{"<TableHead> title 1 </TableHead>"}<br/>
 							&emsp;&emsp;&emsp;&emsp;{"<TableHead> title 2 </TableHead>"}<br/>

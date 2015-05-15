@@ -5,7 +5,7 @@ class Pagination extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { active: "1" };
+		this.state = { active: this.props.active };
 	}
 
 	handleItemClick(index) {
@@ -33,6 +33,7 @@ class Pagination extends React.Component {
 }
 
 Pagination.propTypes = {
+	active: React.PropTypes.number,
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	left: React.PropTypes.string,
@@ -40,6 +41,7 @@ Pagination.propTypes = {
 	style: React.PropTypes.object
 };
 
-Pagination.defaultProps = {left: "#", right: "#"};
+
+Pagination.defaultProps = {active: 0, left: "#", right: "#"};
 
 module.exports = Pagination;

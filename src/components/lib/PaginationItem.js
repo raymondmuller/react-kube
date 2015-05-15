@@ -11,6 +11,7 @@ class PaginationItem extends React.Component {
 		let styles = classNames({
 			"active": this.props.active
 		});
+
 		return (
 			<li className={classNames(this.props.className, styles)} index={this.props.index} onClick={this.handleClick.bind(this)} style={{cursor: "pointer"}}>
 				<a href={this.props.url} target={this.props.target ? this.props.target : "_self"}>

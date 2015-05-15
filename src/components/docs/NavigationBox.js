@@ -18,7 +18,7 @@ class NavigationBox extends React.Component {
 					<GridItem size={50}>
 						<p>NavigationBar demo - coming soon</p>
 						<hr/>
-						<Pagination left="#navigation" right="#navigation">
+						<Pagination active={1} left="#navigation" right="#navigation">
 							<PaginationItem> 1 </PaginationItem>
 							<PaginationItem> 2 </PaginationItem>
 							<PaginationItem> 3 </PaginationItem>
@@ -41,7 +41,7 @@ class NavigationBox extends React.Component {
 							&emsp;&emsp;{"</Navigation"}
 						</Highlight>
 						<Highlight className="javascript">
-							{"<Pagination left=\"#previous\" right=\"#next\">"}<br/>
+							{"<Pagination active={1} left=\"#previous\" right=\"#next\">"}<br/>
 							&emsp;&emsp;{"<PaginationItem> 1 </PaginationItem>"}<br/>
 							&emsp;&emsp;{"<PaginationItem> 2 </PaginationItem>"}<br/>
 							&emsp;&emsp;{"<PaginationItem> 3 </PaginationItem>"}<br/>
