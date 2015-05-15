@@ -16,6 +16,7 @@ class GetStarted extends React.Component {
 						- Remove jQuery and Kube.js dependencies <br/>
 						- Add Tests <br/>
 						- Add More Docs and Demos <br/>
+						<br/>
 					</Grid>
 				</FormSection>
 			</div>

@@ -19,7 +19,7 @@ class AccordionBox extends React.Component {
 						</Accordion>
 						<Accordion title="second title">
 							<p>Content in the second panel</p>
-						</Accordion>
+						</Accordion><br/>
 						<hr/>
 						<p> Grouped (one accordion open at a time) </p>
 						<AccordionGroup>

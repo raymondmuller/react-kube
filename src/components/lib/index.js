@@ -8,6 +8,7 @@ import BreadCrumb from "./BreadCrumb";
 import BreadCrumbs from "./BreadCrumbs";
 import Button from "./Button";
 import CheckBox from "./CheckBox";
+import Dropdown from "./Dropdown";
 import Form from "./Form";
 import FormList from "./FormList";
 import FormSection from "./FormSection";
@@ -53,6 +54,7 @@ export default {
 	BreadCrumbs,
 	Button,
 	CheckBox,
+	Dropdown,
 	Form,
 	FormList,
 	FormSection,
