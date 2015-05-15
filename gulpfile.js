@@ -81,11 +81,12 @@ gulp.task("sass:dist", function () {
 });
 
 gulp.task("sass:lib", function () {
+    console.log("sass libbing")
     gulp.src("src/styles/kube.scss")
         .pipe(sass())
         .pipe(buffer())
         .pipe(rename("kube.css"))
-        .pipe(gulp.dest("dist/dist/"))
+        .pipe(gulp.dest("dist/dist"))
         .pipe(buffer())
         .pipe(minifyCss({compatibility: "ie8"}))
         .pipe(rename("kube.min.css"))
