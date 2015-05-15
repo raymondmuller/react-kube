@@ -1,5 +1,7 @@
 const React = require("react");
 const classNames = require("classnames");
+
+const HighlightText = require("./HighlightText");
 const Input = require("./Input");
 
 class Autocomplete extends React.Component {
@@ -119,13 +121,25 @@ class Autocomplete extends React.Component {
 		if(this.props.data[0].label) {
 			suggestions = this.state.data.map((suggestion, i) => {
 				return (
-					<li key={i}><a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>{suggestion.label}</a></li>
+					<li key={i}>
+						<a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>
+							{this.props.highlight ?
+								<HighlightText query={this.state.value} text={suggestion.label} />
+							: suggestion.label }
+						</a>
+					</li>
 				);
 			});
 		} else {
 			suggestions = this.state.data.map((suggestion, i) => {
 					return (
-						<li key={i}><a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>{suggestion}</a></li>
+						<li key={i}>
+							<a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>
+								{this.props.highlight ?
+									<HighlightText query={this.state.value} text={suggestion} />
+								: suggestion }
+							</a>
+						</li>
 					);
 			});
 		}
@@ -154,6 +168,7 @@ Autocomplete.propTypes = {
 			}))
 		]),
 	description: React.PropTypes.string,
+	highlight: React.PropTypes.bool,
 	label: React.PropTypes.string,
 	limit: React.PropTypes.number,
 	listClassName: React.PropTypes.string,

@@ -13,6 +13,7 @@ import FormList from "./FormList";
 import FormSection from "./FormSection";
 import Grid from "./Grid";
 import GridItem from "./GridItem";
+import HighlightText from "./HighlightText";
 import Input from "./Input";
 import Label from "./Label";
 import LinkButton from "./LinkButton";
@@ -57,6 +58,7 @@ export default {
 	FormSection,
 	Grid,
 	GridItem,
+	HighlightText,
 	Input,
 	Label,
 	LinkButton,

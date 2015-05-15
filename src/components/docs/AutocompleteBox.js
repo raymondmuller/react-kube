@@ -34,7 +34,7 @@ class AutocompleteBox extends React.Component {
 						<FormList>
 							<Autocomplete data={['Apple', 'Banana', 'Bread', 'Cheese']} description="data as array" label="Hungry?" rule={this.state.rule} /><br/>
 						</FormList>
-						<Autocomplete data={[{value: 1, label: "yo"}, {value: 2, label: "yeah"}]} description="data as object" label="What?" rule={this.state.rule} /><br/>
+						<Autocomplete data={[{value: 1, label: "yo"}, {value: 2, label: "yeah"}]} description="data as object" highlight label="What?" rule={this.state.rule} /><br/>
 					</GridItem>
 					<GridItem className="demo" size={50}>
 						<Highlight className="javascript">
