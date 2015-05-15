@@ -10,7 +10,7 @@ render() {
 	return (
 		<span>
 			<NavigationToggle target="#navbar-1"> Menu </NavigationToggle>
-			<Navigation id="#navbar-1" fullwidth toggle className="navCustom">
+			<Navigation id="#navbar-1" fixed fullwidth toggle className="navCustom">
 				<NavigationBar className="navigationBarCustom" left>
 					<NavigationItem url="#" icon="home"> React-Kube (WIP) </NavigationItem>
 					<NavigationItem url="#documentation" icon="code"> Documentation </NavigationItem>

@@ -5,7 +5,7 @@ class NavigationBar extends React.Component {
 
 	render() {
 
-		let styles = classNames({
+		let navBarClasses = classNames({
 			"navbar": !this.props.vertical && !this.props.sub,
 			"nav": this.props.vertical || this.props.stacked || this.props.stats && !this.props.sub,
 			"nav-stacked": this.props.stacked,
@@ -14,12 +14,16 @@ class NavigationBar extends React.Component {
 			"navbar-right": this.props.right && !this.props.sub
 		});
 
+		let navBarStyle = {
+			marginTop: "1.65em"
+		};
+
 		let children = React.Children.map(this.props.children, function(child, i) {
 			return React.cloneElement(child, {active: this.props.index + "" + i === this.props.active, index: i, onItemClick: this.props.onItemClick});
 		}, this);
 
 		return (
-			<ul className={classNames(this.props.className, styles)} style={this.props.style}>
+			<ul className={classNames(this.props.className, navBarClasses)} style={navBarStyle}>
 				{children}
 			</ul> );
 	}
