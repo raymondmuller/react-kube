@@ -90,12 +90,11 @@ class Autocomplete extends React.Component {
 		this.props.onChange ? this.props.onChange(e.target.value) : null;
 	}
 
-	handleSelect(suggestion, e) {
-
+	handleSelect(suggestion) {
 		// close suggestions and set value on selection
 		this.setState({
 			show: false,
-			value: e.target.innerHTML
+			value: suggestion.label
 		});
 
 		// on select callback
