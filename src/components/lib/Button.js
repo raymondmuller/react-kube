@@ -17,6 +17,7 @@ class Button extends React.Component {
 		styles += this.props.width ? " width-" + this.props.width : "";
 
 		let iconStyles = this.props.icon ? "fa fa-" + this.props.icon : "";
+
 		return (
 			<button className={classNames(this.props.className, styles)} onClick={this.props.onClick}>
 				{this.props.icon ? <li className={iconStyles}></li> : null }

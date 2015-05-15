@@ -12,7 +12,7 @@ class GetStarted extends React.Component {
 						Work in progress! *Coming Soon*
 							<br/> <br/>
 						TODO: <br/>
-						- Add JS Tools <br/>
+						- Add missing components (see <a href="https://github.com/raymondmuller/react-kube/issues" target="_new">Github Issues</a>) <br/>
 						- Remove jQuery and Kube.js dependencies <br/>
 						- Add Tests <br/>
 						- Add More Docs and Demos <br/>

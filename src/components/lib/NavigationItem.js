@@ -13,7 +13,7 @@ class NavigationItem extends React.Component {
 			"active": this.props.active
 		});
 		return (
-			<li className={classNames(this.props.className, styles)} index={this.props.index} onClick={this.handleClick.bind(this)} style={this.props.style}>
+			<li className={classNames(this.props.className, styles)} id={this.props.id} index={this.props.index} onClick={this.handleClick.bind(this)} style={this.props.style}>
 				<a className={iconStyles} href={this.props.url} target={this.props.target ? this.props.target : "_self"} >
 				{this.props.children}
 			</a>
@@ -26,6 +26,7 @@ NavigationItem.propTypes = {
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	icon: React.PropTypes.string,
+	id: React.PropTypes.string,
 	index: React.PropTypes.number,
 	onItemClick: React.PropTypes.func,
 	style: React.PropTypes.object,

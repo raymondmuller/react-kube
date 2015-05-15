@@ -1,9 +1,9 @@
 const React = require("react");
 const NavigationBox = require("./NavigationBox");
-const NavigationItem = require("./lib/NavigationItem");
 const Grid = require("./lib/Grid");
 const GridItem = require("./lib/GridItem");
 const Tabs = require("./lib/Tabs");
+const Tab = require("./lib/Tab");
 const GetStarted = require("./GetStarted");
 const CSSComponents = require("./CSSComponents");
 const JSTools = require("./JSTools");
@@ -18,13 +18,16 @@ class Main extends React.Component {
 					<GridItem size={10}><br/></GridItem>
 					<GridItem size={80}>
 					<Tabs equals={false}>
-						<NavigationItem url="#tab1">Get Started</NavigationItem>
-						<NavigationItem url="#tab2">CSS Components</NavigationItem>
-						<NavigationItem url="#tab3">JS Components</NavigationItem>
+						<Tab id="#tab1" title="Get Started">
+							<GetStarted />
+						</Tab>
+						<Tab id="#tab2" title="CSS Components">
+							<CSSComponents />
+						</Tab>
+						<Tab id="#tab3" title="JS Components">
+							<JSTools />
+						</Tab>
 					</Tabs>
-					<GetStarted />
-					<CSSComponents />
-					<JSTools />
 					</GridItem>
 					<GridItem size={10}>
 						<br/>
@@ -37,4 +40,4 @@ class Main extends React.Component {
 
 module.exports = Main;
 
-React.render(<Main />, document.body);  /*eslint-disable no-unused-vars*/
+React.render(<Main />, document.body);

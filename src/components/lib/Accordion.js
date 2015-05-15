@@ -34,7 +34,7 @@ class Accordion extends React.Component {
 			});
 		}
 	}
-	
+
 	render() {
 		let titleStyles = classNames({
 			"accordion-title": true,

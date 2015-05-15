@@ -5,16 +5,25 @@ class Tabs extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { active: 0 };
+		this.state = { active: 0, tabs: []};
 	}
 
-	handleItemClick(index) {
+	handleTabClick(index) {
 		this.setState({
 			active: index
 		});
 	}
 
+	addTab(tab) {
+		let tabs = this.state.tabs;
+		tabs.push(tab);
+		this.setState({
+			tabs: tabs
+		});
+	}
+
 	render() {
+
 		let styles = classNames({
 			"nav-tabs": !this.props.pills,
 			"navbar": this.props.pills,
@@ -22,18 +31,40 @@ class Tabs extends React.Component {
 			"equals": this.props.equals
 		});
 
-		let children = React.Children.map(this.props.children, function(child, i) {
-				return React.cloneElement(child, {active: this.state.active === i, onItemClick: this.handleItemClick.bind(this, i), index: i});
+
+		let tabs = this.state.tabs.map(function(item, i) {
+			let isActive = this.state.active === i;
+
+			let tabHeaderClasses = classNames({
+				"active": isActive
+			});
+
+			let tabHeaderStyle = {
+				cursor: "pointer"
+			};
+
+			return <li active={isActive} className={tabHeaderClasses} onClick={this.handleTabClick.bind(this, i)} style={tabHeaderStyle}><a >{item.title}</a></li>;
+		}, this);
+
+		let children = [];
+		this.props.children.map(function(child, i) {
+				children.push(React.cloneElement(child, {active: i === this.state.active, addTab: this.addTab.bind(this), key: i, index: i }));
 		}, this);
 
 		return (
+			<span>
 			<nav
 				className={classNames(this.props.className, styles)}
 				data-equals={this.props.equals}
-				data-tools="tabs"
 				style={this.props.style}>
-					<ul>{children}</ul>
+					<ul>
+						{tabs}
+					</ul>
 			</nav>
+			<div>
+				{children}
+			</div>
+			</span>
 		);
 	}
 }
