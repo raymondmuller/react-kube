@@ -52,12 +52,15 @@ gulp.task("compile:lib", function () {
         .pipe(gulp.dest("./dist"));
 });
 
-gulp.task("sass", function () {
+gulp.task("sass", function (cb) {
     gulp.src("./src/styles/react-kube.scss")
         .pipe(sass())
         .pipe(buffer())
         .pipe(rename("kube.css"))
-        .pipe(gulp.dest("./build/css"));
+        .pipe(gulp.dest("./build/css"))
+        .on("end", function() {
+            cb();
+        });
 });
 
 gulp.task("sass:dist", function () {
@@ -81,19 +84,18 @@ gulp.task("sass:lib", function () {
         .pipe(gulp.dest("dist/css"));
 });
 
-gulp.task("copy", function () {
+gulp.task("copy", function (cb) {
     gulp.src("./src/index.html")
-        .pipe(gulp.dest("./build"))
-        .pipe(connect.reload());
+        .pipe(gulp.dest("./build"));
 
     gulp.src("./src/styles/**/*.css")
-        .pipe(gulp.dest("./build/css"))
-        .pipe(connect.reload());
+        .pipe(gulp.dest("./build/css"));
 
     gulp.src("./src/assets/**/*")
         .pipe(gulp.dest("./build/assets"))
-        .pipe(connect.reload());
-
+        .on("end", function() {
+            cb();
+        });
 });
 
 gulp.task("copy:production", function () {
@@ -131,7 +133,7 @@ gulp.task("clean:production", function (cb) {
 
 gulp.task("watch", function () {
     gulp.watch(["src/components/**/*.js", "src/*.html", "src/styles/*.scss"], function () {
-        runSequence(["compile", "copy", "sass"], ["reload"]);
+        runSequence(["compile"], ["copy"], ["sass"], ["reload"]);
     });
 });
 
