@@ -10,12 +10,28 @@ class Message extends React.Component {
 
 	handleClick() {
 		this.setState({showMessage: false});
+		this.props.onClose ? this.props.onClose() : null;
 	}
 
 	componentWillReceiveProps(nextProps) {
-		this.setState({
-			showMessage: nextProps.show
-		});
+		if(nextProps.show){
+			this.setState({
+				showMessage: nextProps.show
+			});
+			this.props.onShow ? this.props.onShow() : null;
+		}
+
+		// close automatically after x seconds
+		if(this.props.delay) {
+			if(nextProps.show) {
+				setTimeout(() => {
+					this.setState({
+						showMessage: false
+				});
+				this.props.onClose ? this.props.onClose() : null;
+			}, this.props.delay);
+			}
+		}
 	}
 
 	render() {
@@ -29,21 +45,23 @@ class Message extends React.Component {
 			display: "block !important"
 		};
 
-		if(this.state.showMessage) {
-			return (
+		return (
+			<span>
+			{this.state.showMessage ?
 				<div className={classNames(this.props.className, styles)} onClick={this.handleClick.bind(this)} style={messageStyle}>
 					{this.props.children}
 				</div>
+				: null }
+			</span>
 			);
-		} else {
-			return ( null );
-		}
 	}
 }
 
 Message.propTypes = {
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
+	delay: React.PropTypes.number,
+	onShow: React.PropTypes.func,
 	show: React.PropTypes.bool,
 	style: React.PropTypes.object
 };
