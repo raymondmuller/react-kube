@@ -16,7 +16,6 @@ import FormSection from "./FormSection";
 import Grid from "./Grid";
 import GridItem from "./GridItem";
 import HighlightText from "./HighlightText";
-import InfiniteScroll from "./InfiniteScroll";
 import Input from "./Input";
 import Label from "./Label";
 import LinkButton from "./LinkButton";
@@ -64,7 +63,6 @@ export default {
 	Grid,
 	GridItem,
 	HighlightText,
-	InfiniteScroll,
 	Input,
 	Label,
 	LinkButton,
