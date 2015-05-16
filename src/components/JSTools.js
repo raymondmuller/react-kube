@@ -9,6 +9,7 @@ const ModalBox = require("./docs/ModalBox");
 const ProgressBarBox = require("./docs/ProgressBarBox");
 const TooltipBox = require("./docs/TooltipBox");
 const TextFitBox = require("./docs/TextFitBox");
+const UploadBox = require("./docs/UploadBox");
 
 class JSTools extends React.Component {
 
@@ -24,7 +25,7 @@ class JSTools extends React.Component {
 				<TooltipBox />
 				<TextFitBox />
 				<InfiniteScrollBox />
-
+				<UploadBox />
 			</div>
 		);
 	}
