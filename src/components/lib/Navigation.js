@@ -32,8 +32,11 @@ class Navigation extends React.Component {
 			"navigation-fixed": this.props.fixed
 		});
 
+		let navWidth = this.props.fullwidth ? "100%" : "auto";
+
 		let navStyle = {
-			minHeight: "50px"
+			minHeight: "50px",
+			width: navWidth
 		};
 
 		let headerStyle = {};
