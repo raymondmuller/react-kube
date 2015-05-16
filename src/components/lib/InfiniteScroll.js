@@ -49,9 +49,7 @@ class InfiniteScroll extends React.Component {
   render() {
     return (
       <div className={this.props.className} ref="infiniteScrollWrapper" style={this.props.style}>
-      <span>
           {this.props.children}
-      </span>
       </div>
     );
   }
