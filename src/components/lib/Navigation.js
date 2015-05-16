@@ -5,13 +5,17 @@ class Navigation extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { active: false };
+		this.state = { active: "false" };
 	}
 
 	handleItemClick(index, nav) {
 		this.setState({
 			active: index + "" + nav
 		});
+	}
+
+	componentWillMount() {
+		this.props.active ? this.setState({active: this.props.active}) : null;
 	}
 
 	componentDidMount() {
@@ -24,7 +28,7 @@ class Navigation extends React.Component {
 		let navClasses = classNames({
 			"navbar-pills": this.props.pills,
 			"nav-toggle": this.props.toggle,
-			"fullwidth": this.props.fullwidth,
+			"nav-fullwidth": this.props.fullwidth,
 			"navigation-fixed": this.props.fixed
 		});
 
@@ -54,6 +58,7 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
+	active: React.PropTypes.string,
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	fixed: React.PropTypes.bool,

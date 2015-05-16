@@ -40,10 +40,8 @@ class AutocompleteBox extends React.Component {
 						<Highlight className="javascript">
 							{"<Autocomplete data={['Apple', 'Banana', 'Bread', 'Cheese']} description=\"data as array\" label=\"Hungry?\" rule=\""}{this.state.rule}{"\"/><br/>"}
 						</Highlight>
-						<Highlight className="javascript">
-						{"<Autocomplete data={[{value: 1, label: \"yo\"}, {value: 2, label: \"yeah\"}]} description=\"data as object\" label=\"What?\" rule=\""}{this.state.rule}{"\" />"}
-						</Highlight>
-						</GridItem>
+						
+					</GridItem>
 				</Grid>
 			</FormSection>
 		);
