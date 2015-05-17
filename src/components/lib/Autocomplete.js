@@ -27,7 +27,7 @@ class Autocomplete extends React.Component {
 			});
 		}
 		//on blur callback
-		this.props.onBlur ? this.props.onBlur : null;
+		this.props.onBlur ? this.props.onBlur : null; //eslint-disable-line
 	}
 
 	handleChange(e) {
@@ -87,7 +87,7 @@ class Autocomplete extends React.Component {
 		}
 
 		// on change callback
-		this.props.onChange ? this.props.onChange(e.target.value) : null;
+		this.props.onChange ? this.props.onChange(e.target.value) : null; //eslint-disable-line
 	}
 
 	handleSelect(suggestion) {
@@ -98,7 +98,7 @@ class Autocomplete extends React.Component {
 		});
 
 		// on select callback
-		this.props.onSelect ? this.props.onSelect(suggestion) : null;
+		this.props.onSelect ? this.props.onSelect(suggestion) : null; //eslint-disable-line
 	}
 
 	render() {
@@ -122,7 +122,7 @@ class Autocomplete extends React.Component {
 				return (
 					<li key={i}>
 						<a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>
-							{this.props.highlight ?
+							{this.props.highlight && this.state.value} ?
 								<HighlightText query={this.state.value} text={suggestion.label} />
 							: suggestion.label }
 						</a>
@@ -134,7 +134,7 @@ class Autocomplete extends React.Component {
 					return (
 						<li key={i}>
 							<a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>
-								{this.props.highlight ?
+								{this.props.highlight && this.state.value ?
 									<HighlightText query={this.state.value} text={suggestion} />
 								: suggestion }
 							</a>

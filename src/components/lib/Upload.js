@@ -27,7 +27,10 @@ class Upload extends React.Component {
 		e.preventDefault();
 		e.stopPropagation();
 		React.findDOMNode(this.refs.fileUpload).files = e.dataTransfer.files;
-		this.onDrop ? this.onDrop(e.dataTransfer.files) : null;
+		this.onDrop ? this.onDrop(e.dataTransfer.files) : null; //eslint-disable-line
+		this.setState({
+			dragging: false
+		});
 	}
 
 	render() {

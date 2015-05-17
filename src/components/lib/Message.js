@@ -10,7 +10,7 @@ class Message extends React.Component {
 
 	handleClick() {
 		this.setState({showMessage: false});
-		this.props.onClose ? this.props.onClose() : null;
+		this.props.onClose ? this.props.onClose() : null; //eslint-disable-line
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -18,7 +18,7 @@ class Message extends React.Component {
 			this.setState({
 				showMessage: nextProps.show
 			});
-			this.props.onShow ? this.props.onShow() : null;
+			this.props.onShow ? this.props.onShow() : null; //eslint-disable-line
 		}
 
 		// close automatically after x seconds
@@ -28,7 +28,7 @@ class Message extends React.Component {
 					this.setState({
 						showMessage: false
 				});
-				this.props.onClose ? this.props.onClose() : null;
+				this.props.onClose ? this.props.onClose() : null; //eslint-disable-line
 			}, this.props.delay);
 			}
 		}
@@ -58,12 +58,19 @@ class Message extends React.Component {
 }
 
 Message.propTypes = {
+	bottom: React.PropTypes.number,
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
+	color: React.PropTypes.string,
 	delay: React.PropTypes.number,
+	left: React.PropTypes.number,
+	onClose: React.PropTypes.func,
 	onShow: React.PropTypes.func,
+	position: React.PropTypes.string,
+	right: React.PropTypes.number,
 	show: React.PropTypes.bool,
-	style: React.PropTypes.object
+	style: React.PropTypes.object,
+	top: React.PropTypes.number
 };
 
 Message.defaultProps = {show: false};

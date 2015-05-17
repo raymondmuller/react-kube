@@ -1,6 +1,6 @@
 const React = require("react");
 
-class HiglightText extends React.Component {
+class HighlightText extends React.Component {
 
 	render() {
 		let text = this.props.text;
@@ -15,12 +15,11 @@ class HiglightText extends React.Component {
 			</span>
 		);
 	}
-
 }
 
-HiglightText.propTypes = {
+HighlightText.propTypes = {
 	query: React.PropTypes.string.isRequired,
 	text: React.PropTypes.string.isRequired
 };
 
-module.exports = HiglightText;
+module.exports = HighlightText;

@@ -1,30 +1,30 @@
-'use strict';
+"use strict";
 
-module.exports = function(karma) {  
+module.exports = function(karma) {
   karma.set({
 
-    basePath: '',
+    basePath: "",
 
-    frameworks: [ 'browserify', 'mocha' ],
+    frameworks: [ "browserify", "phantomjs-shim", "mocha"],
 
     files: [
-      'test/**/*Spec.js'
+      "test/**/*Spec.js"
     ],
 
-    reporters: [ 'spec' ],
+    reporters: [ "spec" ],
 
     preprocessors: {
-      'test/**/*.js': [ 'browserify' ],
-      'src/**/*.js': [ 'browserify' ]
+      "test/**/*.js": [ "browserify" ],
+      "src/**/*.js": [ "browserify" ]
     },
 
-    browsers: [ 'Firefox' ], // Change to PhantomJS when karma supports PhantomJS 2.0
+    browsers: [ "PhantomJS" ],
 
     // browserify configuration
     browserify: {
       debug: true,
-      extensions: ['.js'],
-      transform: [ 'babelify' ]
+      extensions: [".js"],
+      transform: [ "babelify" ]
     }
   });
 };

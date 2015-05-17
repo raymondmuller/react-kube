@@ -1,5 +1,4 @@
 const React = require("react");
-const classNames = require("classnames");
 
 class ProgressBar extends React.Component {
 	constructor(props) {
@@ -23,7 +22,7 @@ class ProgressBar extends React.Component {
 		};
 
 		return (
-			<div id="tools-progress" className={this.props.className} style={this.props.style}>
+			<div className={this.props.className} id="tools-progress" style={this.props.style}>
 				<span style={progressStyle}></span>
 			</div>
 			);

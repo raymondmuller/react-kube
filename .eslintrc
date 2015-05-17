@@ -6,9 +6,12 @@
         "classes": true,
         "superInFunctions": true,
         "arrowFunctions": true,
-        "modules": true
+        "modules": true,
     },
-
+    "env": {
+        "browser": true,
+        "node": true
+    },
     "plugins": ["react"] ,
 
     "rules": {

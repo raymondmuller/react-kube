@@ -10,9 +10,10 @@ class GetStarted extends React.Component {
 			<div id="tab1">
 				<FormSection name="Get Started">
 					<Grid>
-						Under active development | *Stay tuned!*
+						<h4>Version: 0.2.2 (BETA)</h4>
+						Found a bug? Please log an issue => <li className="fa fa-github"></li> <a href="https://github.com/raymondmuller/react-kube/issues" target="_new">Github</a>
 						<hr/>
-							- npm install react-kube or bower install react-kube <br/>
+							- npm install react-kube <br/>
 							- require the desired component to use it<br/><br/>
 							for example:
 							<Highlight>
@@ -21,9 +22,8 @@ class GetStarted extends React.Component {
 						<hr/>
 						Todos: <br/>
 						- Add missing components (see <a href="https://github.com/raymondmuller/react-kube/issues" target="_new">Github Issues</a>) <br/>
-						- Remove jQuery and Kube.js dependencies <br/>
 						- Add Tests <br/>
-						- Add More Docs and Demos <br/>
+						- Improve documentation and demos <br/>
 						<br/>
 					</Grid>
 				</FormSection>

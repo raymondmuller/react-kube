@@ -21,7 +21,7 @@ class Tab extends React.Component {
 	}
 
 	render() {
-		let children = React.Children.map(this.props.children, function(child, index) {
+		let children = React.Children.map(this.props.children, function(child) {
 					return React.cloneElement(child, {active: true, id: this.props.id, key: this.props.index});
 		}, this);
 

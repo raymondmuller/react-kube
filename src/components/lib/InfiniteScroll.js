@@ -41,7 +41,7 @@ class InfiniteScroll extends React.Component {
         this.setState({
           isLoading: true
         });
-        this.props.onScrollEnd ? this.props.onScrollEnd() : null;
+        this.props.onScrollEnd ? this.props.onScrollEnd() : null; //eslint-disable-line
       }
     }
   }

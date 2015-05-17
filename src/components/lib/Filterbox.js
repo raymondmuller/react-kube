@@ -57,7 +57,7 @@ class Filterbox extends React.Component {
 			value: e.target.value
 		});
 		// when available, execute the onChange function of the parent
-		this.props.onChange ? this.props.onChange(e.target.value) : null;
+		this.props.onChange ? this.props.onChange(e.target.value) : null; //eslint-disable-line
 	}
 
 	handleSelectItem(item) {
@@ -67,7 +67,7 @@ class Filterbox extends React.Component {
 			value: item
 		});
 		// when available, execute the onChange function of the parent
-		this.props.onChange ? this.props.onChange(item) : null;
+		this.props.onChange ? this.props.onChange(item) : null; //eslint-disable-line
 	}
 
 	render() {
@@ -94,7 +94,7 @@ class Filterbox extends React.Component {
 			width: this.inputWidth
 		};
 
-		let listItems = this.props.data.map((item, index) => {
+		let listItems = this.props.data.map((item) => {
 			return <li onClick={this.handleSelectItem.bind(this, item)}>{item}</li>;
 		});
 
@@ -114,9 +114,15 @@ Filterbox.propTypes = {
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	data: React.PropTypes.array.isRequired,
+	id: React.PropTypes.string,
+	inputClassName: React.PropTypes.string,
+	listClassName: React.PropTypes.string,
 	onChange: React.PropTypes.func,
+	placeholder: React.PropTypes.string,
+	required: React.PropTypes.bool,
 	show: React.PropTypes.bool,
-	style: React.PropTypes.object
+	style: React.PropTypes.object,
+	toggleClassName: React.PropTypes.string
 };
 
 Filterbox.defaultProps = { show: false };

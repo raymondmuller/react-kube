@@ -23,7 +23,7 @@ class Accordion extends React.Component {
 			});
 
 			//callbacks
-			shown ? this.props.onShow : this.props.onClose;
+			shown ? this.props.onShow() : this.props.onClose(); //eslint-disable-line
 		}
 	}
 
@@ -67,6 +67,7 @@ class Accordion extends React.Component {
 }
 
 Accordion.propTypes = {
+	active: React.PropTypes.bool,
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	collapse: React.PropTypes.bool,

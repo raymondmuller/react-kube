@@ -13,7 +13,7 @@ class Modal extends React.Component {
 		});
 
 		//callback
-		this.props.onClose;
+		this.props.onClose ? this.props.onClose() : null; //eslint-disable-line
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -22,7 +22,7 @@ class Modal extends React.Component {
 		});
 
 		if(nextProps.show){
-			this.props.onShow;
+			this.props.onShow();
 		}
 	}
 

@@ -80,7 +80,7 @@ class Dropdown extends React.Component {
 			cursor: "pointer"
 		};
 
-		let items = this.props.data.map((item, index) => {
+		let items = this.props.data.map((item) => {
 				return <li onClick={this.selectItem.bind(this, item)}><a>{item}</a></li>;
 		});
 

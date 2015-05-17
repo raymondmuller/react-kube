@@ -15,7 +15,7 @@ class Navigation extends React.Component {
 	}
 
 	componentWillMount() {
-		this.props.active ? this.setState({active: this.props.active}) : null;
+		this.props.active ? this.setState({active: this.props.active}) : null; //eslint-disable-line
 	}
 
 	componentDidMount() {

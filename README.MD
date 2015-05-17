@@ -1,12 +1,11 @@
 # React Components based on KUBE CSS
 
-! Under active development ! - Stay tuned.
+Beta version ! Under active development !
 
 ### TODO:
 - Improve current code / clean up and formatting
-- Remove jQuery and Kube.js dependencies.
 - Use React Mixins to reuse common code (ES6) ? 
-- Some JS Tools Components ()
+- Resolve issues
 - Tests 
 
 ### Get Started

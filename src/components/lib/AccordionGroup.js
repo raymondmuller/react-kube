@@ -9,12 +9,12 @@ class AccordionGroup extends React.Component {
 
 	updateActive(i, shown) {
 		let accordion;
-		!shown ? accordion = i : accordion = -1;
+		!shown ? accordion = i : accordion = -1; //eslint-disable-line
 		this.setState({
 			active: accordion
 		});
 
-		shown ? this.props.onShow : this.props.onClose;
+		shown ? this.props.onShow() : this.props.onClose(); //eslint-disable-line
 	}
 
 	render() {

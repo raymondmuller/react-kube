@@ -5,6 +5,7 @@ const AutocompleteBox = require("./docs/AutocompleteBox");
 const DropdownBox = require("./docs/DropdownBox");
 const FilterBox = require("./docs/FilterBox");
 const InfiniteScrollBox = require("./docs/InfiniteScrollBox");
+const LivesearchBox = require("./docs/LivesearchBox");
 const ModalBox = require("./docs/ModalBox");
 const ProgressBarBox = require("./docs/ProgressBarBox");
 const TooltipBox = require("./docs/TooltipBox");
@@ -20,6 +21,7 @@ class JSTools extends React.Component {
 				<AutocompleteBox />
 				<DropdownBox />
 				<FilterBox />
+				<LivesearchBox />
 				<ModalBox />
 				<ProgressBarBox />
 				<TooltipBox />
