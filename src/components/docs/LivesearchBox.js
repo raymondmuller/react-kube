@@ -15,7 +15,7 @@ class LivesearchBox extends React.Component {
 						<Livesearch data={["Apple", "Banana", "Bread", "Cheese"]} />
 					</GridItem>
 					<GridItem className="demo" size={50}>
-						<p>Note: For the moment these are just styles. This component is not doing anything yet :) Working on that (<a href="https://github.com/raymondmuller/react-kube/issues/8" target="_new"><li className="fa fa-github"></li> Livesearch Issue</a>)</p>
+						<p>Note: For the moment these are mainly just styles. This component is not doing anything yet, expect for searching in an array :) Working on that (<a href="https://github.com/raymondmuller/react-kube/issues/8" target="_new"><li className="fa fa-github"></li> Livesearch Issue</a>)</p>
 						<Highlight className="javascript">
 							{"<Livesearch />"}
 						</Highlight>

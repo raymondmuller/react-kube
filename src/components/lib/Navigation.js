@@ -7,32 +7,56 @@ class Navigation extends React.Component {
 		this.state = { showFixed: false };
 	}
 
+	componentWillMount() {
+		window.addEventListener("resize", this.onResize.bind(this));
+		this.onResize();
+	}
+
 	componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll.bind(this));
+		window.removeEventListener("resize", this.onResize.bind(this));
+		window.addEventListener("scroll", this.handleScroll.bind(this));
 		this.navHeight = React.findDOMNode(this.refs.siteNavigation).offsetHeight;
 		this.navHeight += 20;
 		this.forceUpdate();
 	}
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll.bind(this));
-  }
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.handleScroll.bind(this));
+	}
 
-  handleScroll() {
+	handleScroll() {
 		if(window.pageYOffset > this.navHeight) {
 			this.setState({
-				showFixed: true
+				showFixed: true,
+				collapsed: false
 			});
 		} else {
 			this.setState({
 				showFixed: false
 			});
 		}
-  }
+	}
+
+	handleToggleClick() {
+		this.setState({
+			collapsed: !this.state.collapsed
+		});
+	}
+
+	onResize() {
+		if(window.innerWidth < 767) {
+			this.setState({
+				mobile: true
+			});
+		} else {
+			this.setState({
+				mobile: false
+			});
+		}
+	}
 
 	render() {
 		let navClasses = classNames({
-			"navigation-toggle": this.props.toggle,
 			"nav-fullwidth": this.props.fullwidth || this.state.showFixed,
 			"navigation-fixed": this.props.fixed && this.state.showFixed
 		});
@@ -43,10 +67,17 @@ class Navigation extends React.Component {
 			width: navWidth
 		};
 
+		let toggleStyle = {
+			display: this.state.mobile ? "block" : "none"
+		};
+
 		return (
 			<header className="group" id="header" style={this.props.style}>
 				<div className={classNames(this.props.className, navClasses)} id="nav" ref="siteNavigation" style={navStyle}>
-					{this.props.children}
+					{ this.props.responsive ? <div className="navigation-toggle" onClick={this.handleToggleClick.bind(this)} style={toggleStyle}>
+						<span>{this.props.menuLabel}</span>
+					</div> : null }
+					{ !this.state.mobile || this.state.collapsed ? this.props.children : null }
 				</div>
 			</header>
 		);
