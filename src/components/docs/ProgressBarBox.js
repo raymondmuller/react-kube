@@ -29,7 +29,7 @@ class ProgressBarBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="ProgressBar">
+			<FormSection id="progressBarBox" name="ProgressBar">
 				<Grid>
 					<GridItem size={50}>
 						<Button color="green" onClick={this.handleIncreaseProgress.bind(this)}>Increase Progress +10</Button><br/><br/>

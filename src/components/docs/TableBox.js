@@ -25,7 +25,7 @@ class TableBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Table">
+			<FormSection id="tableBox" name="Table">
 				<Grid>
 					<GridItem size={50}>
 						<span>Choose a table style: </span>

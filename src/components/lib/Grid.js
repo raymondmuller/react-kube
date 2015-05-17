@@ -13,7 +13,7 @@ class Grid extends React.Component {
 		styles += this.props.mobile ? " units-mobile-" + this.props.mobile : "";
 
 		return (
-				<div className={classNames(this.props.className, styles)} style={this.props.style}>
+				<div className={classNames(this.props.className, styles)} id={this.props.id} style={this.props.style}>
 					{this.props.children}
 				</div>
 		);
@@ -24,6 +24,7 @@ Grid.propTypes = {
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	disabled: React.PropTypes.bool,
+	id: React.PropTypes.string,
 	end: React.PropTypes.bool,
 	mobile: React.PropTypes.number,
 	padding: React.PropTypes.bool,

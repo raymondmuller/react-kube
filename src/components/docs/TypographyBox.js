@@ -7,7 +7,7 @@ class TypographyBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Typography & Helpers">
+			<FormSection id="typographyBox" name="Typography & Helpers">
 				<Grid>
 					<p>No React stuff going on here (yet), please refer to the Official Kube Documentation</p>
 						<LinkButton color="blue" url="http://imperavi.com/kube/css/typography/" target="new">Typography</LinkButton>

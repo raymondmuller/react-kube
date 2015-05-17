@@ -10,7 +10,7 @@ class LabelBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Labels & Badges">
+			<FormSection id="labelBox" name="Labels & Badges">
 				<Grid>
 					<GridItem size={50}>
 						<Label color="red">Normal</Label> <br/><br/>

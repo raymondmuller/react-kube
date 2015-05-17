@@ -9,7 +9,7 @@ class TextFitBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="TextFit">
+			<FormSection id="textFitBox" name="TextFit">
 				<Grid>
 					<GridItem size={50}>
 						<TextFit>

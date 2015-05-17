@@ -22,7 +22,7 @@ class DropdownBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Dropdown">
+			<FormSection id="dropdownBox" name="Dropdown">
 				<Grid>
 					<GridItem size={50}>
 						<FormList>

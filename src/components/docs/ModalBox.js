@@ -23,7 +23,7 @@ class ModalBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Modal">
+			<FormSection id="modalBox" name="Modal">
 				<Grid>
 					<GridItem size={50}>
 						<Button color="green" onClick={this.handleShowModal.bind(this)}>Show Modal</Button>

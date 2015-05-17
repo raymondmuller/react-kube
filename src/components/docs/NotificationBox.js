@@ -50,7 +50,7 @@ class NotificationBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Notifications">
+			<FormSection id="notificationBox" name="Notifications">
 				<FormSection name="Messages">
 					<Blocks amount={2}>
 						<Block>

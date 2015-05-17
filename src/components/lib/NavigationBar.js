@@ -27,7 +27,7 @@ class NavigationBar extends React.Component {
 
 		let children = [];
 		React.Children.forEach(this.props.children, (child, i) => {
-			children.push(React.cloneElement(child, {active: i === this.state.active, index: i, onItemClick: this.handleItemClick.bind(this, i)}));
+			children.push(React.cloneElement(child, {active: i === this.state.active, key: i, index: i, onItemClick: this.handleItemClick.bind(this, i)}));
 		});
 
 		return (

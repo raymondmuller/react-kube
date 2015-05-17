@@ -5,6 +5,22 @@ const Highlight = require("react-highlight");
 
 class GetStarted extends React.Component {
 
+	shiftWindow() {
+		window.scrollBy(0, -60); //dirty fix for anchor links problem with fixed header
+  }
+
+	componentWillMount() {
+		window.addEventListener("hashchange", this.shiftWindow);
+	}
+
+	componentDidMount() {
+		if (location.hash) { this.shiftWindow(); }
+	}
+
+	componentWillUnmount(){
+		window.removeEventListener("hashchange", this.shiftWindow);
+	}
+
 	render() {
 		return (
 			<div id="tab1">

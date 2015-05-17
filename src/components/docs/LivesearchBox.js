@@ -9,7 +9,7 @@ class LivesearchBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection id="#Livesearch" name="Livesearch">
+			<FormSection id="livesearchBox" name="Livesearch">
 				<Grid>
 					<GridItem size={50}>
 						<Livesearch data={["Apple", "Banana", "Bread", "Cheese"]} />

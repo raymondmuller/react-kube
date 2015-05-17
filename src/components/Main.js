@@ -15,6 +15,7 @@ class Main extends React.Component {
 		return (
 			<div className="main">
 				<NavigationBox />
+				<section className="mainSection">
 				<Grid>
 					<GridItem size={10}><br/></GridItem>
 					<GridItem size={80}>
@@ -34,6 +35,7 @@ class Main extends React.Component {
 						<br/>
 					</GridItem>
 				</Grid>
+				</section>
 			</div>
 		);
 	}

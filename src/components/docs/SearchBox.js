@@ -9,7 +9,7 @@ class SearchBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Search">
+			<FormSection id="searchBox" name="Search">
 					<Grid>
 						<GridItem size={50}>
 							<Search placeholder="normal search"/><br/>

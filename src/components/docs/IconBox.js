@@ -9,7 +9,7 @@ class IconBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Icons">
+			<FormSection id="iconBox" name="Icons">
 				<Grid>
 					<GridItem size={50}>
 						For now you can (only) add icons to buttons. I will extend this functionality to more components later

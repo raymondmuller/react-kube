@@ -13,7 +13,7 @@ class NavigationBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection id="navigation" name="Navigation">
+			<FormSection id="navigationBox" name="Navigation">
 				<Grid>
 					<GridItem size={50}>
 						<p>NavigationBar demo - coming soon</p>

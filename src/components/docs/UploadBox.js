@@ -9,7 +9,7 @@ class Uploadbox extends React.Component {
 
 	render() {
 		return (
-			<FormSection id="#upload" name="Upload">
+			<FormSection id="uploadBox" name="Upload">
 				<Grid>
 					<GridItem size={50}>
 						<Upload/>

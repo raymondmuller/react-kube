@@ -8,16 +8,16 @@ class NavigationBox extends React.Component {
 
 render() {
 	return (
-		<span>
-			<Navigation responsive menuLabel="Menu" fixed active="01" id="navbar-1" className="demo-navbar-fixed">
+		<header className="group" id="header" style={this.props.style}>
+			<Navigation responsive menuLabel="Menu" fixed active="01" id="nav" className="demo-navbar-fixed">
 				<NavigationLogo>React-Kube (BETA)</NavigationLogo>
-				<NavigationBar hideOnMobile active={0} left>
+				<NavigationBar active={0} hideOnMobile left>
 					<NavigationItem url="#documentation" icon="code"> Documentation </NavigationItem>
 					<NavigationItem url="http://www.raymondmuller.com" icon="envelope"> Contact </NavigationItem>
 					<NavigationItem url="http://www.github.com/raymondmuller" target="_new" icon="github"> Github</NavigationItem>
 				</NavigationBar>
 			</Navigation>
-		</span>
+		</header>
 		);
 	}
 }

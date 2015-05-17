@@ -48,14 +48,14 @@ class Tabs extends React.Component {
 
 		let children = [];
 		this.props.children.map(function(child, i) {
-				children.push(React.cloneElement(child, {active: i === this.state.active, addTab: this.addTab.bind(this), key: i, index: i }));
+				children.push(React.cloneElement(child, {active: i === this.state.active, addTab: this.addTab.bind(this), key: children.length, index: i }));
 		}, this);
 
 		return (
 			<span>
 			<nav
 				className={classNames(this.props.className, styles)}
-				data-equals={this.props.equals}
+				id={this.props.id}
 				style={this.props.style}>
 					<ul>
 						{tabs}
@@ -72,6 +72,7 @@ class Tabs extends React.Component {
 Tabs.propTypes = {
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
+	id: React.PropTypes.string,
 	equals: React.PropTypes.bool,
 	pills: React.PropTypes.bool,
 	rows: React.PropTypes.number,

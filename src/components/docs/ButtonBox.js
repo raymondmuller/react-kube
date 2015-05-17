@@ -11,7 +11,7 @@ class ButtonBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection id="#buttons" name="Buttons">
+			<FormSection id="buttonBox" name="Buttons">
 				<Grid>
 					<GridItem size={50}>
 						<Button color="red"> Normal </Button><br/><br/>

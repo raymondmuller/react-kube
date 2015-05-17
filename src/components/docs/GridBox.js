@@ -9,7 +9,7 @@ class GridBox extends React.Component {
 	render() {
 
 		return (
-			<FormSection name="Grid">
+			<FormSection id="gridBox" name="Grid">
 				<Grid>
 					<GridItem size={50}>
 						<Grid>

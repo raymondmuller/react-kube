@@ -13,7 +13,7 @@ class FormBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Forms">
+			<FormSection id="formBox" name="Forms">
 				<Grid>
 					<GridItem size={50}>
 					<Form>

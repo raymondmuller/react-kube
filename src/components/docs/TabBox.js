@@ -10,7 +10,7 @@ class TabBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection id="#tabs" name="Tabs">
+			<FormSection id="tabsBox" name="Tabs">
 				<Grid>
 					<GridItem size={50}>
 						<Tabs equals={false}>

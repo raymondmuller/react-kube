@@ -8,20 +8,24 @@ class Navigation extends React.Component {
 	}
 
 	componentWillMount() {
+		if(!this.props.id){
+			console.error("Please assign an ID to the Navigation component");
+		}
 		window.addEventListener("resize", this.onResize.bind(this));
 		this.onResize();
 	}
 
 	componentDidMount() {
-		window.removeEventListener("resize", this.onResize.bind(this));
 		window.addEventListener("scroll", this.handleScroll.bind(this));
-		this.navHeight = React.findDOMNode(this.refs.siteNavigation).offsetHeight;
+		let navId = this.props.id;
+		this.navHeight = React.findDOMNode(this.refs[navId]).offsetHeight;
 		this.navHeight += 20;
 		this.forceUpdate();
 	}
 
 	componentWillUnmount() {
 		window.removeEventListener("scroll", this.handleScroll.bind(this));
+		window.removeEventListener("resize", this.onResize.bind(this));
 	}
 
 	handleScroll() {
@@ -72,14 +76,12 @@ class Navigation extends React.Component {
 		};
 
 		return (
-			<header className="group" id="header" style={this.props.style}>
-				<div className={classNames(this.props.className, navClasses)} id="nav" ref="siteNavigation" style={navStyle}>
+				<div className={classNames(this.props.className, navClasses)} id={this.props.id} ref={this.props.id} style={navStyle}>
 					{ this.props.responsive ? <div className="navigation-toggle" onClick={this.handleToggleClick.bind(this)} style={toggleStyle}>
 						<span>{this.props.menuLabel}</span>
 					</div> : null }
 					{ !this.state.mobile || this.state.collapsed ? this.props.children : null }
 				</div>
-			</header>
 		);
 	}
 }
@@ -90,7 +92,7 @@ Navigation.propTypes = {
 	className: React.PropTypes.string,
 	fixed: React.PropTypes.bool,
 	fullwidth: React.PropTypes.bool,
-	id: React.PropTypes.string,
+	id: React.PropTypes.string.isRequired,
 	pills: React.PropTypes.bool,
 	style: React.PropTypes.object,
 	toggle: React.PropTypes.bool,

@@ -28,7 +28,7 @@ class TooltipBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Tooltip">
+			<FormSection id="tooltipBox" name="Tooltip">
 				<Grid>
 					<GridItem size={50}>
 						<Select description="color" id="tooltipSelect" onChange={this.handleColorChange.bind(this)}>

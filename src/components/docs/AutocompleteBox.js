@@ -23,7 +23,7 @@ class AutocompleteBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Autocomplete">
+			<FormSection id="autocompleteBox" name="Autocomplete">
 				<Grid>
 					<GridItem size={50}>
 						<span>Choose a rule: </span>

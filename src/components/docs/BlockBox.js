@@ -1,4 +1,6 @@
 const React = require("react");
+
+const Accordion = require("./lib/Accordion");
 const FormSection = require("../lib/FormSection");
 const Grid = require("../lib/Grid");
 const GridItem = require("../lib/GridItem");
@@ -10,7 +12,7 @@ class BlockBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Block">
+			<FormSection id="blockBox" name="Block">
 				<Grid>
 					<GridItem size={50}>
 						<Blocks amount={2}>

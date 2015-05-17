@@ -11,7 +11,7 @@ class AccordionBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection name="Accordion">
+			<FormSection id="accordionBox" name="Accordion">
 				<Grid>
 					<GridItem size={50}>
 						<Accordion title="first title">
