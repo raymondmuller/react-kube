@@ -4,7 +4,7 @@ const classNames = require("classnames");
 class Livesearch extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {left: 0, top: 0, value: ""};
+		this.state = {left: 0, top: 0, results: [], value: ""};
 	}
 
 	componentDidMount() {
@@ -13,6 +13,8 @@ class Livesearch extends React.Component {
 		let inputWidth = React.findDOMNode(this.refs.liveSearchInput).offsetWidth;
 		let posLeftClose = inputWidth + posLeft - 25;
 		let posTopClose = posTop + 2;
+
+		this.inputHeight = React.findDOMNode(this.refs.liveSearchInput).offsetHeight;
 
 		this.setState({
 			top: posTopClose,
@@ -31,6 +33,15 @@ class Livesearch extends React.Component {
 		this.setState({
 			value: e.target.value
 		});
+
+		let results = this.props.data.filter((item) => {
+			return item.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1;
+		});
+
+		this.setState({
+			results: results
+		});
+
 		this.props.onChange ? this.props.onChange(e.target.value) : null; //eslint-disable-line
 	}
 
@@ -47,28 +58,35 @@ class Livesearch extends React.Component {
 			width: "17px"
 		};
 
+		let livesearchIconStyle = {
+			top: this.inputHeight / 2 + 2
+		};
+
+		let results = this.state.results.map(function(item) {
+			return <div>{item}</div>;
+		});
+
 		return (
-			<span className={classNames(this.props.className, liveSearchClasses)} style={this.props.style}>
+			<div className={classNames(this.props.className, liveSearchClasses)} style={this.props.style}>
 				<input onChange={this.handleInputChange.bind(this)} placeholder={this.props.placeholder} ref="liveSearchInput" type="search" value={this.state.value} />
-				<span className="livesearch-icon"></span>
+				<span className="livesearch-icon" style={livesearchIconStyle}></span>
 				<span className="close" onClick={this.handleCloseClick.bind(this)} style={closeStyle}></span>
-			</span>
+				<div className={this.props.resultsClassName} id="liveSearchResults" ref="liveSearchResults">
+					<br/>
+					{results}
+				</div>
+			</div>
 			);
 	}
 }
 
 Livesearch.propTypes = {
 	className: React.PropTypes.string,
-	data: React.PropTypes.oneOfType([
-		React.PropTypes.arrayOf(React.PropTypes.string),
-		React.PropTypes.arrayOf(React.PropTypes.shape({
-			label: React.PropTypes.string,
-			value: React.PropTypes.any
-			}))
-		]),
+	data: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
 	onChange: React.PropTypes.func,
 	onClose: React.PropTypes.func,
 	placeholder: React.PropTypes.string,
+	resultsClassName: React.PropTypes.string,
 	style: React.PropTypes.object
 };
 

@@ -17,17 +17,17 @@ class CSSComponents extends React.Component {
 	render() {
 		return (
 			<div id="tab2">
-				<TypographyBox />
-				<GridBox />
 				<BlockBox />
-				<TableBox />
-				<LabelBox />
-				<FormBox />
-				<NavigationBox />
 				<ButtonBox />
-				<SearchBox />
-				<NotificationBox />
+				<FormBox />
+				<GridBox />
 				<IconBox />
+				<LabelBox />
+				<NavigationBox />
+				<NotificationBox />
+				<SearchBox />
+				<TableBox />
+				<TypographyBox />
 			</div>
 		);
 	}

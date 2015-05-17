@@ -32,21 +32,19 @@ class NavigationBox extends React.Component {
 					</GridItem>
 					<GridItem className="demo" size={50}>
 						<Highlight className="javascript">
-							{"<NavigationToggle target=\"#navbar-1\"> Menu </NavigationToggle>"}<br/>
-							&emsp;&emsp;{"<Navigation id=\"#navbar-1\" toggle>"}<br/>
-							&emsp;&emsp;&emsp;&emsp;{"<NavigationBar left>"}<br/>
-							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{"<NavigationItem> Home </NavigationItem"}<br/>
-							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{"<NavigationItem> Contact </NavigationItem"}<br/>
-							&emsp;&emsp;&emsp;&emsp;{"</NavigationBar>"}
-							&emsp;&emsp;{"</Navigation"}
-						</Highlight>
-						<Highlight className="javascript">
 							{"<Pagination active={1} left=\"#previous\" right=\"#next\">"}<br/>
 							&emsp;&emsp;{"<PaginationItem> 1 </PaginationItem>"}<br/>
 							&emsp;&emsp;{"<PaginationItem> 2 </PaginationItem>"}<br/>
 							&emsp;&emsp;{"<PaginationItem> 3 </PaginationItem>"}<br/>
 							{"</Pagination>"}
-						</Highlight> 
+						</Highlight>
+						<Highlight className="javascript">
+							{"<BreadCrumbs>"}<br/>
+							&emsp;&emsp;{"<BreadCrumb>one</BreadCrumb>"}<br/>
+							&emsp;&emsp;{"<BreadCrumb>two</BreadCrumb>"}<br/>
+							&emsp;&emsp;{"<BreadCrumb>three</BreadCrumb>"}<br/>
+							{"</BreadCrumbs>"}
+						</Highlight>
 					</GridItem>
 				</Grid>
 			</FormSection>
