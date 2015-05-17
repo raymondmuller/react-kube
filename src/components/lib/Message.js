@@ -37,12 +37,13 @@ class Message extends React.Component {
 	render() {
 		let styles = this.props.color ? "tools-message tools-message-" + this.props.color : "tools-message";
 		let messageStyle = {
-			top: this.props.top,
-			right: this.props.right,
-			left: this.props.left,
 			bottom: this.props.bottom,
+			display: "block !important",
+			left: this.props.left,
 			position: this.props.position,
-			display: "block !important"
+			right: this.props.right,
+			top: this.props.top,
+			zIndex: this.props.position !== "relative" ? 101 : 100
 		};
 
 		return (

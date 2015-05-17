@@ -1,24 +1,6 @@
-.navCustom {
-	background: #B71C1C;
-}
-
-.navigationBarCustom > li > a {
-	color: white;
-	font-size: large;
-	margin-top: 8px;
-	text-decoration: none;
-	display: block;
-}
-
-.navbar-pills > ul > li.active > a {
-	background: #EF9A9A;
-	color: white;
-	border-radius: 50px;
-}
-
-.navbar-pills > ul > li:hover > a {
-	background: #D32F2F;
-	color: white;
+.demo-navbar-fixed {
+	background: #f2f2f2;
+	padding: 10px;
 }
 
 .demo > pre {

@@ -22,6 +22,4 @@ NavigationToggle.propTypes = {
 	style: React.PropTypes.object
 };
 
-NavigationToggle.defaultProps = { target: "#nav"};
-
 module.exports = NavigationToggle;

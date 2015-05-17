@@ -1,4 +1,5 @@
 import Accordion from "./Accordion";
+import AccordionGroup from "./AccordionGroup";
 import Alert from "./Alert";
 import Autocomplete from "./Autocomplete";
 import Badge from "./Badge";
@@ -20,11 +21,13 @@ import InfiniteScroll from "./InfiniteScroll";
 import Input from "./Input";
 import Label from "./Label";
 import LinkButton from "./LinkButton";
+import Livesearch from "./Livesearch";
 import Message from "./Message";
 import Modal from "./Modal";
 import Navigation from "./Navigation";
 import NavigationBar from "./NavigationBar";
 import NavigationItem from "./NavigationItem";
+import NavigationLogo from "./NavigationLogo";
 import NavigationToggle from "./NavigationToggle";
 import Pagination from "./Pagination";
 import PaginationItem from "./PaginationItem";
@@ -35,6 +38,7 @@ import Select from "./Select";
 import SelectGroup from "./SelectGroup";
 import SelectOption from "./SelectOption";
 import SubmitButton from "./SubmitButton";
+import Tab from "./Tab";
 import Table from "./Table";
 import TableHead from "./TableHead";
 import TableHeader from "./TableHeader";
@@ -44,9 +48,11 @@ import Tabs from "./Tabs";
 import TextArea from "./TextArea";
 import TextFit from "./TextFit";
 import Tooltip from "./Tooltip";
+import Upload from "./Upload";
 
 export default {
 	Accordion,
+	AccordionGroup,
 	Alert,
 	Autocomplete,
 	Badge,
@@ -68,11 +74,13 @@ export default {
 	Input,
 	Label,
 	LinkButton,
+	Livesearch,
 	Message,
 	Modal,
 	Navigation,
 	NavigationBar,
 	NavigationItem,
+	NavigationLogo,
 	NavigationToggle,
 	Pagination,
 	PaginationItem,
@@ -83,6 +91,7 @@ export default {
 	SelectGroup,
 	SelectOption,
 	SubmitButton,
+	Tab,
 	Table,
 	TableHead,
 	TableHeader,
@@ -91,5 +100,6 @@ export default {
 	Tabs,
 	TextArea,
 	TextFit,
-	Tooltip
+	Tooltip,
+	Upload
 };

@@ -2,6 +2,16 @@ const React = require("react");
 var classNames = require("classnames");
 
 class NavigationBar extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { active: this.props.active };
+	}
+
+	handleItemClick(index) {
+		this.setState({
+			active: index
+		});
+	}
 
 	render() {
 
@@ -11,26 +21,27 @@ class NavigationBar extends React.Component {
 			"nav-stacked": this.props.stacked,
 			"nav-stats": this.props.stats,
 			"navbar-left": this.props.left && !this.props.sub,
-			"navbar-right": this.props.right && !this.props.sub
+			"navbar-right": this.props.right && !this.props.sub,
+			"wrap": this.props.wrap
 		});
 
-		let navBarStyle = {
-			marginTop: "1.65em"
-		};
-
-		let children = React.Children.map(this.props.children, function(child, i) {
-			return React.cloneElement(child, {active: this.props.index + "" + i === this.props.active, index: i, onItemClick: this.props.onItemClick});
-		}, this);
+		let children = [];
+		React.Children.forEach(this.props.children, (child, i) => {
+			children.push(React.cloneElement(child, {active: i === this.state.active, index: i, onItemClick: this.handleItemClick.bind(this, i)}));
+		});
 
 		return (
-			<ul className={classNames(this.props.className, navBarClasses)} style={navBarStyle}>
-				{children}
-			</ul> );
+			<nav className="navbar">
+				<ul className={classNames(this.props.className, navBarClasses)} style={this.props.style}>
+					{children}
+				</ul>
+			</nav>
+		);
 	}
 }
 
 NavigationBar.propTypes = {
-	active: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.bool ]),
+	active: React.PropTypes.oneOfType([ React.PropTypes.number, React.PropTypes.bool]),
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	index: React.PropTypes.number,
@@ -41,7 +52,10 @@ NavigationBar.propTypes = {
 	stats: React.PropTypes.bool,
 	style: React.PropTypes.object,
 	sub: React.PropTypes.bool,
-	vertical: React.PropTypes.bool
+	vertical: React.PropTypes.bool,
+	wrap: React.PropTypes.bool
 };
+
+NavigationBar.defaultProps = { active: -1 };
 
 module.exports = NavigationBar;

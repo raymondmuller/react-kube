@@ -98,7 +98,7 @@ gulp.task("clean:production", function (cb) {
 
 gulp.task("watch", function () {
     gulp.watch(["src/components/**/*.js", "src/*.html", "src/styles/*.css"], function () {
-        runSequence(["lint"], ["compile"], ["copy"], ["reload"]);
+        runSequence(["compile"], ["copy"], ["reload"]);
     });
 });
 
@@ -141,7 +141,7 @@ gulp.task("default", function () {
 });
 
 gulp.task("demo", function () {
-    runSequence(["clean"], ["lint"], ["compile", "copy"], "server", "opn", "watch");
+    runSequence(["clean"], ["compile", "copy"], "server", "opn", "watch");
 });
 
 gulp.task("build", ["default"]);

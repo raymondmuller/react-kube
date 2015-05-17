@@ -2,59 +2,52 @@ const React = require("react");
 var classNames = require("classnames");
 
 class Navigation extends React.Component {
-
-	constructor(props) {
+	constructor(props){
 		super(props);
-		this.state = { active: "false" };
-	}
-
-	handleItemClick(index, nav) {
-		this.setState({
-			active: index + "" + nav
-		});
-	}
-
-	componentWillMount() {
-		this.props.active ? this.setState({active: this.props.active}) : null; //eslint-disable-line
+		this.state = { showFixed: false };
 	}
 
 	componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll.bind(this));
 		this.navHeight = React.findDOMNode(this.refs.siteNavigation).offsetHeight;
 		this.navHeight += 20;
 		this.forceUpdate();
 	}
 
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll.bind(this));
+  }
+
+  handleScroll() {
+		if(window.pageYOffset > this.navHeight) {
+			this.setState({
+				showFixed: true
+			});
+		} else {
+			this.setState({
+				showFixed: false
+			});
+		}
+  }
+
 	render() {
 		let navClasses = classNames({
-			"navbar-pills": this.props.pills,
-			"nav-toggle": this.props.toggle,
-			"nav-fullwidth": this.props.fullwidth,
-			"navigation-fixed": this.props.fixed
+			"navigation-toggle": this.props.toggle,
+			"nav-fullwidth": this.props.fullwidth || this.state.showFixed,
+			"navigation-fixed": this.props.fixed && this.state.showFixed
 		});
 
-		let navWidth = this.props.fullwidth ? "100%" : "auto";
+		let navWidth = this.props.fullwidth || this.state.showFixed ? "100%" : "auto";
 
 		let navStyle = {
-			minHeight: "50px",
 			width: navWidth
 		};
 
-		let headerStyle = {};
-		if("fixed" in this.props) {
-			headerStyle = {
-				marginBottom: this.navHeight
-			};
-		}
-
-		let children = React.Children.map(this.props.children, function(child, i) {
-			return React.cloneElement(child, {active: this.state.active, onItemClick: this.handleItemClick.bind(this, i), index: i});
-		}, this);
-
 		return (
-			<header className="group" style={headerStyle}>
-				<nav className={classNames(this.props.className, navClasses)} data-equals={this.props["data-equals"]} data-tools={this.props["data-tools"]} id={this.props.id} ref="siteNavigation" style={navStyle}>
-					{children}
-				</nav>
+			<header className="group" id="header" style={this.props.style}>
+				<div className={classNames(this.props.className, navClasses)} id="nav" ref="siteNavigation" style={navStyle}>
+					{this.props.children}
+				</div>
 			</header>
 		);
 	}
@@ -68,7 +61,10 @@ Navigation.propTypes = {
 	fullwidth: React.PropTypes.bool,
 	id: React.PropTypes.string,
 	pills: React.PropTypes.bool,
-	toggle: React.PropTypes.bool
+	style: React.PropTypes.object,
+	toggle: React.PropTypes.bool,
+	wrap: React.PropTypes.bool
 };
 
+Navigation.defaultProps = { wrap: true };
 module.exports = Navigation;
