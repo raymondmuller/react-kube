@@ -7,8 +7,8 @@ import Breadcrumbs from "../src/Components/lib/Breadcrumbs";
 describe("Breadcrumbs", function () {
   it("should exist in the dom", function () {
     let instance = ReactTestUtils.renderIntoDocument(
-      <Breadcrumbs>1</Breadcrumbs>
+      <Breadcrumbs><span>1</span></Breadcrumbs>
     );
-    assert.ok(ReactTestUtils.findRenderedDOMComponentWithTag(instance, "li"));
+    assert.ok(ReactTestUtils.findRenderedDOMComponentWithClass(instance, "breadcrumbs"));
   });
 });
