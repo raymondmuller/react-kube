@@ -7,9 +7,17 @@ import NavigationLogo from "./lib/NavigationLogo";
 
 class NavigationBox extends React.Component {
 
+componentWillMount() {
+	window.addEventListener("hashchange", function() { scrollBy(0, -115); }); // Dirty fix demo anchor scroll
+}
+
+componentWillUnmount(){
+	window.removeEventListener("hashchange", function() { scrollBy(0, -115); }); // Dirty fix demo anchor scroll
+}
+
 render() {
 	return (
-		<header className="group" id="header" style={this.props.style}>
+		<header className="group" id="header" ref="header" style={this.props.style}>
 			<Navigation responsive menuLabel="Menu" fixed active="01" id="nav" className="demo-navbar-fixed">
 				<NavigationLogo>React-Kube (BETA)</NavigationLogo>
 				<NavigationBar active={0} hideOnMobile left>

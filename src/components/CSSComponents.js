@@ -20,19 +20,11 @@ import IconBox from "./docs/IconBox";
 
 class CSSComponents extends React.Component {
 
-	componentWillMount() {
-		window.addEventListener("hashchange", function() { scrollBy(0, -75); });
-	}
-
-	componentWillUnmount(){
-		window.removeEventListener("hashchange", function() { scrollBy(0, -75); });
-	}
-
 	render() {
 		return (
 			<div id="tab2">
 			<Grid>
-				<GridItem id="side" size={25}>
+				<GridItem id="side" size={20}>
 					<Label className="hide-on-mobile" color="black" style={{marginBottom: "10px", fontSize: "1em"}} >CSS Components</Label><br/>
 					<Navigation id="side-nav" menuLabel="CSS Components" responsive>
 						<NavigationBar hideOnMobile vertical>
@@ -50,7 +42,7 @@ class CSSComponents extends React.Component {
 						</NavigationBar>
 					</Navigation>
 				</GridItem>
-					<GridItem size={75}>
+					<GridItem size={80}>
 						<BlockBox />
 						<ButtonBox />
 						<FormBox />
