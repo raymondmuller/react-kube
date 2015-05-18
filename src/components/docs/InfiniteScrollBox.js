@@ -47,7 +47,7 @@ class InfiniteScrollBox extends React.Component {
 		});
 
 		return (
-			<FormSection id="#InfiniteScroll" name="InfiniteScroll">
+			<FormSection id="infiniteScrollBox" name="InfiniteScroll">
 				<Blocks amount={2}>
 						<Block>
 						<InfiniteScroll finished={this.state.finishedScrolling} isLoading={this.state.isInfiniteLoading} onScrollEnd={this.handleScrollEnd.bind(this)} style={{height: "100px", overflowY: "scroll"}}>

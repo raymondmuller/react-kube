@@ -31,7 +31,7 @@ Button.propTypes = {
 	active: React.PropTypes.bool,
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
-	color: React.PropTypes.string,
+	color: React.PropTypes.oneOf(["black", "blue", "red", "yellow", "green", "white"]),
 	disabled: React.PropTypes.bool,
 	icon: React.PropTypes.string,
 	left: React.PropTypes.bool,

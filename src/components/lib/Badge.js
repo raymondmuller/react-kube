@@ -22,7 +22,7 @@ class Badge extends React.Component {
 Badge.propTypes = {
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
-	color: React.PropTypes.string,
+	color: React.PropTypes.oneOf(["black", "blue", "red", "yellow", "green", "white"]),
 	small: React.PropTypes.bool,
 	style: React.PropTypes.object
 };

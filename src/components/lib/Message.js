@@ -62,7 +62,7 @@ Message.propTypes = {
 	bottom: React.PropTypes.number,
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
-	color: React.PropTypes.string,
+	color: React.PropTypes.oneOf(["black", "blue", "red", "yellow", "green"]),
 	delay: React.PropTypes.number,
 	left: React.PropTypes.number,
 	onClose: React.PropTypes.func,

@@ -18,6 +18,7 @@ class ProgressBar extends React.Component {
 	render() {
 
 		let progressStyle = {
+			backgroundColor: this.props.color,
 			width: this.state.progress
 		};
 
@@ -31,6 +32,7 @@ class ProgressBar extends React.Component {
 
 ProgressBar.propTypes = {
 	className: React.PropTypes.string,
+	color: React.PropTypes.string,
 	progress: React.PropTypes.number,
 	style: React.PropTypes.object
 };

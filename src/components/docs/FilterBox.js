@@ -22,7 +22,7 @@ class FilterBox extends React.Component {
 
 	render() {
 		return (
-			<FormSection id="filterBoxBox" name="Filterbox">
+			<FormSection id="filterBox" name="Filterbox">
 				<Grid>
 					<GridItem size={50}>
 						<FormList>

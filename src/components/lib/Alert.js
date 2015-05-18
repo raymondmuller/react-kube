@@ -52,7 +52,7 @@ class Alert extends React.Component {
 Alert.propTypes = {
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
-	color: React.PropTypes.string,
+	color: React.PropTypes.oneOf(["black", "blue", "red", "yellow", "green"]),
 	outline: React.PropTypes.bool,
 	remove: React.PropTypes.bool,
 	style: React.PropTypes.object

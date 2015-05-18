@@ -81,7 +81,7 @@ class Tooltip extends React.Component {
 Tooltip.propTypes = {
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
-	color: React.PropTypes.string,
+	color: React.PropTypes.oneOf(["blue", "red", "yellow", "green", "white"]),
 	placement: React.PropTypes.oneOf(["top", "right", "bottom", "left"]),
 	style: React.PropTypes.object,
 	text: React.PropTypes.string.isRequired
