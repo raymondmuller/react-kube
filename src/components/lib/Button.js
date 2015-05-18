@@ -19,7 +19,7 @@ class Button extends React.Component {
 		let iconStyles = this.props.icon ? "fa fa-" + this.props.icon : "";
 
 		return (
-			<button className={classNames(this.props.className, styles)} onClick={this.props.onClick}>
+			<button className={classNames(this.props.className, styles)} onClick={this.props.onClick} value={this.props.value}>
 				{this.props.icon ? <li className={iconStyles}></li> : null }
 				{this.props.children}
 			</button>
@@ -38,6 +38,7 @@ Button.propTypes = {
 	onClick: React.PropTypes.func,
 	outline: React.PropTypes.bool,
 	right: React.PropTypes.bool,
+	value: React.PropTypes.string,
 	width: React.PropTypes.bool
 };
 

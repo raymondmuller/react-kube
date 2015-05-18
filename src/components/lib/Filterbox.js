@@ -94,8 +94,8 @@ class Filterbox extends React.Component {
 			width: this.inputWidth
 		};
 
-		let listItems = this.props.data.map((item) => {
-			return <li onClick={this.handleSelectItem.bind(this, item)}>{item}</li>;
+		let listItems = this.props.data.map((item, i) => {
+			return <li key={i} onClick={this.handleSelectItem.bind(this, item)}>{item}</li>;
 		});
 
 		return (

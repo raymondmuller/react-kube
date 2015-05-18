@@ -16,8 +16,9 @@ import NavigationItem from "./lib/NavigationItem";
 import NotificationBox from "./docs/NotificationBox";
 import ProgressBarBox from "./docs/ProgressBarBox";
 import TabBox from "./docs/TabBox";
-import TooltipBox from "./docs/TooltipBox";
 import TextFitBox from "./docs/TextFitBox";
+import ToggleButtonBox from "./docs/ToggleButtonBox";
+import TooltipBox from "./docs/TooltipBox";
 import UploadBox from "./docs/UploadBox";
 
 class JSTools extends React.Component {
@@ -41,6 +42,7 @@ class JSTools extends React.Component {
 								<NavigationItem url="#progressBarBox"> Progressbar </NavigationItem>
 								<NavigationItem url="#tabsBox"> Tabs </NavigationItem>
 								<NavigationItem url="#textFitBox"> TextFit </NavigationItem>
+								<NavigationItem url="#toggleButtonsBox"> Toggle Buttons </NavigationItem>
 								<NavigationItem url="#tooltipBox"> Tooltip </NavigationItem>
 								<NavigationItem url="#uploadBox"> Upload </NavigationItem>
 							</NavigationBar>
@@ -58,6 +60,7 @@ class JSTools extends React.Component {
 						<ProgressBarBox />
 						<TabBox />
 						<TextFitBox />
+						<ToggleButtonBox />
 						<TooltipBox />
 						<UploadBox />
 					</GridItem>

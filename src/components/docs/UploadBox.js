@@ -12,7 +12,7 @@ class Uploadbox extends React.Component {
 			<FormSection id="uploadBox" name="Upload">
 				<Grid>
 					<GridItem size={50}>
-						<Upload/>
+						<Upload onDrop={function() { return; }}/>
 					</GridItem>
 					<GridItem className="demo" size={50}>
 						<Highlight className="javascript">

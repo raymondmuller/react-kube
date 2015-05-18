@@ -43,7 +43,7 @@ class Tabs extends React.Component {
 				cursor: "pointer"
 			};
 
-			return <li active={isActive} className={tabHeaderClasses} onClick={this.handleTabClick.bind(this, i)} style={tabHeaderStyle}><a >{item.title}</a></li>;
+			return <li active={isActive} className={tabHeaderClasses} key={i} onClick={this.handleTabClick.bind(this, i)} style={tabHeaderStyle}><a >{item.title}</a></li>;
 		}, this);
 
 		let children = [];
