@@ -4,8 +4,10 @@ import classNames from "classnames";
 class Grid extends React.Component {
 	render() {
 		let styles = classNames({
-			"units-row": true,
 			"units-padding": this.props.padding,
+			"units-role-left": this.props.left,
+			"units-role-right": this.props.right,
+			"units-row": true,
 			"units-split": this.props.disabled,
 			"end": this.props.end
 		});
@@ -26,8 +28,10 @@ Grid.propTypes = {
 	disabled: React.PropTypes.bool,
 	end: React.PropTypes.bool,
 	id: React.PropTypes.string,
+	left: React.PropTypes.bool,
 	mobile: React.PropTypes.number,
 	padding: React.PropTypes.bool,
+	right: React.PropTypes.bool,
 	style: React.PropTypes.object
 };
 
