@@ -1,6 +1,6 @@
 import React from "react";
 
-class BreadCrumb extends React.Component {
+class Breadcrumb extends React.Component {
 
 	render() {
 		return (
@@ -9,11 +9,11 @@ class BreadCrumb extends React.Component {
 	}
 }
 
-BreadCrumb.propTypes = {
+Breadcrumb.propTypes = {
 	active: React.PropTypes.bool,
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	style: React.PropTypes.object
 };
 
-module.exports = BreadCrumb;
+module.exports = Breadcrumb;

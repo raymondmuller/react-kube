@@ -36,7 +36,7 @@ class Tab extends React.Component {
 Tab.propTypes = {
 	active: React.PropTypes.bool,
 	addTab: React.PropTypes.func,
-	children: React.PropTypes.element.isRequired,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	id: React.PropTypes.string,
 	index: React.PropTypes.number,

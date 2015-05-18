@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
+
 class NavigationBar extends React.Component {
 	constructor(props) {
 		super(props);
@@ -42,7 +43,7 @@ class NavigationBar extends React.Component {
 
 NavigationBar.propTypes = {
 	active: React.PropTypes.oneOfType([ React.PropTypes.number, React.PropTypes.bool]),
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	index: React.PropTypes.number,
 	left: React.PropTypes.bool,

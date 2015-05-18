@@ -1,6 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 
+import Tab from "./Tab";
+
 class Tabs extends React.Component {
 
 	constructor(props) {
@@ -70,10 +72,10 @@ class Tabs extends React.Component {
 }
 
 Tabs.propTypes = {
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
-	id: React.PropTypes.string,
 	equals: React.PropTypes.bool,
+	id: React.PropTypes.string,
 	pills: React.PropTypes.bool,
 	rows: React.PropTypes.number,
 	style: React.PropTypes.object,

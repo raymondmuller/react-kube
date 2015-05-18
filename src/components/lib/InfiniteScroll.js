@@ -56,7 +56,7 @@ class InfiniteScroll extends React.Component {
 }
 
 InfiniteScroll.propTypes = {
-  children: React.PropTypes.element.isRequired,
+  children: React.PropTypes.node.isRequired,
   className: React.PropTypes.string,
   finished: React.PropTypes.bool,
   isLoading: React.PropTypes.bool,

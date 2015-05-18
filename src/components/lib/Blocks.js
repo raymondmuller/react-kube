@@ -16,7 +16,7 @@ class Blocks extends React.Component {
 
 Blocks.propTypes = {
 	amount: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ]).isRequired, // amount is required
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	mobile: React.PropTypes.number,
 	style: React.PropTypes.object

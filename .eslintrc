@@ -32,11 +32,14 @@
         "react/self-closing-comp": 1
     },
      "globals": {
+        "describe": true,
         "document": true,
         "chai": true,
         "console": false,
+        "it": true,
+        "module": true,
         "React":true,
-        "module": true
+        "window": true
   },
     
 }

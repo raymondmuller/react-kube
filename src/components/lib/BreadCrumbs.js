@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-class BreadCrumbs extends React.Component {
+class Breadcrumbs extends React.Component {
 
 	render() {
 		let styles = classNames({
@@ -22,12 +22,12 @@ class BreadCrumbs extends React.Component {
 	}
 }
 
-BreadCrumbs.propTypes = {
+Breadcrumbs.propTypes = {
 	active: React.PropTypes.bool,
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	path: React.PropTypes.bool,
 	style: React.PropTypes.object
 };
 
-module.exports = BreadCrumbs;
+module.exports = Breadcrumbs;

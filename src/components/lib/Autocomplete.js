@@ -165,7 +165,7 @@ Autocomplete.propTypes = {
 			label: React.PropTypes.string,
 			value: React.PropTypes.any
 			}))
-		]),
+		]).isRequired,
 	description: React.PropTypes.string,
 	highlight: React.PropTypes.bool,
 	label: React.PropTypes.string,

@@ -24,15 +24,18 @@ class AccordionGroup extends React.Component {
 		}, this);
 
 		return (
-			<span>{children}</span>
+			<span className={this.props.className} id={this.props.id} style={this.props.style}>{children}</span>
 		);
 	}
 }
 
 AccordionGroup.propTypes = {
 	children: React.PropTypes.node.isRequired,
+	className: React.PropTypes.string,
+	id: React.PropTypes.string,
 	onClose: React.PropTypes.func,
-	onShow: React.PropTypes.func
+	onShow: React.PropTypes.func,
+	style: React.PropTypes.object
 };
 
 AccordionGroup.defaultProps = { collapse: true};

@@ -20,7 +20,7 @@ class Badge extends React.Component {
 }
 
 Badge.propTypes = {
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	color: React.PropTypes.string,
 	small: React.PropTypes.bool,

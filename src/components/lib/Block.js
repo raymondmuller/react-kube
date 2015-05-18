@@ -11,7 +11,7 @@ class Block extends React.Component {
 }
 
 Block.propTypes = {
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	style: React.PropTypes.object
 };

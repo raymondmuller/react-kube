@@ -26,7 +26,7 @@ class TextFit extends React.Component {
 }
 
 TextFit.propTypes = {
-	children: React.PropTypes.element.isRequired,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
   compressor: React.PropTypes.number,
   maxFontSize: React.PropTypes.number,

@@ -2,16 +2,15 @@ import React from "react";
 import ReactTestUtils from "react/lib/ReactTestUtils";
 import assert from "assert";
 
-import Alert from "../src/Components/Lib/Alert";
+import Alert from "../src/Components/lib/Alert";
 
 describe("Alert", function () {
-
-  it("Should output an alert with message", function () {
-    let instance = ReactTestUtils.renderIntoDocument(
-      <Alert>
-        Message
-      </Alert>
-    );
-    assert.ok(ReactTestUtils.findRenderedDOMComponentWithClass(instance, "tools-alert"));
-  });
+	it("should exist in the dom", function () {
+		let instance = ReactTestUtils.renderIntoDocument(
+			<Alert>
+				<br/>
+			</Alert>
+		);
+		assert.ok(ReactTestUtils.findRenderedDOMComponentWithClass(instance, "tools-alert"));
+	});
 });

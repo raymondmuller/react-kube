@@ -21,11 +21,11 @@ class Grid extends React.Component {
 }
 
 Grid.propTypes = {
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	disabled: React.PropTypes.bool,
-	id: React.PropTypes.string,
 	end: React.PropTypes.bool,
+	id: React.PropTypes.string,
 	mobile: React.PropTypes.number,
 	padding: React.PropTypes.bool,
 	style: React.PropTypes.object

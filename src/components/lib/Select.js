@@ -1,6 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 
+import SelectOption from "./SelectOption";
+
 class Select extends React.Component {
 
 	render() {
@@ -16,7 +18,7 @@ class Select extends React.Component {
 }
 
 Select.propTypes = {
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	description: React.PropTypes.string,
 	disabled: React.PropTypes.bool,

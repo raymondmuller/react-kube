@@ -102,7 +102,7 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-	children: React.PropTypes.element.isRequired,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	data: React.PropTypes.array,
 	onSelect: React.PropTypes.func,

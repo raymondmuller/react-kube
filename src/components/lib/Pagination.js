@@ -34,7 +34,7 @@ class Pagination extends React.Component {
 
 Pagination.propTypes = {
 	active: React.PropTypes.number,
-	children: React.PropTypes.node,
+	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	left: React.PropTypes.string,
 	right: React.PropTypes.string,
