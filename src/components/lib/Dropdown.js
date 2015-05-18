@@ -51,7 +51,7 @@ class Dropdown extends React.Component {
 
 	selectItem(item) {
 		// on select function
-		if("onSelect" in this.props) { this.props.onSelect(item); }
+		this.props.onSelect ? this.props.onSelect(item) : null; //eslint-disable-line
 		// hide dropdown on select
 		this.setState({
 			show: false
@@ -85,7 +85,7 @@ class Dropdown extends React.Component {
 		});
 
 		let children = React.Children.map(this.props.children, function(child, i) {
-			return React.cloneElement(child, {active: i === this.state.active, index: i, onClick: this.toggleDropDown.bind(this), ref: "dropdownOwner"});
+			return React.cloneElement(child, {active: i === this.state.active, key: i, index: i, onClick: this.toggleDropDown.bind(this), ref: "dropdownOwner"});
 		}, this);
 
 		return (
@@ -104,11 +104,9 @@ class Dropdown extends React.Component {
 Dropdown.propTypes = {
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
-	data: React.PropTypes.array,
+	data: React.PropTypes.array.isRequired,
 	onSelect: React.PropTypes.func,
 	style: React.PropTypes.object
 };
-
-Dropdown.defaultProps = { placement: "bottom"};
 
 module.exports = Dropdown;

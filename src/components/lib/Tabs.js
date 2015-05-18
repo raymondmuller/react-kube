@@ -1,8 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 
-import Tab from "./Tab";
-
 class Tabs extends React.Component {
 
 	constructor(props) {

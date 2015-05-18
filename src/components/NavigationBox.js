@@ -19,7 +19,7 @@ render() {
 	return (
 		<header className="group" id="header" ref="header" style={this.props.style}>
 			<Navigation responsive menuLabel="Menu" fixed active="01" id="nav" className="demo-navbar-fixed">
-				<NavigationLogo>React-Kube (BETA)</NavigationLogo>
+				<NavigationLogo id="logo">React-Kube (BETA)</NavigationLogo>
 				<NavigationBar active={0} hideOnMobile left>
 					<NavigationItem url="#documentation" icon="code"> Documentation </NavigationItem>
 					<NavigationItem url="http://www.raymondmuller.com" icon="envelope"> Contact </NavigationItem>

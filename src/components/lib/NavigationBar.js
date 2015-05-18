@@ -15,9 +15,11 @@ class NavigationBar extends React.Component {
 	}
 
 	render() {
-
 		let navBarClasses = classNames({
-			"navbar": !this.props.vertical && !this.props.sub,
+			"navbar": !this.props.vertical && !this.props.sub
+		});
+
+		let navListClasses = classNames({
 			"nav": this.props.vertical || this.props.stacked || this.props.stats && !this.props.sub,
 			"nav-stacked": this.props.stacked,
 			"nav-stats": this.props.stats,
@@ -32,8 +34,8 @@ class NavigationBar extends React.Component {
 		});
 
 		return (
-			<nav className="navbar">
-				<ul className={classNames(this.props.className, navBarClasses)} style={this.props.style}>
+			<nav className={navBarClasses}>
+				<ul className={classNames(this.props.className, navListClasses)} style={this.props.style}>
 					{children}
 				</ul>
 			</nav>

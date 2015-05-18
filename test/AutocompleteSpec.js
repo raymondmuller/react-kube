@@ -9,6 +9,6 @@ describe("Autocomplete", function () {
 		let instance = ReactTestUtils.renderIntoDocument(
 			<Autocomplete data={["1", "2", "3"]} />
 		);
-		assert.ok(ReactTestUtils.findRenderedDOMComponentWithTag(instance, "input"));
+		assert.ok(ReactTestUtils.findRenderedDOMComponentWithTag(instance, "input").getDOMNode().name === "q");
 	});
 });

@@ -3,8 +3,8 @@ import React from "react";
 import FormSection from "../lib/FormSection";
 import Grid from "../lib/Grid";
 import GridItem from "../lib/GridItem";
-import BreadCrumbs from "../lib/BreadCrumbs";
-import BreadCrumb from "../lib/BreadCrumb";
+import Breadcrumbs from "../lib/Breadcrumbs";
+import Breadcrumb from "../lib/Breadcrumb";
 import Pagination from "../lib/Pagination";
 import PaginationItem from "../lib/PaginationItem";
 import Highlight from "react-highlight";
@@ -24,11 +24,11 @@ class NavigationBox extends React.Component {
 							<PaginationItem> 3 </PaginationItem>
 						</Pagination>
 						<hr/>
-						<BreadCrumbs>
-							<BreadCrumb>one</BreadCrumb>
-							<BreadCrumb>two</BreadCrumb>
-							<BreadCrumb>three</BreadCrumb>
-						</BreadCrumbs>
+						<Breadcrumbs>
+							<Breadcrumb>one</Breadcrumb>
+							<Breadcrumb>two</Breadcrumb>
+							<Breadcrumb>three</Breadcrumb>
+						</Breadcrumbs>
 					</GridItem>
 					<GridItem className="demo" size={50}>
 						<Highlight className="javascript">
