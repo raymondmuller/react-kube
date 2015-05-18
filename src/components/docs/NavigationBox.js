@@ -1,13 +1,13 @@
-const React = require("react");
+import React from "react";
 
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const BreadCrumbs = require("../lib/BreadCrumbs");
-const BreadCrumb = require("../lib/BreadCrumb");
-const Pagination = require("../lib/Pagination");
-const PaginationItem = require("../lib/PaginationItem");
-const Highlight = require("react-highlight");
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import BreadCrumbs from "../lib/BreadCrumbs";
+import BreadCrumb from "../lib/BreadCrumb";
+import Pagination from "../lib/Pagination";
+import PaginationItem from "../lib/PaginationItem";
+import Highlight from "react-highlight";
 
 class NavigationBox extends React.Component {
 

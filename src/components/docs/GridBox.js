@@ -1,8 +1,9 @@
-const React = require("react");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-var Highlight = require('react-highlight');
+import React from "react";
+
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Highlight from "react-highlight";
 
 class GridBox extends React.Component {
 

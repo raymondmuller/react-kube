@@ -1,11 +1,11 @@
-const React = require("react");
+import React from "react";
 
-const Accordion = require("../lib/Accordion");
-const AccordionGroup = require("../lib/AccordionGroup");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Highlight = require("react-highlight");
+import Accordion from "../lib/Accordion";
+import AccordionGroup from "../lib/AccordionGroup";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Highlight from "react-highlight";
 
 class AccordionBox extends React.Component {
 

@@ -1,11 +1,11 @@
-const React = require("react");
-const FormSection = require("../lib/FormSection");
-const Blocks = require("../lib/Blocks");
-const Block = require("../lib/Block");
-const Message = require("../lib/Message");
-const Alert = require("../lib/Alert");
-const Button = require("../lib/Button");
-const Highlight = require("react-highlight");
+import React from "react";
+import FormSection from "../lib/FormSection";
+import Blocks from "../lib/Blocks";
+import Block from "../lib/Block";
+import Message from "../lib/Message";
+import Alert from "../lib/Alert";
+import Button from "../lib/Button";
+import Highlight from "react-highlight";
 
 class NotificationBox extends React.Component {
 

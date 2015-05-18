@@ -1,11 +1,11 @@
-const React = require("react");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Button = require("../lib/Button");
-const SubmitButton = require("../lib/SubmitButton");
-const LinkButton = require("../lib/LinkButton");
-const Highlight = require("react-highlight");
+import React from "react";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Button from "../lib/Button";
+import SubmitButton from "../lib/SubmitButton";
+import LinkButton from "../lib/LinkButton";
+import Highlight from "react-highlight";
 
 class ButtonBox extends React.Component {
 

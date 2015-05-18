@@ -1,13 +1,13 @@
-const React = require("react");
+import React from "react";
 
-const NavigationBox = require("./NavigationBox");
-const Grid = require("./lib/Grid");
-const GridItem = require("./lib/GridItem");
-const Tabs = require("./lib/Tabs");
-const Tab = require("./lib/Tab");
-const GetStarted = require("./GetStarted");
-const CSSComponents = require("./CSSComponents");
-const JSTools = require("./JSTools");
+import NavigationBox from "./NavigationBox";
+import Grid from "./lib/Grid";
+import GridItem from "./lib/GridItem";
+import Tabs from "./lib/Tabs";
+import Tab from "./lib/Tab";
+import GetStarted from "./GetStarted";
+import CSSComponents from "./CSSComponents";
+import JSTools from "./JSTools";
 
 class Main extends React.Component {
 

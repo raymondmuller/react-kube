@@ -1,10 +1,10 @@
-const React = require("react");
+import React from "react";
 
-const Blocks = require("../lib/Blocks");
-const Block = require("../lib/Block");
-const FormSection = require("../lib/FormSection");
-const InfiniteScroll = require("../lib/InfiniteScroll");
-const Highlight = require("react-highlight");
+import Blocks from "../lib/Blocks";
+import Block from "../lib/Block";
+import FormSection from "../lib/FormSection";
+import InfiniteScroll from "../lib/InfiniteScroll";
+import Highlight from "react-highlight";
 
 class InfiniteScrollBox extends React.Component {
 	constructor(props) {

@@ -1,7 +1,7 @@
-const React = require("react");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const LinkButton = require("../lib/LinkButton");
+import React from "react";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import LinkButton from "../lib/LinkButton";
 
 class TypographyBox extends React.Component {
 

@@ -1,5 +1,4 @@
-const React = require("react");
-const ReactPropTypes = React.PropTypes;
+import React from "react";
 
 class TextFit extends React.Component {
 
@@ -27,12 +26,12 @@ class TextFit extends React.Component {
 }
 
 TextFit.propTypes = {
-	children: ReactPropTypes.element.isRequired,
+	children: React.PropTypes.element.isRequired,
 	className: React.PropTypes.string,
-  compressor: ReactPropTypes.number,
-  maxFontSize: ReactPropTypes.number,
-  minFontSize: ReactPropTypes.number,
-  style: ReactPropTypes.object
+  compressor: React.PropTypes.number,
+  maxFontSize: React.PropTypes.number,
+  minFontSize: React.PropTypes.number,
+  style: React.PropTypes.object
 };
 
 TextFit.defaultProps = {

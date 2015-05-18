@@ -1,11 +1,11 @@
-const React = require("react");
+import React from "react";
 
-const Button = require("../lib/Button");
-const ProgressBar = require("../lib/ProgressBar");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Highlight = require("react-highlight");
+import Button from "../lib/Button";
+import ProgressBar from "../lib/ProgressBar";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Highlight from "react-highlight";
 
 class ProgressBarBox extends React.Component {
 	constructor(props) {

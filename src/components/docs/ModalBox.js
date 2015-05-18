@@ -1,11 +1,11 @@
-const React = require("react");
+import React from "react";
 
-const Button = require("../lib/Button");
-const Modal = require("../lib/Modal");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Highlight = require("react-highlight");
+import Button from "../lib/Button";
+import Modal from "../lib/Modal";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Highlight from "react-highlight";
 
 class ModalBox extends React.Component {
 	constructor(props) {
@@ -27,7 +27,7 @@ class ModalBox extends React.Component {
 				<Grid>
 					<GridItem size={50}>
 						<Button color="green" onClick={this.handleShowModal.bind(this)}>Show Modal</Button>
-						<Modal show={this.state.showModal} title="Modal Title" padding="30px">
+						<Modal padding="30px" show={this.state.showModal} title="Modal Title" >
 							<hr/>
 							<p> Lorem ipsum.... </p>
 						</Modal>

@@ -1,12 +1,12 @@
-const React = require("react");
+import React from "react";
 
-const Button = require("../lib/Button");
-const Dropdown = require("../lib/Dropdown");
-const FormSection = require("../lib/FormSection");
-const FormList = require("../lib/FormList");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Highlight = require("react-highlight");
+import Button from "../lib/Button";
+import Dropdown from "../lib/Dropdown";
+import FormSection from "../lib/FormSection";
+import FormList from "../lib/FormList";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Highlight from "react-highlight";
 
 class DropdownBox extends React.Component {
 	constructor(props) {

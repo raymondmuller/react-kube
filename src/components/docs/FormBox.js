@@ -1,13 +1,13 @@
-const React = require("react");
+import React from "react";
 
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Form = require("../lib/Form");
-const Input = require("../lib/Input");
-const FormList = require("../lib/FormList");
-const Button = require("../lib/Button");
-const Highlight = require("react-highlight");
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Form from "../lib/Form";
+import Input from "../lib/Input";
+import FormList from "../lib/FormList";
+import Button from "../lib/Button";
+import Highlight from "react-highlight";
 
 class FormBox extends React.Component {
 

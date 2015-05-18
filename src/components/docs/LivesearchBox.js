@@ -1,9 +1,9 @@
-const React = require("react");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Livesearch = require("../lib/Livesearch");
-const Highlight = require("react-highlight");
+import React from "react";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Livesearch from "../lib/Livesearch";
+import Highlight from "react-highlight";
 
 class LivesearchBox extends React.Component {
 

@@ -1,6 +1,6 @@
-const React = require("react");
-const Input = require("./Input");
-const classNames = require("classnames");
+import React from "react";
+import Input from "./Input";
+import classNames from "classnames";
 
 class Search extends React.Component {
 	render() {

@@ -1,8 +1,9 @@
-const React = require("react");
-const Navigation = require("./lib/Navigation");
-const NavigationBar = require("./lib/NavigationBar");
-const NavigationItem = require("./lib/NavigationItem");
-const NavigationLogo = require("./lib/NavigationLogo");
+import React from "react";
+
+import Navigation from "./lib/Navigation";
+import NavigationBar from "./lib/NavigationBar";
+import NavigationItem from "./lib/NavigationItem";
+import NavigationLogo from "./lib/NavigationLogo";
 
 class NavigationBox extends React.Component {
 

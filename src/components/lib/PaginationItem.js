@@ -1,5 +1,5 @@
-const React = require("react");
-var classNames = require("classnames");
+import React from "react";
+import classNames from "classnames";
 
 class PaginationItem extends React.Component {
 

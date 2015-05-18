@@ -1,5 +1,6 @@
-const React = require("react");
-var classNames = require("classnames");
+import React from "react";
+import classNames from "classnames";
+
 class NavigationLogo extends React.Component {
 
 	handleClick() {

@@ -1,17 +1,17 @@
-const React = require("react");
+import React from "react";
 
-const AccordionBox = require("./docs/AccordionBox");
-const AutocompleteBox = require("./docs/AutocompleteBox");
-const DropdownBox = require("./docs/DropdownBox");
-const FilterBox = require("./docs/FilterBox");
-const InfiniteScrollBox = require("./docs/InfiniteScrollBox");
-const LivesearchBox = require("./docs/LivesearchBox");
-const ModalBox = require("./docs/ModalBox");
-const ProgressBarBox = require("./docs/ProgressBarBox");
-const TabBox = require("./docs/TabBox");
-const TooltipBox = require("./docs/TooltipBox");
-const TextFitBox = require("./docs/TextFitBox");
-const UploadBox = require("./docs/UploadBox");
+import AccordionBox from "./docs/AccordionBox";
+import AutocompleteBox from "./docs/AutocompleteBox";
+import DropdownBox from "./docs/DropdownBox";
+import FilterBox from "./docs/FilterBox";
+import InfiniteScrollBox from "./docs/InfiniteScrollBox";
+import LivesearchBox from "./docs/LivesearchBox";
+import ModalBox from "./docs/ModalBox";
+import ProgressBarBox from "./docs/ProgressBarBox";
+import TabBox from "./docs/TabBox";
+import TooltipBox from "./docs/TooltipBox";
+import TextFitBox from "./docs/TextFitBox";
+import UploadBox from "./docs/UploadBox";
 
 class JSTools extends React.Component {
 	shiftWindow() {
@@ -29,7 +29,7 @@ class JSTools extends React.Component {
 	componentWillUnmount(){
 		window.removeEventListener("hashchange", this.shiftWindow);
 	}
-	
+
 	render() {
 		return (
 			<div id="tab3">

@@ -1,10 +1,10 @@
-const React = require("react");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Label = require("../lib/Label");
-const Badge = require("../lib/Badge");
-const Highlight = require("react-highlight");
+import React from "react";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Label from "../lib/Label";
+import Badge from "../lib/Badge";
+import Highlight from "react-highlight";
 
 class LabelBox extends React.Component {
 

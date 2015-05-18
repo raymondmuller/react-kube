@@ -1,5 +1,5 @@
-const React = require("react");
-const classNames = require("classnames");
+import React from "react";
+import classNames from "classnames";
 
 class Upload extends React.Component {
 	constructor(props){

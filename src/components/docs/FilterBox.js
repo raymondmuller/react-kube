@@ -1,11 +1,11 @@
-const React = require("react");
+import React from "react";
 
-const Filterbox = require("../lib/Filterbox");
-const FormSection = require("../lib/FormSection");
-const FormList = require("../lib/FormList");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Highlight = require("react-highlight");
+import Filterbox from "../lib/Filterbox";
+import FormSection from "../lib/FormSection";
+import FormList from "../lib/FormList";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Highlight from "react-highlight";
 
 class FilterBox extends React.Component {
 

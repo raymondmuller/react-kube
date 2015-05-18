@@ -1,4 +1,4 @@
-const React = require("react");
+import React from "react";
 
 class TableRow extends React.Component {
 

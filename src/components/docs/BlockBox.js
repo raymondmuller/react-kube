@@ -1,12 +1,11 @@
-const React = require("react");
+import React from "react";
 
-const Accordion = require("./lib/Accordion");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Blocks = require("../lib/Blocks");
-const Block = require("../lib/Block");
-const Highlight = require("react-highlight");
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Blocks from "../lib/Blocks";
+import Block from "../lib/Block";
+import Highlight from "react-highlight";
 
 class BlockBox extends React.Component {
 

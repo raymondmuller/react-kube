@@ -1,22 +1,22 @@
-const React = require("react");
+import React from "react";
 
-const Navigation = require("./lib/Navigation");
-const NavigationBar = require("./lib/NavigationBar");
-const NavigationItem = require("./lib/NavigationItem");
-const Grid = require("./lib/Grid");
-const GridItem = require("./lib/GridItem");
-const Label = require("./lib/Label");
-const TypographyBox = require("./docs/TypographyBox");
-const GridBox = require("./docs/GridBox");
-const BlockBox = require("./docs/BlockBox");
-const TableBox = require("./docs/TableBox");
-const LabelBox = require("./docs/LabelBox");
-const SearchBox = require("./docs/SearchBox");
-const ButtonBox = require("./docs/ButtonBox");
-const FormBox = require("./docs/FormBox");
-const NavigationBox = require("./docs/NavigationBox");
-const NotificationBox = require("./docs/NotificationBox");
-const IconBox = require("./docs/IconBox");
+import Navigation from "./lib/Navigation";
+import NavigationBar from "./lib/NavigationBar";
+import NavigationItem from "./lib/NavigationItem";
+import Grid from "./lib/Grid";
+import GridItem from "./lib/GridItem";
+import Label from "./lib/Label";
+import TypographyBox from "./docs/TypographyBox";
+import GridBox from "./docs/GridBox";
+import BlockBox from "./docs/BlockBox";
+import TableBox from "./docs/TableBox";
+import LabelBox from "./docs/LabelBox";
+import SearchBox from "./docs/SearchBox";
+import ButtonBox from "./docs/ButtonBox";
+import FormBox from "./docs/FormBox";
+import NavigationBox from "./docs/NavigationBox";
+import NotificationBox from "./docs/NotificationBox";
+import IconBox from "./docs/IconBox";
 
 class CSSComponents extends React.Component {
 
@@ -33,8 +33,8 @@ class CSSComponents extends React.Component {
 			<div id="tab2">
 			<Grid>
 				<GridItem id="side" size={25}>
-					<Label color="black" className="hide-on-mobile" style={{marginBottom: "10px", fontSize: "1em"}} >CSS Components</Label><br/>
-					<Navigation id="side-nav" responsive menuLabel="CSS Components">
+					<Label className="hide-on-mobile" color="black" style={{marginBottom: "10px", fontSize: "1em"}} >CSS Components</Label><br/>
+					<Navigation id="side-nav" menuLabel="CSS Components" responsive>
 						<NavigationBar hideOnMobile vertical>
 							<NavigationItem url="#blockBox"> Blocks </NavigationItem>
 							<NavigationItem url="#buttonBox"> Buttons </NavigationItem>

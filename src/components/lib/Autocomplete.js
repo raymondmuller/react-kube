@@ -1,8 +1,8 @@
-const React = require("react");
-const classNames = require("classnames");
+import React from "react";
+import classNames from "classnames";
 
-const HighlightText = require("./HighlightText");
-const Input = require("./Input");
+import HighlightText from "./HighlightText";
+import Input from "./Input";
 
 class Autocomplete extends React.Component {
 

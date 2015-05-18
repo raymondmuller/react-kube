@@ -1,15 +1,15 @@
-const React = require("react");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Select = require("../lib/Select");
-const SelectOption = require("../lib/SelectOption");
-const Table = require("../lib/Table");
-const TableHeader = require("../lib/TableHeader");
-const TableHead = require("../lib/TableHead");
-const TableRow = require("../lib/TableRow");
-const TableItem = require("../lib/TableItem");
-const Highlight = require("react-highlight");
+import React from "react";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Select from "../lib/Select";
+import SelectOption from "../lib/SelectOption";
+import Table from "../lib/Table";
+import TableHeader from "../lib/TableHeader";
+import TableHead from "../lib/TableHead";
+import TableRow from "../lib/TableRow";
+import TableItem from "../lib/TableItem";
+import Highlight from "react-highlight";
 
 class TableBox extends React.Component {
 	constructor(props) {

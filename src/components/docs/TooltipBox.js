@@ -1,12 +1,12 @@
-const React = require("react");
-const FormSection = require("../lib/FormSection");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Button = require("../lib/Button");
-const Tooltip = require("../lib/Tooltip");
-const Select = require("../lib/Select");
-const SelectOption = require("../lib/SelectOption");
-const Highlight = require("react-highlight");
+import React from "react";
+import FormSection from "../lib/FormSection";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Button from "../lib/Button";
+import Tooltip from "../lib/Tooltip";
+import Select from "../lib/Select";
+import SelectOption from "../lib/SelectOption";
+import Highlight from "react-highlight";
 
 class TooltipBox extends React.Component {
 	constructor(props) {

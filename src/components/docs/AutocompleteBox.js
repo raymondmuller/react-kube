@@ -1,13 +1,13 @@
-const React = require("react");
+import React from "react";
 
-const Autocomplete = require("../lib/Autocomplete");
-const FormSection = require("../lib/FormSection");
-const FormList = require("../lib/FormList");
-const Select = require("../lib/Select");
-const SelectOption = require("../lib/SelectOption");
-const Grid = require("../lib/Grid");
-const GridItem = require("../lib/GridItem");
-const Highlight = require("react-highlight");
+import Autocomplete from "../lib/Autocomplete";
+import FormSection from "../lib/FormSection";
+import FormList from "../lib/FormList";
+import Select from "../lib/Select";
+import SelectOption from "../lib/SelectOption";
+import Grid from "../lib/Grid";
+import GridItem from "../lib/GridItem";
+import Highlight from "react-highlight";
 
 class AutocompleteBox extends React.Component {
 	constructor(props) {

@@ -1,7 +1,8 @@
-const React = require("react");
-const FormSection = require("./lib/FormSection");
-const Grid = require("./lib/Grid");
-const Highlight = require("react-highlight");
+import React from "react";
+
+import FormSection from "./lib/FormSection";
+import Grid from "./lib/Grid";
+import Highlight from "react-highlight";
 
 class GetStarted extends React.Component {
 
