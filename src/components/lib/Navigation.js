@@ -17,10 +17,6 @@ class Navigation extends React.Component {
 
 	componentDidMount() {
 		window.addEventListener("scroll", this.handleScroll.bind(this));
-		let navId = this.props.id;
-		this.navHeight = React.findDOMNode(this.refs[navId]).offsetHeight;
-		this.navHeight += 20;
-		this.forceUpdate();
 	}
 
 	componentWillUnmount() {
@@ -29,6 +25,8 @@ class Navigation extends React.Component {
 	}
 
 	handleScroll() {
+		this.navHeight = React.findDOMNode(this.refs[this.props.id]).offsetHeight;	//recalculate nav height
+		this.navHeight += 20;
 		if(window.pageYOffset > this.navHeight) {
 			this.setState({
 				showFixed: true,
