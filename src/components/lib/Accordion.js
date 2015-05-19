@@ -26,7 +26,7 @@ class Accordion extends React.Component {
 			if(shown){
 				this.props.onShow ? this.props.onShow() : null //eslint-disable-line
 				this.props.onClose ? this.props.onClose() : null //eslint-disable-line
-			};
+			}
 		}
 	}
 
