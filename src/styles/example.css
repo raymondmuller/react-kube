@@ -20,6 +20,7 @@
 #side-nav > nav > ul > li {
 	float: none;
 	list-style-type: none;
+	padding: 0 20px;
 }
 
 #side-nav > nav > ul{
