@@ -23,7 +23,10 @@ class Accordion extends React.Component {
 			});
 
 			//callbacks
-			shown ? this.props.onShow() : this.props.onClose(); //eslint-disable-line
+			if(shown){
+				this.props.onShow ? this.props.onShow() : null //eslint-disable-line
+				this.props.onClose ? this.props.onClose() : null //eslint-disable-line
+			};
 		}
 	}
 
