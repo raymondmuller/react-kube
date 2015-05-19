@@ -1,5 +1,6 @@
 import React from "react";
 
+import CheckBox from "../lib/CheckBox";
 import FormSection from "../lib/FormSection";
 import Grid from "../lib/Grid";
 import GridItem from "../lib/GridItem";
@@ -10,6 +11,17 @@ import Button from "../lib/Button";
 import Highlight from "react-highlight";
 
 class FormBox extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = { checkboxValue: "on", checkboxChecked: false};
+	}
+
+	handleCheckBoxChange(isChecked, value) {
+		this.setState({
+			checkboxChecked: isChecked,
+			checkboxValue: value
+		});
+	}
 
 	render() {
 		return (
@@ -50,7 +62,11 @@ class FormBox extends React.Component {
 							<FormList>
 								<Button color="green">Login</Button><span> </span>
 								<Button color="blue">Sign Up</Button>
-							</FormList>
+							</FormList><br/>
+							<FormList>
+								<CheckBox onChange={this.handleCheckBoxChange.bind(this)}>A checkbox</CheckBox><br/>
+								<p> value = {this.state.checkboxValue} - checked = {this.state.checkboxChecked.toString()} </p>
+							</FormList><br/>
 						</FormSection>
 					</Form>
 					</GridItem>
@@ -97,6 +113,9 @@ class FormBox extends React.Component {
 							&emsp;&emsp;&emsp;&emsp;{"<Button color=\"green\">Login</Button> <Button color=\"blue\">Sign Up</Button>"}<br/>
 							&emsp;&emsp;{"</FormList>"}<br/>
 							{"</FormSection>"}
+						</Highlight>
+						<Highlight>
+							{"<CheckBox onChange={this.handleCheckBoxChange.bind(this)}>A checkbox</CheckBox>"}
 						</Highlight>
 					</GridItem>
 				</Grid>

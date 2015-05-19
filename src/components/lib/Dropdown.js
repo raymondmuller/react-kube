@@ -80,12 +80,12 @@ class Dropdown extends React.Component {
 			cursor: "pointer"
 		};
 
-		let items = this.props.data.map((item) => {
-				return <li onClick={this.selectItem.bind(this, item)}><a>{item}</a></li>;
+		let items = this.props.data.map((item, i) => {
+				return <li key={i} onClick={this.selectItem.bind(this, item)}><a>{item}</a></li>;
 		});
 
 		let children = React.Children.map(this.props.children, function(child, i) {
-			return React.cloneElement(child, {active: i === this.state.active, key: i, index: i, onClick: this.toggleDropDown.bind(this), ref: "dropdownOwner"});
+			return (React.cloneElement(child, {key: i, onClick: this.toggleDropDown.bind(this), ref: "dropdownOwner"}));
 		}, this);
 
 		return (
