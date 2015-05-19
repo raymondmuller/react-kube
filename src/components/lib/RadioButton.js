@@ -1,10 +1,15 @@
 import React from "react";
 
 class RadioButton extends React.Component {
+
+	handleChange(e){
+		this.props.onChange ? this.props.onChange(e.target.value) : null; //eslint-disable-line
+	}
+
 	render() {
 		return (
 			<li>
-				<input className={this.props.className} disabled={this.props.disabled} id={this.props.id} name={this.props.id} style={this.props.style} type="radio" />
+				<input defaultChecked={this.props.checked} className={this.props.className} disabled={this.props.disabled} id={this.props.id ? this.props.id : this.props.name} name={this.props.name} onChange={this.handleChange.bind(this)} style={this.props.style} type="radio" value={this.props.value} />
 				<label htmlFor={this.props.id}>
 					{this.props.children}
 				</label>
@@ -14,11 +19,14 @@ class RadioButton extends React.Component {
 }
 
 RadioButton.propTypes = {
+	checked: React.PropTypes.bool,
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	disabled: React.PropTypes.bool,
 	id: React.PropTypes.string,
-	style: React.PropTypes.object
+	name: React.PropTypes.string.isRequired,
+	style: React.PropTypes.object,
+	value: React.PropTypes.string.isRequired
 };
 
 module.exports = RadioButton;

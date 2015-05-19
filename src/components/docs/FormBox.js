@@ -6,6 +6,7 @@ import Grid from "../lib/Grid";
 import GridItem from "../lib/GridItem";
 import Form from "../lib/Form";
 import Input from "../lib/Input";
+import RadioButton from "../lib/RadioButton";
 import FormList from "../lib/FormList";
 import Button from "../lib/Button";
 import Highlight from "react-highlight";
@@ -13,13 +14,19 @@ import Highlight from "react-highlight";
 class FormBox extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = { checkboxValue: "on", checkboxChecked: false};
+		this.state = { checkboxValue: "on", checkboxChecked: false, radioValue: ""};
 	}
 
 	handleCheckBoxChange(isChecked, value) {
 		this.setState({
 			checkboxChecked: isChecked,
 			checkboxValue: value
+		});
+	}
+
+	handleRadioChange(value){
+		this.setState({
+			radioValue: value
 		});
 	}
 
@@ -65,8 +72,13 @@ class FormBox extends React.Component {
 							</FormList><br/>
 							<FormList>
 								<CheckBox onChange={this.handleCheckBoxChange.bind(this)}>A checkbox</CheckBox><br/>
-								<p> value = {this.state.checkboxValue} - checked = {this.state.checkboxChecked.toString()} </p>
+								<p> checkbox value = {this.state.checkboxValue} - checked = {this.state.checkboxChecked.toString()} </p>
 							</FormList><br/>
+							<FormList>
+								<RadioButton checked={true} name="q" onChange={this.handleRadioChange.bind(this)} value="yes">yes</RadioButton><br/>
+								<RadioButton name="q" onChange={this.handleRadioChange.bind(this)} value="no">no</RadioButton><br/>
+								<p> radio value = {this.state.radioValue} </p>
+							</FormList>
 						</FormSection>
 					</Form>
 					</GridItem>
@@ -116,6 +128,10 @@ class FormBox extends React.Component {
 						</Highlight>
 						<Highlight>
 							{"<CheckBox onChange={this.handleCheckBoxChange.bind(this)}>A checkbox</CheckBox>"}
+						</Highlight>
+						<Highlight>
+							{"<RadioButton checked={true} name=\"q\" onChange={this.handleRadioChange.bind(this)} value=\"yes\">yes</RadioButton>"}<br/>
+							{"<RadioButton name=\"q\" onChange={this.handleRadioChange.bind(this)} value=\"no\">no</RadioButton>"}
 						</Highlight>
 					</GridItem>
 				</Grid>
