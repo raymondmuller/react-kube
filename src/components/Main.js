@@ -11,6 +11,15 @@ import JSTools from "./JSTools";
 
 class Main extends React.Component {
 
+	componentWillMount() {
+		if(location.hash){ // replace hashtag on first page load
+			setTimeout(function(){
+				location.hash = "";
+				window.scrollTo(0, 0);
+			}, 1);
+		}
+	}
+
 	render() {
 		return (
 			<div className="main">

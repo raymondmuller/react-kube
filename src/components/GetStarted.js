@@ -38,8 +38,8 @@ class GetStarted extends React.Component {
 							</Highlight>
 						<hr/>
 						Todos: <br/>
-						- Add missing components (see <a href="https://github.com/raymondmuller/react-kube/issues" target="_new">Github Issues</a>) <br/>
-						- Add Tests <br/>
+						- Livesearch, Check-All,  (see <a href="https://github.com/raymondmuller/react-kube/issues" target="_new">Github Issues</a>) <br/>
+						- Improve Tests <br/>
 						- Improve documentation and demos <br/>
 						<br/>
 					</Grid>
