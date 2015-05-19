@@ -9,7 +9,7 @@ class RadioButton extends React.Component {
 	render() {
 		return (
 			<li>
-				<input defaultChecked={this.props.checked} className={this.props.className} disabled={this.props.disabled} id={this.props.id ? this.props.id : this.props.name} name={this.props.name} onChange={this.handleChange.bind(this)} style={this.props.style} type="radio" value={this.props.value} />
+				<input className={this.props.className} defaultChecked={this.props.checked} disabled={this.props.disabled} id={this.props.id ? this.props.id : this.props.name} name={this.props.name} onChange={this.handleChange.bind(this)} style={this.props.style} type="radio" value={this.props.value} />
 				<label htmlFor={this.props.id}>
 					{this.props.children}
 				</label>
