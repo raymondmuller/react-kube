@@ -91,7 +91,9 @@ Navigation.propTypes = {
 	fixed: React.PropTypes.bool,
 	fullwidth: React.PropTypes.bool,
 	id: React.PropTypes.string.isRequired,
+	menuLabel: React.PropTypes.string,
 	pills: React.PropTypes.bool,
+	responsive: React.PropTypes.bool,
 	style: React.PropTypes.object,
 	toggle: React.PropTypes.bool,
 	wrap: React.PropTypes.bool

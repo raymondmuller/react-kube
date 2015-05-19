@@ -22,7 +22,7 @@ render() {
 				<NavigationLogo id="logo">React-Kube (BETA)</NavigationLogo>
 				<NavigationBar active={0} hideOnMobile left>
 					<NavigationItem url="#documentation" icon="code"> Documentation </NavigationItem>
-					<NavigationItem url="http://www.raymondmuller.com" icon="envelope"> Contact </NavigationItem>
+					<NavigationItem url="http://www.raymondmuller.com" icon="envelope" target="_new"> Contact </NavigationItem>
 					<NavigationItem url="http://www.github.com/raymondmuller" target="_new" icon="github"> Github</NavigationItem>
 				</NavigationBar>
 			</Navigation>

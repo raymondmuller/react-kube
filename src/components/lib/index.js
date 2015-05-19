@@ -46,6 +46,7 @@ import TableRow from "./TableRow";
 import Tabs from "./Tabs";
 import TextArea from "./TextArea";
 import TextFit from "./TextFit";
+import ToggleButtons from "./ToggleButtons";
 import Tooltip from "./Tooltip";
 import Upload from "./Upload";
 
@@ -80,7 +81,6 @@ export default {
 	NavigationBar,
 	NavigationItem,
 	NavigationLogo,
-	NavigationToggle,
 	Pagination,
 	PaginationItem,
 	ProgressBar,
@@ -99,6 +99,7 @@ export default {
 	Tabs,
 	TextArea,
 	TextFit,
+	ToggleButtons,
 	Tooltip,
 	Upload
 };

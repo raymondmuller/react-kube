@@ -1,8 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 
-import SelectOption from "./SelectOption";
-
 class Select extends React.Component {
 
 	render() {
