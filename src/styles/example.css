@@ -27,9 +27,30 @@
 	margin-left: 0;
 }
 
+#side {
+	padding-top: .8em;
+}
+
 #tab1 > .units-row > .unit-80 > fieldset > .units-row > h3,
 #tab2 > .units-row > .unit-80 > fieldset > .units-row > h3,
 #tab3 > .units-row > .unit-80 > fieldset > .units-row > h3 {
 	text-decoration: underline;
+}
+
+#tab2 > .units-row > #side > span,
+#tab3 > .units-row > #side > span {
+	width: 100%;
+}
+
+#infiniteScrollBox > .blocks-1,
+#buttonBox > .units-row > .unit-30,
+#labelBox > .units-row > .unit-30,
+#checkAllBox > .units-row > form > .unit-30,
+#iconBox > .units-row > .unit-50 {
+	margin-left: 0;
+}
+
+#iconBox > .units-row > .unit-50 {
+	padding: 15px;
 }
 

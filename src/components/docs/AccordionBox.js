@@ -31,7 +31,6 @@ class AccordionBox extends React.Component {
 							&emsp;&emsp;{"<p>Content in the second panel</p>"}<br/>
 							{"</Accordion>"}
 						</CodeSample>
-						<hr/>
 						<h3> Grouped (one accordion open at a time) </h3>
 						<AccordionGroup>
 							<Accordion title="first title">
@@ -41,7 +40,8 @@ class AccordionBox extends React.Component {
 								<p>Content in the second panel</p>
 							</Accordion>
 						</AccordionGroup>
-						<CodeSample>
+						<hr/>
+						<CodeSample noLines>
 							{"<AccordionGroup>"}<br/>
 							&emsp;&emsp;{"<Accordion title=\"first title\">"}<br/>
 							&emsp;&emsp;&emsp;&emsp;{"<p>Content in the first panel</p>"}<br/>
@@ -51,19 +51,19 @@ class AccordionBox extends React.Component {
 							&emsp;&emsp;{"</Accordion>"}<br/>
 							{"</AccordionGroup"}
 						</CodeSample>
+					<PropTable>
+						<Prop default="-" description="CSS class content" name="className" type="string" />
+						<Prop default="true" description="Is the accordion collapsed?" name="collapse" type="boolean" />
+						<Prop default="-" description="onClose callback fn" name="onClose" type="function" />
+						<Prop default="-" description="onShow callback fn" name="onShow" type="function" />
+						<Prop default="-" description="CSS class for the panel" name="panelClassName" type="string" />
+						<Prop default="-" description="Style for the panel" name="panelStyle" type="object" />
+						<Prop default="-" description="Style for the content" name="style" type="object" />
+						<Prop default="-" description="Accordion title" name="title" type="string" />
+						<Prop default="-" description="CSS class for the toggle +-" name="toggleClassName" type="string" />
+						<Prop default="-" description="Style for the toggle +-" name="toggleStyle" type="object" />
+					</PropTable>
 				</Grid>
-				<PropTable>
-					<Prop default="-" description="CSS class content" name="className" type="string" />
-					<Prop default="true" description="Is the accordion collapsed?" name="collapse" type="boolean" />
-					<Prop default="-" description="On close callback fn" name="onClose" type="function" />
-					<Prop default="-" description="On show callback fn" name="onShow" type="function" />
-					<Prop default="-" description="CSS class for the panel" name="panelClassName" type="string" />
-					<Prop default="-" description="Style for the panel" name="panelStyle" type="object" />
-					<Prop default="-" description="Style for the content" name="style" type="object" />
-					<Prop default="-" description="Accordion title" name="title" type="string" />
-					<Prop default="-" description="CSS class for the toggle +-" name="toggleClassName" type="string" />
-					<Prop default="-" description="Style for the toggle +-" name="toggleStyle" type="object" />
-				</PropTable>
 			</FormSection>
 		);
 	}

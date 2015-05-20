@@ -9,16 +9,23 @@ class CodeSample extends React.Component {
 
 		return (
 			<span>
-			<br/>
-			<Accordion style={{backgroundColor: "#3a4fb9", color: "white"}} title="Show code sample">
+			{this.props.noLines ? null : <hr/>}
+			<Accordion style={{backgroundColor: "#455A64", color: "white"}} title="SHOW CODE SAMPLE">
 			<Highlight className="javascript">
 				{(this.props.children)}
 			</Highlight>
 			</Accordion>
 			<br/>
+			{this.props.noLines ? null : <hr/>}
+			{this.props.noLines ? null : <br/>}
 			</span>
 		);
 	}
 }
+
+CodeSample.propTypes = {
+	children: React.PropTypes.node.isRequired,
+	noLines: React.PropTypes.bool
+};
 
 module.exports = CodeSample;

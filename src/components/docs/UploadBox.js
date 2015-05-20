@@ -1,9 +1,10 @@
 import React from "react";
 import FormSection from "../lib/FormSection";
 import Grid from "../lib/Grid";
-import GridItem from "../lib/GridItem";
 import Upload from "../lib/Upload";
-import Highlight from "react-highlight";
+import CodeSample from "./CodeSample";
+import PropTable from "./PropTable";
+import Prop from "./Prop";
 
 class Uploadbox extends React.Component {
 
@@ -11,14 +12,17 @@ class Uploadbox extends React.Component {
 		return (
 			<FormSection id="uploadBox" name="Upload">
 				<Grid>
-					<GridItem size={50}>
 						<Upload onDrop={function() { return; }}/>
-					</GridItem>
-					<GridItem className="demo" size={50}>
-						<Highlight className="javascript">
+						<hr/>
+						<CodeSample noLines>
 							{"<Upload onDrop={this.handleFileDrop.bind(this)} />"}
-						</Highlight>
-					</GridItem>
+						</CodeSample>
+					<PropTable>
+						<Prop description="CSS class" name="className" type="string" />
+						<Prop description="onDrop callback fn" name="onDrop" required type="function" />
+						<Prop description="Upload placeholder" name="placeholder" type="string" />
+						<Prop description="Style attribute" name="style" type="object" />
+					</PropTable>
 				</Grid>
 			</FormSection>
 		);

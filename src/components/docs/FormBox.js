@@ -3,13 +3,14 @@ import React from "react";
 import CheckBox from "../lib/CheckBox";
 import FormSection from "../lib/FormSection";
 import Grid from "../lib/Grid";
-import GridItem from "../lib/GridItem";
 import Form from "../lib/Form";
 import Input from "../lib/Input";
 import RadioButton from "../lib/RadioButton";
 import FormList from "../lib/FormList";
 import Button from "../lib/Button";
-import Highlight from "react-highlight";
+import CodeSample from "./CodeSample";
+import PropTable from "./PropTable";
+import Prop from "./Prop";
 
 class FormBox extends React.Component {
 	constructor(props){
@@ -34,106 +35,118 @@ class FormBox extends React.Component {
 		return (
 			<FormSection id="formBox" name="Forms">
 				<Grid>
-					<GridItem size={50}>
 					<Form>
 						<FormSection name="Form Section">
+							<CodeSample>
+								{"<FormSection name=\"Forms\"> ... </FormSection>"}
+							</CodeSample>
+
+							<span> New form row? use FormList</span>
+							<CodeSample>
+								{"<FormList> ...</FormList>"}
+							</CodeSample>
 							<FormList>
-								<Input width={100} placeholder="normal input (width=100)"/>
+								<Input placeholder="normal input (width=100)" width={100} />
 							</FormList>
+							<CodeSample>
+								{"<Input width={100} placeholder=\"normal input (width=100)\"/>"}
+							</CodeSample>
+
 							<FormList>
-								<Input width={100} label="With a label"/>
+								<Input label="With a label" width={100} />
 							</FormList>
+							<CodeSample>
+								{"<Input label=\"with a label\" />"}
+							</CodeSample>
+
 							<FormList>
-								<Input width={100} label="required" required /><br/>
+								<Input label="required" required width={100} /><br/>
 							</FormList>
+							<CodeSample>
+								{"<Input required />"}
+							</CodeSample>
+
 							<FormList>
-								<Input width={100} label="With a label" description="and a description" /><br/>
+								<Input description="and a description" label="With a label" width={100} /><br/>
 							</FormList>
+							<CodeSample>
+								{"<Input description=\"with a description\" label=\"label\"/>"}
+							</CodeSample>
+
 							<FormList>
-								<Input width={100} success successMessage="Good job!" label="Success!" /><br/>
+								<Input label="Success!" success successMessage="Good job!" width={50} /><br/>
 							</FormList>
+							<CodeSample>
+								{"<Input success successMessage=\"Good job!\" label=\"Success!\" width={50}/>"}
+							</CodeSample>
+
 							<FormList>
-								<Input width={50} error errorMessage="Oh no!" label="Error!" /><br/>
+								<Input error errorMessage="Oh no!" label="Error!" width={50} /><br/>
 							</FormList>
+							<CodeSample>
+								{"<Input error errorMessage=\"Oh no!\" label=\"Error!\" width={50}/>"}
+							</CodeSample>
+
 							<FormList className="btn-black">
-								<Input width={100} black placeholder="on black" /><br/>
+								<Input black placeholder="on black" width={100}/><br/>
 							</FormList>
+							<CodeSample>
+								{"<Input black placeholder=\"on black\" width={100} />"}
+							</CodeSample>
+
 						</FormSection>
+
 						<FormSection name="Example">
 							<FormList>
-								<Input width={100} required label="E-mail"/>
+								<Input label="E-mail" required width={100} />
 							</FormList>
 							<FormList>
-								<Input width={100} required type="password" label="Password"/>
+								<Input label="Password" required type="password" width={100} />
 							</FormList>
 							<FormList>
 								<Button color="green">Login</Button><span> </span>
 								<Button color="blue">Sign Up</Button>
-							</FormList><br/>
+							</FormList>
+							<CodeSample>
+								{"<FormSection name=\"Example\">"}<br/>
+								&emsp;&emsp;{"<FormList>"}<br/>
+								&emsp;&emsp;&emsp;&emsp;{"<Input required label=\"E-mail\"/>"}<br/>
+								&emsp;&emsp;{"</FormList>"}<br/>
+								&emsp;&emsp;{"<FormList>"}<br/>
+								&emsp;&emsp;&emsp;&emsp;{"<Input required type=\"password\" label=\"Password\"/>"}<br/>
+								&emsp;&emsp;{"</FormList>"}<br/>
+								&emsp;&emsp;{"<FormList>"}<br/>
+								&emsp;&emsp;{"<FormList>"}<br/>
+								&emsp;&emsp;&emsp;&emsp;{"<Button color=\"green\">Login</Button> <Button color=\"blue\">Sign Up</Button>"}<br/>
+								&emsp;&emsp;{"</FormList>"}<br/>
+								{"</FormSection>"}
+							</CodeSample>
+
 							<FormList>
 								<CheckBox id="check1" onChange={this.handleCheckBoxChange.bind(this)} value="yes">A checkbox</CheckBox><br/>
 								<p> checkbox value = {this.state.checkboxValue} - checked = {this.state.checkboxChecked.toString()} </p>
-							</FormList><br/>
+							</FormList>
+							<CodeSample>
+								{"<CheckBox onChange={this.handleCheckBoxChange.bind(this)}>"}<br/>
+								&emsp;&emsp;{"A checkbox"}<br/>
+								{"</CheckBox>"}
+							</CodeSample>
+
 							<FormList>
 								<RadioButton checked={true} name="q" onChange={this.handleRadioChange.bind(this)} value="yes">yes</RadioButton><br/>
 								<RadioButton name="q" onChange={this.handleRadioChange.bind(this)} value="no">no</RadioButton><br/>
 								<p> radio value = {this.state.radioValue} </p>
 							</FormList>
+							<CodeSample>
+								{"<RadioButton checked={true} name=\"q\" onChange={this.handleRadioChange.bind(this)} value=\"yes\">"}<br/>
+								&emsp;&emsp;{"yes"}<br/>
+								{"</RadioButton>"}<br/>
+								{"<RadioButton name=\"q\" onChange={this.handleRadioChange.bind(this)} value=\"no\">"}<br/>
+								&emsp;&emsp;{"no"}<br/>
+								{"</RadioButton>"}
+							</CodeSample>
 						</FormSection>
 					</Form>
-					</GridItem>
-					<GridItem className="demo" size={50}>
-						<Highlight className="javascript">
-							{"<FormSection name=\"Forms\"> content </FormSection>"}
-						</Highlight>
-						<span> new line? use a FormList</span>
-						<Highlight className="javascript">
-							{"<FormList> content </FormList>"}
-						</Highlight>
-						<Highlight className="javascript">
-							{"<Input width={100} placeholder=\"normal input (width=100)\"/>"}
-						</Highlight>
-						<Highlight className="javascript">
-							{"<Input label=\"with a label\" />"}
-						</Highlight>
-						<Highlight className="javascript">
-							{"<Input required />"}
-						</Highlight>
-						<Highlight className="javascript">
-							{"<Input description=\"with a description\" label=\"label\"/>"}
-						</Highlight>
-						<Highlight>
-							{"<Input width={100} success successMessage=\"Good job!\" label=\"Success!\" />"}
-						</Highlight>
-						<Highlight>
-							{"<Input width={100} error errorMessage=\"Oh no!\" label=\"Error!\" />"}
-						</Highlight>
-						<Highlight>
-							{"<Input black placeholder=\"on black\" />"}
-						</Highlight>
-						<hr/>
-						<Highlight>
-							{"<FormSection name=\"Example\">"}<br/>
-							&emsp;&emsp;{"<FormList>"}<br/>
-							&emsp;&emsp;&emsp;&emsp;{"<Input required label=\"E-mail\"/>"}<br/>
-							&emsp;&emsp;{"</FormList>"}<br/>
-							&emsp;&emsp;{"<FormList>"}<br/>
-							&emsp;&emsp;&emsp;&emsp;{"<Input required type=\"password\" label=\"Password\"/>"}<br/>
-							&emsp;&emsp;{"</FormList>"}<br/>
-							&emsp;&emsp;{"<FormList>"}<br/>
-							&emsp;&emsp;{"<FormList>"}<br/>
-							&emsp;&emsp;&emsp;&emsp;{"<Button color=\"green\">Login</Button> <Button color=\"blue\">Sign Up</Button>"}<br/>
-							&emsp;&emsp;{"</FormList>"}<br/>
-							{"</FormSection>"}
-						</Highlight>
-						<Highlight>
-							{"<CheckBox onChange={this.handleCheckBoxChange.bind(this)}>A checkbox</CheckBox>"}
-						</Highlight>
-						<Highlight>
-							{"<RadioButton checked={true} name=\"q\" onChange={this.handleRadioChange.bind(this)} value=\"yes\">yes</RadioButton>"}<br/>
-							{"<RadioButton name=\"q\" onChange={this.handleRadioChange.bind(this)} value=\"no\">no</RadioButton>"}
-						</Highlight>
-					</GridItem>
 				</Grid>
 			</FormSection>
 		);

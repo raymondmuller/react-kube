@@ -11,8 +11,8 @@ class PropTable extends React.Component {
 	render() {
 		return (
 			<Grid>
-				<hr/>
-				<Accordion title="AVAILABLE PROPS">
+				{ this.props.noLines ? null : <hr/> }
+				<Accordion style={{backgroundColor: "#EC407A", color: "white"}} title={this.props.title ? this.props.title : "AVAILABLE PROPS"}>
 					<Table hovered>
 						<TableHeader>
 							<TableHead> name </TableHead>
@@ -28,6 +28,12 @@ class PropTable extends React.Component {
 		);
 	}
 }
+
+PropTable.propTypes = {
+	children: React.PropTypes.node.isRequired,
+	noLines: React.PropTypes.bool,
+	title: React.PropTypes.string
+};
 
 module.exports = PropTable;
 

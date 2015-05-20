@@ -43,7 +43,8 @@ class AutocompleteBox extends React.Component {
 						<FormList>
 							<Autocomplete data={[{value: 1, label: "yo"}, {value: 2, label: "yeah"}]} description="data as object" highlight label="What?" rule={this.state.rule} />
 						</FormList>
-						<CodeSample>
+						<hr/>
+						<CodeSample noLines>
 							{"<Autocomplete data={[{value: 1, label: \"yo\"}, {value: 2, label: \"yeah\"}]} description=\"data as object\" highlight label=\"What?\" rule=\""}{this.state.rule}{"\"/>"}
 						</CodeSample>
 						<PropTable>
@@ -54,9 +55,11 @@ class AutocompleteBox extends React.Component {
 							<Prop description="Label for the input field" name="label" type="string" />
 							<Prop description="Style for the panel" name="limit" type="object" />
 							<Prop description="CSS Class for the dropdown list" name="listClassName" type="object" />
-							<Prop description="OnBlur(value) callback" name="onBlur" type="function" />
-							<Prop description="OnChange(value) callback" name="onChange" type="function" />
-							<Prop description="OnSelect(value) callback" name="onSelect" type="function" />
+							<Prop description="onBlur(value) callback" name="onBlur" type="function" />
+							<Prop description="onChange(value) callback" name="onChange" type="function" />
+							<Prop description="onSelect(value) callback" name="onSelect" type="function" />
+							<Prop description="Input placeholder value" name="placeholder" type="string" />
+							<Prop default="false" description="Is the input required?" name="required" type="boolean" />
 							<Prop default="contains" description="exact or contains" name="rule" type="string" />
 							<Prop description="Style object" name="style" type="object" />
 							<Prop description="Value of the input field" name="value" type="string" />
