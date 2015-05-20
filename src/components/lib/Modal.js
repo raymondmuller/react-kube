@@ -21,9 +21,7 @@ class Modal extends React.Component {
 			show: nextProps.show
 		});
 
-		if(nextProps.show){
-			this.props.onShow();
-		}
+		this.props.onShow ? this.props.onShow() : null; //eslint-disable-line
 	}
 
 	render() {
