@@ -72,7 +72,7 @@ class TooltipBox extends React.Component {
 						<Prop description="blue|red|yellow|green|white" name="color" type="string" />
 						<Prop default="bottom" description="top|right|left|bottom" name="placement" type="string" />
 						<Prop description="Style attribute" name="style" type="object" />
-						<Prop description="Tooltip text" name="text" required type="string" />
+						<Prop description="Tooltip text" name="text" required="yes" type="string" />
 					</PropTable>
 				</Grid>
 			</FormSection>

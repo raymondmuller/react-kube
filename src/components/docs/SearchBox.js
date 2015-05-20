@@ -24,7 +24,7 @@ class SearchBox extends React.Component {
 					<PropTable>
 						<Prop description="Button text (when undefined, button is hidden" name="button" type="string" />
 						<Prop description="CSS class" name="className" type="string" />
-					<Prop description="red|blue|black|green|yellow" name="color" type="string" />
+						<Prop description="red|blue|black|green|yellow" name="color" type="string" />
 						<Prop description="Add a description to the search input" name="description" type="string" />
 						<Prop default="false" description="disable the input" name="disable" type="boolean" />
 						<Prop description="Add a label to the input" name="label" type="string" />

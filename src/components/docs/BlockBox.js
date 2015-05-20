@@ -54,7 +54,7 @@ class BlockBox extends React.Component {
 							{"</Blocks>"}
 						</CodeSample>
 					<PropTable noLines title="BLOCKS: AVAILABLE PROPS">
-						<Prop default="-" description="Amount of children blocks" name="amount" type="string or number" />
+						<Prop default="-" description="Amount of children blocks" name="amount" required="yes" type="string or number" />
 						<Prop default="-" description="CSS class" name="className" type="string" />
 						<Prop default="-" description="Specify custom behaviour for the width of blocks on mobile devices (amount in percentage)" name="mobile" type="object" />
 						<Prop default="-" description="Style attribute" name="style" type="object" />

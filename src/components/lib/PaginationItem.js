@@ -4,8 +4,8 @@ import classNames from "classnames";
 class PaginationItem extends React.Component {
 
 	handleClick() {
-		this.props.onItemClick(this.props.index);
-		this.props.onClick ? this.props.onClick(this.props.index) : null;
+		this.props.onItemClick ? this.props.onItemClick(this.props.index) : null; //eslint-disable-line
+		this.props.onClick ? this.props.onClick(this.props.index) : null; //eslint-disable-line
 	}
 
 	render() {

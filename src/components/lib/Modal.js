@@ -64,7 +64,7 @@ Modal.propTypes = {
 	show: React.PropTypes.bool,
 	style: React.PropTypes.object,
 	title: React.PropTypes.string,
-	titleClassName: React.PropTypes.object,
+	titleClassName: React.PropTypes.object
 };
 
 Modal.defaultProps = {padding: "50px", show: false};

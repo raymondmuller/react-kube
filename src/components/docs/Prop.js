@@ -18,6 +18,14 @@ class Prop extends React.Component {
 	}
 }
 
+Prop.propTypes = {
+	default: React.PropTypes.string,
+	description: React.PropTypes.string,
+	name: React.PropTypes.string,
+	required: React.PropTypes.string,
+	type: React.PropTypes.string
+};
+
 Prop.defaultProps = {default: "-", required: "no"};
 
 module.exports = Prop;

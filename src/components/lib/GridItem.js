@@ -6,8 +6,7 @@ class GridItem extends React.Component {
 	render() {
 		let styles = classNames({
 			"unit-centered": this.props.centered,
-			"unit-push-right": this.props.right,
-			"end": this.props.end
+			"unit-push-right": this.props.right
 		});
 
 		styles += this.props.size ? " unit-" + this.props.size : "";

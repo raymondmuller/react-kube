@@ -9,8 +9,6 @@ import RadioButton from "../lib/RadioButton";
 import FormList from "../lib/FormList";
 import Button from "../lib/Button";
 import CodeSample from "./CodeSample";
-import PropTable from "./PropTable";
-import Prop from "./Prop";
 
 class FormBox extends React.Component {
 	constructor(props){
