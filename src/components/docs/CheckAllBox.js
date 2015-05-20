@@ -28,19 +28,31 @@ class CheckAllBox extends React.Component {
 				<Grid>
 					<GridItem size={50}>
 					<Form>
-						<FormSection name="Form Section">
 							<FormList>
-			<CheckAll highlight label="enable all" label2="disable all"><br/>
-				<CheckBox id="check1">first</CheckBox><br/>
-				<CheckBox id="check2">second</CheckBox><br/>
-			</CheckAll>
+						<CheckAll highlight label="enable all" label2="disable all">
+							<CheckBox id="check1">first</CheckBox>
+							<CheckBox id="check2">second</CheckBox>
+						</CheckAll>
+						<br/><hr/><br/>
+						<CheckAll bottom highlight inline label="enable all" label2="disable all">
+							<CheckBox id="check1">one</CheckBox>
+							<CheckBox id="check2">two</CheckBox>
+						</CheckAll>
 							</FormList>
-						</FormSection>
 					</Form>
 					</GridItem>
 					<GridItem className="demo" size={50}>
 						<Highlight className="javascript">
-							{"<FormSection name=\"Forms\"> content </FormSection>"}
+							{"<CheckAll highlight label=\"enable all\" label2=\"disable all\">"}<br/>
+							&emsp;&emsp;{"<CheckBox id=\"check1\">first</CheckBox>"}<br/>
+							&emsp;&emsp;{"<CheckBox id=\"check2\">second</CheckBox>"}<br/>
+							{"</CheckAll>"}
+						</Highlight>
+						<Highlight className="javascript">
+							{"<CheckAll bottom highlight inline label=\"enable all\" label2=\"disable all\">"}<br/>
+							&emsp;&emsp;{"<CheckBox id=\"check1\">one</CheckBox>"}<br/>
+							&emsp;&emsp;{"<CheckBox id=\"check2\">two</CheckBox>"}<br/>
+							{"</CheckAll>"}
 						</Highlight>
 					</GridItem>
 				</Grid>

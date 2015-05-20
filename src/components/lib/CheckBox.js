@@ -24,9 +24,9 @@ class CheckBox extends React.Component {
 	render() {
 		return (
 			<span>
-				<input className={this.props.className} checked={this.state.checked} defaultChecked={this.props.checked} disabled={this.props.disabled} id={this.props.id} name={this.props.id} onChange={this.handleToggle.bind(this)} ref={this.props.id} style={this.props.style} type="checkbox" value={this.props.value} />
+				<input checked={this.state.checked} className={this.props.className} defaultChecked={this.props.checked} disabled={this.props.disabled} id={this.props.id} name={this.props.id} onChange={this.handleToggle.bind(this)} ref={this.props.id} style={this.props.style} type="checkbox" value={this.props.value} />
 				<label className={this.props.labelClassName} htmlFor={this.props.id}>{this.props.children}</label>
-				{!this.props.inline ? <br/> : null}
+				{!this.props.inline ? <br/> : " "}
 			</span>
 		);
 	}

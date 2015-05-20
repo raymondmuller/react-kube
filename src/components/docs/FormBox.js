@@ -18,7 +18,6 @@ class FormBox extends React.Component {
 	}
 
 	handleCheckBoxChange(isChecked, value) {
-		console.log(isChecked + " " + value)
 		this.setState({
 			checkboxChecked: isChecked,
 			checkboxValue: value
