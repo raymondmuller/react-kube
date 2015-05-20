@@ -88,7 +88,6 @@ class ToggleButtonBox extends React.Component {
 						{"</ToggleButtons>"}
 					</CodeSample>
 					<p> Single toggle code needs to be cleaner and is subjective to change in the near future </p>
-
 					<PropTable>
 						<Prop description="Set active button (index of)" name="active" type="string or number" />
 						<Prop description="CSS class" name="className" type="string" />

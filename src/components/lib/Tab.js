@@ -17,7 +17,6 @@ class Tab extends React.Component {
 
 	componentDidMount() {
 		this.props.addTab({title: this.props.title});
-
 	}
 
 	render() {
