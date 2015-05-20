@@ -12,7 +12,7 @@ class PropTable extends React.Component {
 		return (
 			<Grid>
 				<hr/>
-				<Accordion title="Available Props">
+				<Accordion title="AVAILABLE PROPS">
 					<Table hovered>
 						<TableHeader>
 							<TableHead> name </TableHead>

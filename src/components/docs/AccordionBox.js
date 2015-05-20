@@ -2,13 +2,13 @@ import React from "react";
 
 import Accordion from "../lib/Accordion";
 import AccordionGroup from "../lib/AccordionGroup";
-import CodeSample from "./CodeSample";
 import FormSection from "../lib/FormSection";
 import Grid from "../lib/Grid";
-import GridItem from "../lib/GridItem";
+
+import CodeSample from "./CodeSample";
 import PropTable from "./PropTable";
 import Prop from "./Prop";
-import Highlight from "react-highlight";
+
 
 class AccordionBox extends React.Component {
 
