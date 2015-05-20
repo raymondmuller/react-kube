@@ -18,7 +18,8 @@ class FormBox extends React.Component {
 	}
 
 	handleCheckBoxChange(isChecked, value) {
-		this.setState({ 
+		console.log(isChecked + " " + value)
+		this.setState({
 			checkboxChecked: isChecked,
 			checkboxValue: value
 		});
@@ -71,7 +72,7 @@ class FormBox extends React.Component {
 								<Button color="blue">Sign Up</Button>
 							</FormList><br/>
 							<FormList>
-								<CheckBox onChange={this.handleCheckBoxChange.bind(this)}>A checkbox</CheckBox><br/>
+								<CheckBox id="check1" onChange={this.handleCheckBoxChange.bind(this)} value="yes">A checkbox</CheckBox><br/>
 								<p> checkbox value = {this.state.checkboxValue} - checked = {this.state.checkboxChecked.toString()} </p>
 							</FormList><br/>
 							<FormList>

@@ -6,23 +6,28 @@ class CheckBox extends React.Component {
 		this.state = { checked: this.props.checked };
 	}
 
-	handleToggle() {
-		let currentValue = this.state.checked;
+	handleToggle(e) {
 		this.setState({
-			checked: !currentValue
+			checked: e.target.checked
 		});
+		this.props.onChange ? this.props.onChange(e.target.checked, e.target.value) : null; //eslint-disable-line
 	}
 
-	handleChange(e) {
-		this.props.onChange ? this.props.onChange(e.target.checked, e.target.value) : null; //eslint-disable-line
+	componentWillReceiveProps(nextProps){
+		if("checked" in nextProps && nextProps.checked !== this.state.checked){
+			this.setState({
+				checked: nextProps.checked
+			});
+		}
 	}
 
 	render() {
 		return (
-			<li>
-				<input className={this.props.className} defaultChecked={this.state.checked} disabled={this.props.disabled} id={this.props.id} name={this.props.id} onChange={this.handleChange.bind(this)} onClick={this.handleToggle.bind(this)} style={this.props.style} type="checkbox" value={this.props.value} />
-				<label htmlFor={this.props.id}>{this.props.children}</label>
-			</li>
+			<span>
+				<input className={this.props.className} checked={this.state.checked} defaultChecked={this.props.checked} disabled={this.props.disabled} id={this.props.id} name={this.props.id} onChange={this.handleToggle.bind(this)} ref={this.props.id} style={this.props.style} type="checkbox" value={this.props.value} />
+				<label className={this.props.labelClassName} htmlFor={this.props.id}>{this.props.children}</label>
+				{!this.props.inline ? <br/> : null}
+			</span>
 		);
 	}
 }
@@ -32,10 +37,12 @@ CheckBox.propTypes = {
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	disabled: React.PropTypes.bool,
-	id: React.PropTypes.string,
+	id: React.PropTypes.string.isRequired,
+	inline: React.PropTypes.bool,
+	labelClassName: React.PropTypes.string,
 	onChange: React.PropTypes.func,
 	style: React.PropTypes.object,
-	value: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ])
+	value: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ]).isRequired
 };
 
 CheckBox.defaultProps = {checked: false, disabled: false};

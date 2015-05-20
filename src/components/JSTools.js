@@ -2,6 +2,7 @@ import React from "react";
 
 import AccordionBox from "./docs/AccordionBox";
 import AutocompleteBox from "./docs/AutocompleteBox";
+import CheckAllBox from "./docs/CheckAllBox";
 import DropdownBox from "./docs/DropdownBox";
 import FilterBox from "./docs/FilterBox";
 import Grid from "./lib/Grid";
@@ -33,6 +34,7 @@ class JSTools extends React.Component {
 							<NavigationBar hideOnMobile vertical>
 								<NavigationItem url="#accordionBox"> Accordion </NavigationItem>
 								<NavigationItem url="#autocompleteBox"> Autocomplete </NavigationItem>
+								<NavigationItem url="#checkAllBox"> Check All </NavigationItem>
 								<NavigationItem url="#dropdownBox"> Dropdown </NavigationItem>
 								<NavigationItem url="#filterBox"> Filterbox </NavigationItem>
 								<NavigationItem url="#infiniteScrollBox"> Infinite Scroll </NavigationItem>
@@ -51,6 +53,7 @@ class JSTools extends React.Component {
 					<GridItem size={80}>
 						<AccordionBox />
 						<AutocompleteBox />
+						<CheckAllBox />
 						<DropdownBox />
 						<FilterBox />
 						<InfiniteScrollBox />
