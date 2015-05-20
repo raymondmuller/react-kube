@@ -73,7 +73,7 @@ class InfiniteScrollBox extends React.Component {
 				<PropTable>
 						<Prop default="false" description="Pass true when there is no more data to load" name="finished" type="boolean" />
 						<Prop description="isLoading boolean to avoid multiple requests" name="isLoading" type="boolean" />
-						<Prop description="onScrollEnd callback fn (e.g. use this to load extra data)" name="data" required type="array" />
+						<Prop description="onScrollEnd callback fn (e.g. use this to load extra data)" name="onScrollEnd" required="yes" type="function" />
 						<Prop description="Style attribute" name="style" type="object" />
 						<Prop default="25" description="scroll threshold" name="threshold" type="number" />
 					</PropTable>

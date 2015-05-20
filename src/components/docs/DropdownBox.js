@@ -47,7 +47,7 @@ class DropdownBox extends React.Component {
 					</CodeSample>
 					<PropTable>
 						<Prop description="CSS class" name="className" type="string" />
-						<Prop description="The options for the dropdown in an array" name="data" required type="array" />
+						<Prop description="The options for the dropdown in an array" name="data" required="yes" type="array" />
 						<Prop description="onSelect callback fn (passes value)" name="onSelect" type="function" />
 						<Prop description="Style attribute" name="style" type="object" />
 					</PropTable>

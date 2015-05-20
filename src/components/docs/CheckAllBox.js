@@ -32,8 +32,8 @@ class CheckAllBox extends React.Component {
 						<GridItem size={30}>
 							<FormList>
 								<CheckAll highlight label="enable all" label2="disable all">
-									<CheckBox id="check1">first</CheckBox>
-									<CheckBox id="check2">second</CheckBox>
+									<CheckBox id="check1" value="first">first</CheckBox>
+									<CheckBox id="check2" value="second">second</CheckBox>
 								</CheckAll>
 							</FormList>
 							</GridItem>
@@ -49,8 +49,8 @@ class CheckAllBox extends React.Component {
 						<GridItem size={30}>
 						<FormList>
 							<CheckAll bottom highlight inline label="enable all" label2="disable all">
-								<CheckBox id="check1">one</CheckBox>
-								<CheckBox id="check2">two</CheckBox>
+								<CheckBox id="check1" value="one">one</CheckBox>
+								<CheckBox id="check2" value="two">two</CheckBox>
 							</CheckAll>
 						</FormList>
 							</GridItem>
@@ -74,6 +74,7 @@ class CheckAllBox extends React.Component {
 					<Prop description="Checkbox label when disabled" name="label2" type="string" />
 					<Prop description="onChange callback fn (passes value)" name="onChange" type="function" />
 					<Prop description="Style attribute" name="style" type="object" />
+					<Prop default="all" description="Set check all value" name="value" type="string or number" />
 				</PropTable>
 				<PropTable title="SINGLE CHECKBOX: AVAILABLE PROPS">
 					<Prop default="false" description="set default checked value" name="checked" type="boolean" />

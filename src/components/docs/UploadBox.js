@@ -19,7 +19,7 @@ class Uploadbox extends React.Component {
 						</CodeSample>
 					<PropTable>
 						<Prop description="CSS class" name="className" type="string" />
-						<Prop description="onDrop callback fn" name="onDrop" required type="function" />
+						<Prop description="onDrop callback fn" name="onDrop" required="yes" type="function" />
 						<Prop description="Upload placeholder" name="placeholder" type="string" />
 						<Prop description="Style attribute" name="style" type="object" />
 					</PropTable>

@@ -36,7 +36,7 @@ class FilterBox extends React.Component {
 					</CodeSample>
 					<PropTable>
 						<Prop description="CSS class" name="className" type="string" />
-						<Prop description="The options for the dropdown in an array" name="data" required type="array" />
+						<Prop description="The options for the dropdown in an array" name="data" required="yes" type="array" />
 						<Prop description="The id attribute" name="id" type="string" />
 						<Prop description="Class attribute of the input field" name="inputClassName" type="string" />
 						<Prop description="Class attribute of the list" name="listClassName" type="string" />
