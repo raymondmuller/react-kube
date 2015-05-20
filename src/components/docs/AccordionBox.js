@@ -2,9 +2,12 @@ import React from "react";
 
 import Accordion from "../lib/Accordion";
 import AccordionGroup from "../lib/AccordionGroup";
+import CodeSample from "./CodeSample";
 import FormSection from "../lib/FormSection";
 import Grid from "../lib/Grid";
 import GridItem from "../lib/GridItem";
+import PropTable from "./PropTable";
+import Prop from "./Prop";
 import Highlight from "react-highlight";
 
 class AccordionBox extends React.Component {
@@ -13,15 +16,23 @@ class AccordionBox extends React.Component {
 		return (
 			<FormSection id="accordionBox" name="Accordion">
 				<Grid>
-					<GridItem size={50}>
+						<h3>Normal Accordion</h3>
 						<Accordion title="first title">
 							<p>Content in the first panel</p>
 						</Accordion>
 						<Accordion title="second title">
 							<p>Content in the second panel</p>
-						</Accordion><br/>
+						</Accordion>
+						<CodeSample>
+							{'<Accordion title=\"first title\">'}<br/>
+							&emsp;&emsp;{'<p>Content in the first panel</p>'}<br/>
+							{'</Accordion>'}<br/>
+							{"<Accordion title=\"second title\">"}<br/>
+							&emsp;&emsp;{"<p>Content in the second panel</p>"}<br/>
+							{"</Accordion>"}
+						</CodeSample>
 						<hr/>
-						<p> Grouped (one accordion open at a time) </p>
+						<h3> Grouped (one accordion open at a time) </h3>
 						<AccordionGroup>
 							<Accordion title="first title">
 							<p>Content in the first panel</p>
@@ -29,19 +40,8 @@ class AccordionBox extends React.Component {
 							<Accordion title="second title">
 								<p>Content in the second panel</p>
 							</Accordion>
-					</AccordionGroup>
-					</GridItem>
-					<GridItem className="demo" size={50}>
-						<Highlight className="javascript">
-							{"<Accordion title=\"first title\">"}<br/>
-							&emsp;&emsp;{"<p>Content in the first panel</p>"}<br/>
-							{"</Accordion>"}<br/>
-							{"<Accordion title=\"second title\">"}<br/>
-							&emsp;&emsp;{"<p>Content in the second panel</p>"}<br/>
-							{"</Accordion>"}
-						</Highlight>
-						<hr/>
-						<Highlight className="javascript">
+						</AccordionGroup>
+						<CodeSample>
 							{"<AccordionGroup>"}<br/>
 							&emsp;&emsp;{"<Accordion title=\"first title\">"}<br/>
 							&emsp;&emsp;&emsp;&emsp;{"<p>Content in the first panel</p>"}<br/>
@@ -50,9 +50,20 @@ class AccordionBox extends React.Component {
 							&emsp;&emsp;&emsp;&emsp;{"<p>Content in the second panel</p>"}<br/>
 							&emsp;&emsp;{"</Accordion>"}<br/>
 							{"</AccordionGroup"}
-						</Highlight>
-						</GridItem>
+						</CodeSample>
 				</Grid>
+				<PropTable>
+					<Prop default="-" description="CSS class content" name="className" type="string" />
+					<Prop default="true" description="Is the accordion collapsed?" name="collapse" type="boolean" />
+					<Prop default="-" description="On close callback fn" name="onClose" type="function" />
+					<Prop default="-" description="On show callback fn" name="onShow" type="function" />
+					<Prop default="-" description="CSS class for the panel" name="panelClassName" type="string" />
+					<Prop default="-" description="Style for the panel" name="panelStyle" type="object" />
+					<Prop default="-" description="Style for the content" name="style" type="object" />
+					<Prop default="-" description="Accordion title" name="title" type="string" />
+					<Prop default="-" description="CSS class for the toggle +-" name="toggleClassName" type="string" />
+					<Prop default="-" description="Style for the toggle +-" name="toggleStyle" type="object" />
+				</PropTable>
 			</FormSection>
 		);
 	}

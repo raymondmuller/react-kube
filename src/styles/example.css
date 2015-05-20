@@ -3,7 +3,7 @@
 	padding: 10px;
 }
 
-.demo > pre {
+.demo > pre, .accordion-panel > pre {
 	margin-top: 0 !important;
 	white-space: normal !important;
 }
@@ -25,5 +25,11 @@
 
 #side-nav > nav > ul{
 	margin-left: 0;
+}
+
+#tab1 > .units-row > .unit-80 > fieldset > .units-row > h3,
+#tab2 > .units-row > .unit-80 > fieldset > .units-row > h3,
+#tab3 > .units-row > .unit-80 > fieldset > .units-row > h3 {
+	text-decoration: underline;
 }
 
