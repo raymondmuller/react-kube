@@ -27,17 +27,14 @@ class Table extends React.Component {
 }
 
 Table.propTypes = {
-	bordered: React.PropTypes.bool,
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
-	flat: React.PropTypes.bool,
 	frame: React.PropTypes.string,
-	hovered: React.PropTypes.bool,
 	responsive: React.PropTypes.bool,
-	simple: React.PropTypes.bool,
-	stripped: React.PropTypes.bool,
 	style: React.PropTypes.object,
 	type: React.PropTypes.oneOf(["bordered", "flat", "hovered", "simple", "stripped"])
 };
+
+Table.defaultProps = { responsive: false };
 
 module.exports = Table;

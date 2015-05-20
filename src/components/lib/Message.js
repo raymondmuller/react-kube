@@ -10,7 +10,7 @@ class Message extends React.Component {
 
 	handleClick() {
 		this.setState({showMessage: false});
-		this.props.onClose ? this.props.onClose() : null; //eslint-disable-line
+		this.props.onHide ? this.props.onHide() : null; //eslint-disable-line
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -28,7 +28,7 @@ class Message extends React.Component {
 					this.setState({
 						showMessage: false
 				});
-				this.props.onClose ? this.props.onClose() : null; //eslint-disable-line
+				this.props.onHide ? this.props.onHide() : null; //eslint-disable-line
 			}, this.props.delay);
 			}
 		}
@@ -65,7 +65,7 @@ Message.propTypes = {
 	color: React.PropTypes.oneOf(["black", "blue", "red", "yellow", "green"]),
 	delay: React.PropTypes.number,
 	left: React.PropTypes.number,
-	onClose: React.PropTypes.func,
+	onHide: React.PropTypes.func,
 	onShow: React.PropTypes.func,
 	position: React.PropTypes.string,
 	right: React.PropTypes.number,

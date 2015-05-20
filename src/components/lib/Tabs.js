@@ -27,8 +27,7 @@ class Tabs extends React.Component {
 		let styles = classNames({
 			"nav-tabs": !this.props.pills,
 			"navbar": this.props.pills,
-			"navbar-pills": this.props.pills,
-			"equals": this.props.equals
+			"navbar-pills": this.props.pills
 		});
 
 
@@ -72,12 +71,9 @@ class Tabs extends React.Component {
 Tabs.propTypes = {
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
-	equals: React.PropTypes.bool,
 	id: React.PropTypes.string,
 	pills: React.PropTypes.bool,
-	rows: React.PropTypes.number,
-	style: React.PropTypes.object,
-	width: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ])
+	style: React.PropTypes.object
 };
 
 module.exports = Tabs;

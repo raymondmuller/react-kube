@@ -36,7 +36,7 @@ Search.propTypes = {
 	button: React.PropTypes.string,
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
-	color: React.PropTypes.string,
+	color: React.PropTypes.oneOf(["black", "blue", "red", "yellow", "green", "white"]),
 	description: React.PropTypes.string,
 	disabled: React.PropTypes.bool,
 	label: React.PropTypes.string,
@@ -45,7 +45,6 @@ Search.propTypes = {
 	onChange: React.PropTypes.func,
 	placeholder: React.PropTypes.string,
 	rounded: React.PropTypes.bool,
-	size: React.PropTypes.number,
 	value: React.PropTypes.string,
 	width: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ])
 };

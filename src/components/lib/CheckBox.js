@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 class CheckBox extends React.Component {
 	constructor(props){
@@ -22,9 +23,13 @@ class CheckBox extends React.Component {
 	}
 
 	render() {
+		let inputClasses = classNames({
+			"highlight": this.props.highlight
+		});
+
 		return (
 			<span>
-				<input checked={this.state.checked} className={this.props.className} defaultChecked={this.props.checked} disabled={this.props.disabled} id={this.props.id} name={this.props.id} onChange={this.handleToggle.bind(this)} ref={this.props.id} style={this.props.style} type="checkbox" value={this.props.value} />
+				<input checked={this.state.checked} className={classNames(this.props.className, inputClasses)} defaultChecked={this.props.checked} disabled={this.props.disabled} id={this.props.id} name={this.props.id} onChange={this.handleToggle.bind(this)} ref={this.props.id} style={this.props.style} type="checkbox" value={this.props.value} />
 				<label className={this.props.labelClassName} htmlFor={this.props.id}>{this.props.children}</label>
 				{!this.props.inline ? <br/> : " "}
 			</span>
@@ -37,6 +42,7 @@ CheckBox.propTypes = {
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	disabled: React.PropTypes.bool,
+	highlight: React.PropTypes.bool,
 	id: React.PropTypes.string.isRequired,
 	inline: React.PropTypes.bool,
 	labelClassName: React.PropTypes.string,

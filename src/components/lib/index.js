@@ -8,6 +8,7 @@ import Blocks from "./Blocks";
 import BreadCrumb from "./BreadCrumb";
 import BreadCrumbs from "./BreadCrumbs";
 import Button from "./Button";
+import CheckAll from "./CheckAll";
 import CheckBox from "./CheckBox";
 import Dropdown from "./Dropdown";
 import Filterbox from "./Filterbox";
@@ -61,6 +62,7 @@ export default {
 	BreadCrumb,
 	BreadCrumbs,
 	Button,
+	CheckAll,
 	CheckBox,
 	Dropdown,
 	Filterbox,

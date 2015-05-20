@@ -51,7 +51,7 @@ class CheckAll extends React.Component {
 		});
 
 		let checkAllBox =
-			<CheckBox checked={this.state.all} disabled={this.props.disabled} id="all" inline={this.props.inline} onChange={this.handleChange.bind(this)} ref="checkAll">
+			<CheckBox checked={this.state.all} className={this.props.className} disabled={this.props.disabled} id="all" inline={this.props.inline} onChange={this.handleChange.bind(this)} ref="checkAll">
 						{this.props.label2 ? (this.state.all ? this.props.label2 : this.props.label) : this.props.label}
 			</CheckBox>;
 
@@ -76,8 +76,7 @@ CheckAll.propTypes = {
 	label: React.PropTypes.string,
 	label2: React.PropTypes.string,
 	onChange: React.PropTypes.func,
-	style: React.PropTypes.object,
-	value: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ])
+	style: React.PropTypes.object
 };
 
 CheckAll.defaultProps = {bottom: false, checked: false, disabled: false};

@@ -8,8 +8,9 @@ class Breadcrumbs extends React.Component {
 			"breadcrumbs": true,
 			"breadcrumbs-path": this.props.path
 		});
+
 		let children = React.Children.map(this.props.children, function(child, i) {
-			return React.cloneElement(child, {active: this.props.active, index: i});
+			return React.cloneElement(child, {key: i, index: i});
 		}, this);
 
 		return (
@@ -23,7 +24,6 @@ class Breadcrumbs extends React.Component {
 }
 
 Breadcrumbs.propTypes = {
-	active: React.PropTypes.bool,
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
 	path: React.PropTypes.bool,

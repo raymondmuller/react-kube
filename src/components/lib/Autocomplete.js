@@ -146,7 +146,7 @@ class Autocomplete extends React.Component {
 		return (
 			<span>
 				<div style={wrapperStyle}>
-					<Input autoComplete="false" description={this.props.description} label={this.props.label} name="q" onBlur={this.handleBlur.bind(this)} onChange={this.handleChange.bind(this)} ref="autocompleteInput" type="text" value={this.state.value} width={this.props.width}/>
+					<Input autoComplete="false" description={this.props.description} label={this.props.label} name="q" onBlur={this.handleBlur.bind(this)} onChange={this.handleChange.bind(this)} placeholder={this.props.placeholder} ref="autocompleteInput" required={this.props.required} type="text" value={this.state.value} width={this.props.width}/>
 						{this.state.show ?
 					<ul className={classNames(this.props.listClassName, listClasses)} style={listStyle}>
 						{suggestions}
@@ -174,6 +174,8 @@ Autocomplete.propTypes = {
 	onBlur: React.PropTypes.func,
 	onChange: React.PropTypes.func,
 	onSelect: React.PropTypes.func,
+	placeholder: React.PropTypes.string,
+	required: React.PropTypes.bool,
 	rule: React.PropTypes.oneOf(["contains", "exact"]),
 	style: React.PropTypes.object,
 	value: React.PropTypes.string,

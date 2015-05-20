@@ -8,7 +8,7 @@ class Grid extends React.Component {
 			"units-role-left": this.props.left,
 			"units-role-right": this.props.right,
 			"units-row": true,
-			"units-split": this.props.disabled,
+			"units-split": this.props.split,
 			"end": this.props.end
 		});
 
@@ -25,13 +25,13 @@ class Grid extends React.Component {
 Grid.propTypes = {
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
-	disabled: React.PropTypes.bool,
 	end: React.PropTypes.bool,
 	id: React.PropTypes.string,
 	left: React.PropTypes.bool,
-	mobile: React.PropTypes.number,
+	mobile: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ]),
 	padding: React.PropTypes.bool,
 	right: React.PropTypes.bool,
+	split: React.PropTypes.bool,
 	style: React.PropTypes.object
 };
 

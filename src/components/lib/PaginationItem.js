@@ -5,6 +5,7 @@ class PaginationItem extends React.Component {
 
 	handleClick() {
 		this.props.onItemClick(this.props.index);
+		this.props.onClick ? this.props.onClick(this.props.index) : null;
 	}
 
 	render() {
@@ -26,6 +27,7 @@ PaginationItem.propTypes = {
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
 	index: React.PropTypes.number,
+	onClick: React.PropTypes.func,
 	onItemClick: React.PropTypes.func,
 	style: React.PropTypes.object,
 	target: React.PropTypes.string,

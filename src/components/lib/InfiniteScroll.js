@@ -31,7 +31,7 @@ class InfiniteScroll extends React.Component {
 
   handleScroll(){
     //this function will be triggered when the user scrolls
-    let threshold = this.props.threshold ? this.props.threshold : 25;
+    let threshold = this.props.threshold;
     let innerHeight = React.findDOMNode(this.refs.infiniteScrollWrapper).offsetHeight;
     let scrollHeight = React.findDOMNode(this.refs.infiniteScrollWrapper).scrollHeight;
     let scrollTop = React.findDOMNode(this.refs.infiniteScrollWrapper).scrollTop;
@@ -64,5 +64,7 @@ InfiniteScroll.propTypes = {
   style: React.PropTypes.object,
   threshold: React.PropTypes.number
 };
+
+InfiniteScroll.defaultProps = { threshold: 25 };
 
 module.exports = InfiniteScroll;

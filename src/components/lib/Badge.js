@@ -27,4 +27,6 @@ Badge.propTypes = {
 	style: React.PropTypes.object
 };
 
+Badge.defaultProps = { small: false };
+
 module.exports = Badge;

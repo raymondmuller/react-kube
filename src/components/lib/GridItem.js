@@ -7,8 +7,7 @@ class GridItem extends React.Component {
 		let styles = classNames({
 			"unit-centered": this.props.centered,
 			"unit-push-right": this.props.right,
-			"end": this.props.end,
-			"units-split": this.props.split
+			"end": this.props.end
 		});
 
 		styles += this.props.size ? " unit-" + this.props.size : "";
@@ -24,13 +23,10 @@ GridItem.propTypes = {
 	centered: React.PropTypes.bool,
 	children: React.PropTypes.node,
 	className: React.PropTypes.string,
-	end: React.PropTypes.bool,
 	id: React.PropTypes.string,
-	outline: React.PropTypes.bool,
-	push: React.PropTypes.number,
+	push: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ]),
 	right: React.PropTypes.bool,
-	size: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ]),
-	split: React.PropTypes.bool,
+	size: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ]).isRequired,
 	style: React.PropTypes.object
 };
 
