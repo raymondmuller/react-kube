@@ -94,7 +94,7 @@ class Autocomplete extends React.Component {
 		// close suggestions and set value on selection
 		this.setState({
 			show: false,
-			value: suggestion.label
+			value: suggestion.label ? suggestion.label : suggestion
 		});
 
 		// on select callback
@@ -122,7 +122,7 @@ class Autocomplete extends React.Component {
 				return (
 					<li key={i}>
 						<a key={i} onMouseDown={this.handleSelect.bind(this, suggestion)} ref={i}>
-							{this.props.highlight && this.state.value} ?
+							{this.props.highlight && this.state.value ?
 								<HighlightText query={this.state.value} text={suggestion.label} />
 							: suggestion.label }
 						</a>
@@ -180,6 +180,6 @@ Autocomplete.propTypes = {
 	width: React.PropTypes.oneOfType([ React.PropTypes.string, React.PropTypes.number ])
 };
 
-Autocomplete.defaultProps = { rule: "contains"};
+Autocomplete.defaultProps = { highlight: false, rule: "contains"};
 
 module.exports = Autocomplete;
