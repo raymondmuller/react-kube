@@ -32,7 +32,7 @@ class ButtonBox extends React.Component {
 						</CodeSample>
 				</GridItem>
 				<GridItem size={30}>
-						<SubmitButton color="blue" outline  small>round small outline submit</SubmitButton>
+						<SubmitButton color="blue" outline small>round small outline submit</SubmitButton>
 				</GridItem>
 				<GridItem size={70}>
 						<CodeSample noLines>

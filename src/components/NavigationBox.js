@@ -18,17 +18,21 @@ componentWillUnmount(){
 render() {
 	return (
 		<header className="group" id="header" ref="header" style={this.props.style}>
-			<Navigation responsive menuLabel="Menu" fixed active="01" id="nav" className="demo-navbar-fixed">
+			<Navigation active="01" className="demo-navbar-fixed" fixed id="nav" menuLabel="Menu" responsive >
 				<NavigationLogo id="logo">React-Kube (BETA)</NavigationLogo>
 				<NavigationBar active={0} hideOnMobile left>
-					<NavigationItem url="#documentation" icon="code"> Documentation </NavigationItem>
-					<NavigationItem url="http://www.raymondmuller.com" icon="envelope" target="_new"> Contact </NavigationItem>
-					<NavigationItem url="http://www.github.com/raymondmuller/react-kube" target="_new" icon="github"> Github</NavigationItem>
+					<NavigationItem icon="code" url="#documentation"> Documentation </NavigationItem>
+					<NavigationItem icon="envelope" target="_new" url="http://www.raymondmuller.com"> Contact </NavigationItem>
+					<NavigationItem icon="github" target="_new" url="http://www.github.com/raymondmuller/react-kube" > Github</NavigationItem>
 				</NavigationBar>
 			</Navigation>
 		</header>
 		);
 	}
 }
+
+NavigationBox.propTypes = {
+	style: React.PropTypes.object
+};
 
 module.exports = NavigationBox;

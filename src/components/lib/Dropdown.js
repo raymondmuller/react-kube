@@ -51,7 +51,7 @@ class Dropdown extends React.Component {
 
 	selectItem(item) {
 		// sub navigation click callback
-		this.props.onClick ? this.props.onClick(item) : null;
+		this.props.onClick ? this.props.onClick(item) : null; //eslint-disable-line
 		// on select function
 		this.props.onSelect ? this.props.onSelect(item) : null; //eslint-disable-line
 		// hide dropdown on select
@@ -116,6 +116,7 @@ Dropdown.propTypes = {
 	className: React.PropTypes.string,
 	color: React.PropTypes.string,
 	data: React.PropTypes.array.isRequired,
+	onClick: React.PropTypes.func,
 	onSelect: React.PropTypes.func,
 	style: React.PropTypes.object,
 	top: React.PropTypes.number
