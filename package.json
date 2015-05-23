@@ -3,6 +3,7 @@
   "description": "Kube CSS in React Components",
   "author": "Raymond Muller <raymond.muller.1989@gmail.com>",
   "version": "0.2.9",
+  "keywords": ["react", "reactjs", "kube", "react-component"],
   "devDependencies": {
     "babel": "^5.2.17",
     "babelify": "^6.0.2",
