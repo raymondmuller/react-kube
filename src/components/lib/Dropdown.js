@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react/addons";
 import classNames from "classnames";
 
 class Dropdown extends React.Component {
@@ -8,14 +8,27 @@ class Dropdown extends React.Component {
 	}
 
 	componentDidMount() {
-		let dropdownHeight = React.findDOMNode(this.refs.dropdownOwner).offsetHeight;
-		let posTop = React.findDOMNode(this.refs.dropdownOwner).offsetTop + dropdownHeight;
-		let posLeft = React.findDOMNode(this.refs.dropdownOwner).offsetLeft;
+		let element = React.findDOMNode(this.refs.dropdownOwner);
+		let dropdownHeight = element.offsetHeight;
+		let posTop = element.offsetTop + dropdownHeight;
+		let posLeft = element.offsetLeft;
 
 		this.setState({
 			left: posLeft,
 			top: posTop
 		});
+
+		let listStyle = {
+			background: this.props.background,
+			color: this.props.color ? this.props.color : "inherit",
+			cursor: "pointer",
+			display: "block !important",
+			left: posLeft,
+			top: posTop + (this.props.top ? this.props.top : 0),
+			zIndex: 100
+		};
+
+		this.dropdownStyle = React.addons.update(this.props.style, {$merge: listStyle});
 
 		//mousedown listener, used to detect clicks outside of the dropdown
 		window.addEventListener("mousedown", this.closeDropDown.bind(this));
@@ -65,22 +78,10 @@ class Dropdown extends React.Component {
 			"dropdown": true
 		});
 
-		let dropdownStyle = {
-			background: this.props.background,
-			color: this.props.color ? this.props.color : "inherit",
-			cursor: "pointer",
-			display: "block !important",
-			left: this.state.left,
-			top: this.state.top + this.props.top,
-			visibility: this.state.show ? "visible" : "hidden",
-			zIndex: 100
-		};
-
 		let wrapperStyle = {
 			cursor: "pointer",
 			position: "relative"
 		};
-
 
 		let items = this.props.data.map((item, i) => {
 				return (
@@ -100,11 +101,11 @@ class Dropdown extends React.Component {
 		}, this);
 
 		return (
-			<div onMouseDown={this.handleMouseDown.bind(this)} onMouseUp={this.handleMouseUp.bind(this)} ref="dropDownOwner" style={wrapperStyle}>
+			<div onMouseDown={this.handleMouseDown.bind(this)} onMouseUp={this.handleMouseUp.bind(this)} style={wrapperStyle}>
 					{children}
-				<ul className={classNames(this.props.className, dropdownClasses)} ref="dropdown" style={dropdownStyle}>
+				{this.state.show ? <ul className={classNames(this.props.className, dropdownClasses)} ref="dropdown" style={this.dropdownStyle}>
 					{items}
-				</ul>
+				</ul> : null}
 			</div>
 		);
 	}
@@ -121,5 +122,7 @@ Dropdown.propTypes = {
 	style: React.PropTypes.object,
 	top: React.PropTypes.number
 };
+
+Dropdown.defaultProps = { style: {} };
 
 module.exports = Dropdown;

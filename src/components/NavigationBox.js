@@ -3,7 +3,6 @@ import React from "react";
 import Navigation from "./lib/Navigation";
 import NavigationBar from "./lib/NavigationBar";
 import NavigationItem from "./lib/NavigationItem";
-import NavigationLogo from "./lib/NavigationLogo";
 
 class NavigationBox extends React.Component {
 
@@ -19,7 +18,7 @@ render() {
 	return (
 		<header className="group" id="header" ref="header" style={this.props.style}>
 			<Navigation active="01" className="demo-navbar-fixed" fixed id="nav" menuLabel="Menu" responsive >
-				<NavigationLogo id="logo">React-Kube (BETA)</NavigationLogo>
+				<NavigationItem id="logo">React-Kube (BETA)</NavigationItem>
 				<NavigationBar active={0} hideOnMobile left>
 					<NavigationItem icon="code" url="#documentation"> Documentation </NavigationItem>
 					<NavigationItem icon="envelope" target="_new" url="http://www.raymondmuller.com"> Contact </NavigationItem>

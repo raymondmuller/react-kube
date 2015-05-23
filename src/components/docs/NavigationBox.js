@@ -20,21 +20,38 @@ class NavigationBox extends React.Component {
 		return (
 			<FormSection id="navigationBox" name="Navigation">
 				<Grid>
-				<Navigation id="subNavigationDemo">
-				<NavigationBar color="white">
-						<SubNavigation background="lightblue" title="First (with subnavigation)" top={15} >
-						<NavigationItem target="_new" url="http://www.github.com/raymondmuller/react-kube">
-							react-kube source code
-						</NavigationItem>
-						<NavigationItem>
-							react
-						</NavigationItem>
-						</SubNavigation>
-				<NavigationItem color="white"> Second </NavigationItem>
-				</NavigationBar>
-				</Navigation>
-					<p>NavigationBar demo - coming soon</p>
-					<hr/>
+					<Navigation id="navigationDemo">
+						<NavigationItem color="white" logo uppercase>Menu</NavigationItem>
+						<NavigationBar color="white">
+							<SubNavigation background="#ff5722" title="First (with subnavigation)" top={15} >
+								<NavigationItem target="_new" url="http://www.github.com/raymondmuller/react-kube">
+									react-kube source code
+								</NavigationItem>
+								<NavigationItem target="_new" url="https://facebook.github.io/react/">
+									react
+								</NavigationItem>
+							</SubNavigation>
+							<NavigationItem color="white"> Second </NavigationItem>
+						</NavigationBar>
+					</Navigation>
+					<CodeSample>
+						{"<Navigation id=\"navigationDemo\">"}<br/>
+						&emsp;&emsp;{"<NavigationBar color=\"white\">"}<br/>
+						&emsp;&emsp;&emsp;&emsp;{"<NavigationItem color=\"white\" logo uppercase>Menu</NavigationItem>"}<br/>
+						&emsp;&emsp;&emsp;&emsp;{"<SubNavigation background=\"#ff5722\" title=\"First (with subnavigation)\" top={15} >"}<br/>
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{"<NavigationItem target=\"_new\" url=\"http://www.github.com/raymondmuller/react-kube\">"}<br/>
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{"react-kube source code"}<br/>
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{"</NavigationItem>"}<br/>
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{"<NavigationItem target=\"_new\" url=\"https://facebook.github.io/react/\">"}<br/>
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{"react"}<br/>
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{"</NavigationItem>"}<br/>
+						&emsp;&emsp;&emsp;&emsp;{"</SubNavigation>"}<br/>
+						&emsp;&emsp;&emsp;&emsp;{"<NavigationItem color=\"white\">"}<br/>
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{"Second"}<br/>
+						&emsp;&emsp;&emsp;&emsp;{"</NavigationItem>"}<br/>
+						&emsp;&emsp;{"</NavigationBar>"}<br/>
+						{"</Navigation>"}
+					</CodeSample>
 					<Pagination active={1} left="#navigation" right="#navigation">
 						<PaginationItem> 1 </PaginationItem>
 						<PaginationItem> 2 </PaginationItem>

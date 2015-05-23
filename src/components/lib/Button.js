@@ -24,17 +24,17 @@ class Button extends React.Component {
 		let iconStyles = this.props.icon ? "fa fa-" + this.props.icon : "";
 
 		let button =
-			<button className={classNames(this.props.className, styles)} onClick={this.props.onClick} type={this.props.type} value={this.props.value}>
+			<button className={classNames(this.props.className, styles)} onClick={this.props.onClick} style={this.props.style} type={this.props.type} value={this.props.value}>
 				{this.props.icon ? <li className={iconStyles}></li> : null }
 				{this.props.children}
 			</button>;
 
 		return (
-			<span>
+			<div>
 			{this.props.append ?
 				<span className="btn-append"> {button} </span>
 				: {button} }
-			</span>
+			</div>
 		);
 	}
 }
@@ -56,6 +56,7 @@ Button.propTypes = {
 	round: React.PropTypes.bool,
 	small: React.PropTypes.bool,
 	smaller: React.PropTypes.bool,
+	style: React.PropTypes.object,
 	type: React.PropTypes.string,
 	value: React.PropTypes.string,
 	width: React.PropTypes.bool

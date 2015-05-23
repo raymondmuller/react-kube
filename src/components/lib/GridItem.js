@@ -13,7 +13,7 @@ class GridItem extends React.Component {
 		styles += this.props.push ? " unit-push-" + this.props.push : "";
 
 		return (
-			<div className={classNames(this.props.className, styles)} id={this.props.id} style={this.props.style}>{this.props.children}</div>
+			<div className={classNames(this.props.className, styles)} id={this.props.id} style={this.props.style}> {this.props.children} </div>
 		);
 	}
 }

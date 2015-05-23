@@ -28,7 +28,6 @@ import Modal from "./Modal";
 import Navigation from "./Navigation";
 import NavigationBar from "./NavigationBar";
 import NavigationItem from "./NavigationItem";
-import NavigationLogo from "./NavigationLogo";
 import Pagination from "./Pagination";
 import PaginationItem from "./PaginationItem";
 import ProgressBar from "./ProgressBar";
@@ -37,6 +36,7 @@ import Search from "./Search";
 import Select from "./Select";
 import SelectGroup from "./SelectGroup";
 import SelectOption from "./SelectOption";
+import SubNavigation from "./SubNavigation";
 import SubmitButton from "./SubmitButton";
 import Tab from "./Tab";
 import Table from "./Table";
@@ -82,7 +82,6 @@ export default {
 	Navigation,
 	NavigationBar,
 	NavigationItem,
-	NavigationLogo,
 	Pagination,
 	PaginationItem,
 	ProgressBar,
@@ -91,6 +90,7 @@ export default {
 	Select,
 	SelectGroup,
 	SelectOption,
+	SubNavigation,
 	SubmitButton,
 	Tab,
 	Table,
