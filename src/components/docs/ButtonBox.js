@@ -32,19 +32,19 @@ class ButtonBox extends React.Component {
 						</CodeSample>
 				</GridItem>
 				<GridItem size={30}>
-						<SubmitButton color="blue" outline round small>round small outline submit</SubmitButton>
+						<SubmitButton color="blue" outline  small>round small outline submit</SubmitButton>
 				</GridItem>
 				<GridItem size={70}>
 						<CodeSample noLines>
-							{"<SubmitButton color=\"blue\" outline round small> Submit </SubmitButton>"}
+							{"<SubmitButton color=\"blue\" outline  small> Submit </SubmitButton>"}
 						</CodeSample>
 				</GridItem>
 				<GridItem size={30}>
-						<LinkButton big color="green" target="_new" url="http://www.raymondmuller.com">Big LinkButton</LinkButton>
+						<LinkButton big color="green" round target="_new" url="http://www.raymondmuller.com">Big round LinkButton</LinkButton>
 				</GridItem>
 				<GridItem size={70}>
 						<CodeSample noLines>
-							{"<LinkButton big color=\"green\" url=\"http://www.raymondmuller.com\" target=\"_new\"> Link to </LinkButton>"}
+							{"<LinkButton big color=\"green\" round url=\"http://www.raymondmuller.com\" target=\"_new\"> Link to </LinkButton>"}
 						</CodeSample>
 				</GridItem>
 				</Grid>

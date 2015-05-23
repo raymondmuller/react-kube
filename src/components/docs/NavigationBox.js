@@ -1,14 +1,19 @@
 import React from "react";
 
+import Breadcrumb from "../lib/Breadcrumb";
+import Breadcrumbs from "../lib/Breadcrumbs";
+import CodeSample from "./CodeSample";
+import Dropdown from "../lib/Dropdown";
 import FormSection from "../lib/FormSection";
 import Grid from "../lib/Grid";
-import Breadcrumbs from "../lib/Breadcrumbs";
-import Breadcrumb from "../lib/Breadcrumb";
+import Navigation from "../lib/Navigation";
+import NavigationBar from "../lib/NavigationBar";
+import NavigationItem from "../lib/NavigationItem";
 import Pagination from "../lib/Pagination";
 import PaginationItem from "../lib/PaginationItem";
-import CodeSample from "./CodeSample";
-import PropTable from "./PropTable";
 import Prop from "./Prop";
+import PropTable from "./PropTable";
+import SubNavigation from "../lib/SubNavigation";
 
 class NavigationBox extends React.Component {
 
@@ -16,6 +21,19 @@ class NavigationBox extends React.Component {
 		return (
 			<FormSection id="navigationBox" name="Navigation">
 				<Grid>
+				<Navigation id="subNavigationDemo">
+				<NavigationBar color="white">
+						<SubNavigation background="lightblue" title="First (with subnavigation)" top={15} >
+						<NavigationItem target="_new" url="http://www.github.com/raymondmuller/react-kube">
+							react-kube source code
+						</NavigationItem>
+						<NavigationItem>
+							react
+						</NavigationItem>
+						</SubNavigation>
+				<NavigationItem color="white"> Second </NavigationItem>
+				</NavigationBar>
+				</Navigation>
 					<p>NavigationBar demo - coming soon</p>
 					<hr/>
 					<Pagination active={1} left="#navigation" right="#navigation">

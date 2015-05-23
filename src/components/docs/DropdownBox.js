@@ -13,7 +13,7 @@ import Prop from "./Prop";
 class DropdownBox extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { selected: ""};
+		this.state = { selected: "" };
 	}
 
 	handleSelect(item) {
@@ -28,16 +28,14 @@ class DropdownBox extends React.Component {
 				<Grid>
 					<FormList>
 						<p>Selected value: {this.state.selected}</p><hr/>
-						<Dropdown data={["Apple", "Banana", "Bread", "Cheese"]} onSelect={this.handleSelect.bind(this)}>
+						<Dropdown data={["Apple", "Banana", "Bread", "Cheese"]} name="firstDropdown" onSelect={this.handleSelect.bind(this)}>
 							<a>Show Dropdown</a>
 						</Dropdown><br/><br/>
-						<Dropdown data={["Apple", "Banana", "Bread", "Cheese"]} onSelect={this.handleSelect.bind(this)}>
+						<Dropdown data={["Apple", "Banana", "Bread", "Cheese"]} name="secondDropdown" onSelect={this.handleSelect.bind(this)} >
 							<Button>Show Dropdown</Button>
 						</Dropdown>
 						<br/>
-						<Dropdown data={["Apple", "Banana", "Bread", "Cheese"]} onSelect={this.handleSelect.bind(this)}>
-							<Input onSelect={this.handleSelect.bind(this)} value={this.state.selected} />
-						</Dropdown>
+						<Input onSelect={this.handleSelect.bind(this)} value={this.state.selected} />
 					</FormList>
 					<hr/>
 					<CodeSample noLines>

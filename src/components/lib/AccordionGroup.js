@@ -41,6 +41,4 @@ AccordionGroup.propTypes = {
 	style: React.PropTypes.object
 };
 
-AccordionGroup.defaultProps = { collapse: true};
-
 module.exports = AccordionGroup;

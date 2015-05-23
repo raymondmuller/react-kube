@@ -7,7 +7,7 @@ class Breadcrumb extends React.Component {
 				<li className={this.props.className} style={this.props.style}>
 				{this.props.active ?
 					<span>{this.props.children}</span>
-					: <a href={this.props.url} target="_self">{this.props.children}</a>} }
+					: <a href={this.props.url} target="_self">{this.props.children}</a> }
 				</li>
 		);
 	}

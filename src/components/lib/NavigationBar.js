@@ -30,9 +30,8 @@ class NavigationBar extends React.Component {
 
 		let children = [];
 		React.Children.forEach(this.props.children, (child, i) => {
-			children.push(React.cloneElement(child, {active: i === this.state.active, key: i, index: i, onItemClick: this.handleItemClick.bind(this, i)}));
+			children.push(React.cloneElement(child, {active: i === this.state.active, color: this.props.color, key: i, index: i, onItemClick: this.handleItemClick.bind(this, i)}));
 		});
-
 		return (
 			<nav className={navBarClasses}>
 				<ul className={classNames(this.props.className, navListClasses)} style={this.props.style}>
@@ -47,6 +46,7 @@ NavigationBar.propTypes = {
 	active: React.PropTypes.oneOfType([ React.PropTypes.number, React.PropTypes.bool]),
 	children: React.PropTypes.node.isRequired,
 	className: React.PropTypes.string,
+	color: React.PropTypes.string,
 	index: React.PropTypes.number,
 	left: React.PropTypes.bool,
 	onItemClick: React.PropTypes.func,
