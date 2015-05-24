@@ -50,6 +50,7 @@ import TextFit from "./TextFit";
 import ToggleButtons from "./ToggleButtons";
 import Tooltip from "./Tooltip";
 import Upload from "./Upload";
+import VideoPlayer from "./VideoPlayer";
 
 export default {
 	Accordion,
@@ -103,5 +104,6 @@ export default {
 	TextFit,
 	ToggleButtons,
 	Tooltip,
-	Upload
+	Upload,
+	VideoPlayer
 };
