@@ -16,6 +16,7 @@ import ButtonBox from "./docs/ButtonBox";
 import FormBox from "./docs/FormBox";
 import NavigationBox from "./docs/NavigationBox";
 import IconBox from "./docs/IconBox";
+import VideoBox from "./docs/VideoBox";
 
 class CSSComponents extends React.Component {
 
@@ -37,6 +38,7 @@ class CSSComponents extends React.Component {
 							<NavigationItem url="#searchBox"> Search </NavigationItem>
 							<NavigationItem url="#tableBox"> Table </NavigationItem>
 							<NavigationItem url="#typographyBox"> Typhography </NavigationItem>
+							<NavigationItem url="#videoBox"> Video player </NavigationItem>
 						</NavigationBar>
 					</Navigation>
 				</GridItem>
@@ -51,6 +53,7 @@ class CSSComponents extends React.Component {
 						<SearchBox />
 						<TableBox />
 						<TypographyBox />
+						<VideoBox />
 					</GridItem>
 				</Grid>
 			</div>
