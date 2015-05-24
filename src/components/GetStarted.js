@@ -27,7 +27,7 @@ class GetStarted extends React.Component {
 			<div id="tab1">
 				<FormSection name="react-kube">
 					<Grid>
-						<h4>Version: 0.2.9 (BETA)</h4>
+						<h4>Version: 0.3.0 (BETA)</h4>
 						Found a bug? Please log an issue => <li className="fa fa-github"></li> <a href="https://github.com/raymondmuller/react-kube/issues" target="_new">Github</a>
 						<hr/>
 							- npm install react-kube <br/>
