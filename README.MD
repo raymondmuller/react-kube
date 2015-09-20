@@ -1,6 +1,8 @@
 # React Components based on KUBE CSS
 
-Beta version ! Under active development !
+Beta version
+
+! Too busy at the moment to continue development, feel free to contribute !
 
 ### TODO:
 - Improve current code / clean up and formatting
