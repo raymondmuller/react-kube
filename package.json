@@ -1,7 +1,7 @@
 {
   "name": "react-kube",
   "description": "Kube CSS in React Components",
-  "author": "Raymond Muller <raymond.muller.1989@gmail.com>",
+  "author": "Raymond Muller",
   "version": "0.3.0",
   "keywords": ["react", "reactjs", "kube", "react-component"],
   "devDependencies": {
